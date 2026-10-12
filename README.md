@@ -6,7 +6,7 @@ button links straight to the module zip on GitHub.
 
 ## How it works
 
-1. Each module is a folder in `modules/` with a `module.prop`.
+1. Each module is a folder in `modules/` with a `module.json` (KamiOS format) or a `module.prop`.
 2. On every push, a GitHub Action zips each module, attaches the zips to the
    `latest` release, and rewrites `modules.json`.
 3. The ROM app and the website read `modules.json`.
@@ -26,8 +26,8 @@ Your links will be:
 
 ## Add a module
 
-1. Copy `modules/hello-module` to `modules/<your-id>`.
-2. Edit `module.prop` and add your files.
+1. Make a folder `modules/<your-id>` (it must match the module id) and put the exported module files in it, including `module.json`.
+2. Optional: add `thumbnail.png` and a `screenshots/` folder.
 3. Commit and push. Done. Wait about a minute for the Action.
 
 `module.prop` fields (all required):
