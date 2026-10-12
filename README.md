@@ -20,9 +20,8 @@ one-tap download straight from GitHub.
 
 We would love seeing what you build and want to make it as easy as possible to share your creations, making the experience available to everyone in the community.
 
-Role          | How to Contribute
-Maintainers	  | Can push directly to the main branch.
-Contributors	| Fork the repository and open a Pull Request.
+Maintainers: Can push directly to the main branch.
+Contributors: Fork the repository and open a Pull Request.
 
 
 What to Expect Next
