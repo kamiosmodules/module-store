@@ -2,16 +2,6 @@
   "updated": "2026-10-12",
   "modules": [
     {
-      "id": "hello-module",
-      "name": "Hello Module",
-      "version": "1.0",
-      "author": "yourname",
-      "description": "A starter module. Copy this folder to make your own.",
-      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/hello-module.zip",
-      "thumbnail": null,
-      "screenshots": []
-    },
-    {
       "id": "nyan-cat-pill",
       "name": "Nyan Cat Pill",
       "version": "1.0",
@@ -20,7 +10,6 @@
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/nyan-cat-pill.zip",
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nyan-cat-pill/thumbnail.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nyan-cat-pill/screenshots/1.gif",
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nyan-cat-pill/screenshots/Screenshot 2026-10-12 151243.png"
       ]
     }
