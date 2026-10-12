@@ -14,6 +14,16 @@
       ]
     },
     {
+      "id": "pacman-pill",
+      "name": "Pacman Pill",
+      "version": "1.0",
+      "author": "MrSteelballs",
+      "description": "Replaces the gesture pill with an animated Pacman munching on your display's pixels",
+      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/pacman-pill.zip",
+      "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pacman-pill/thumbnail.png",
+      "screenshots": []
+    },
+    {
       "id": "spiderverse",
       "name": "Spider-Verse",
       "version": "1.0",
