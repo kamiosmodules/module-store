@@ -1,0 +1,228 @@
+{
+ "format": "kamios-module",
+ "version": 1,
+ "id": "minecraft",
+ "name": "Minecraft",
+ "author": "MrSteelballs",
+ "description": "A Minecraft look for KamiOS: square blocky tiles, grass-green accents, enchantment-glint notifications, XP-orb shade animation, classic battery, pixel icons for the volume panel and status bar, textured volume and brightness sliders. Use with Minecraft XP pill for best experience",
+ "settings": {
+  "system/qs_tile_shape": 3,
+  "system/qs_tile_animation_style": 1,
+  "system/qs_panel_style": 0,
+  "system/status_bar_clock_bold": 1,
+  "system/statusbar_battery_bar": 1,
+  "system/statusbar_battery_bar_thickness": 3,
+  "system/statusbar_battery_bar_style": 0,
+  "system/statusbar_battery_bar_blend_color": 0,
+  "system/statusbar_battery_bar_color": "#55FF55",
+  "system/statusbar_battery_bar_battery_low_color": "#FF5555",
+  "system/statusbar_battery_bar_animate": 1,
+  "system/statusbar_battery_bar_enable_charging_color": 1,
+  "system/statusbar_battery_bar_charging_color": "#FFFF55",
+  "secure/ambient_pulse_enabled": 1,
+  "secure/pulse_renderer": "fading",
+  "secure/pulse_rounded_bars": 0,
+  "secure/pulse_color": "custom",
+  "secure/pulse_custom_color": "#55FF55",
+  "secure/pulse_bar_count": 24,
+  "system/edge_light_enabled": 1,
+  "system/edge_light_color_mode": "custom",
+  "system/edge_light_custom_color": "#55FF55",
+  "system/edge_light_animation_effect": "chase",
+  "system/edge_light_pulse_count": 3,
+  "system/screen_off_animation": 1,
+  "secure/media_squiggle_animation": 1,
+  "system/settings_icon_style": 1,
+  "system/settings_icon_random_colors": 1,
+  "system/settings_icon_corner_style": 1,
+  "system/qs_brightness_slider_shape": 3,
+  "system/enable_ripple_effect": 1,
+  "system/qs_tile_haptic": 1,
+  "global/window_animation_scale": "0.8",
+  "global/transition_animation_scale": "0.8",
+  "global/animator_duration_scale": "0.8",
+  "lineage_system/status_bar_clock": 2,
+  "lineage_system/status_bar_am_pm": 1,
+  "system/status_bar_clock_date_display": 1,
+  "system/status_bar_clock_date_style": 2,
+  "lineage_system/status_bar_show_battery_percent": 1,
+  "system/qs_tiles_columns": 4,
+  "system/qs_tiles_columns_landscape": 6,
+  "system/qs_tiles_rows": 4,
+  "system/qqs_tiles_rows": 1,
+  "system/qs_tile_gradient": 0,
+  "system/qs_brightness_slider_gradient": 0,
+  "system/volume_slider_gradient": 0,
+  "system/kami_qs_dual_tone": 0,
+  "system/kami_shade_dual_tone": 1,
+  "system/qs_show_volume_slider": 1,
+  "system/qs_show_ringer_mode": 1,
+  "system/qs_tile_label_hide": 0,
+  "lineage_secure/qs_brightness_slider_position": 0,
+  "system/edge_light_stroke_width": 8,
+  "system/edge_light_style": "default",
+  "system/less_boring_heads_up": 0,
+  "secure/lock_screen_custom_clock_color_mode": "custom",
+  "secure/lock_screen_custom_clock_custom_color": -11141291,
+  "secure/lock_screen_custom_clock_aod_anim": 1
+ },
+ "targets": {
+  "com.android.systemui": {
+   "dimen/qs_corner_radius": "4dp",
+   "dimen/common_tile_default_active_tile_corner_radius": "4dp",
+   "dimen/common_tile_default_inactive_tile_corner_radius": "4dp",
+   "dimen/common_tile_default_active_icon_corner_radius": "2dp",
+   "dimen/common_tile_default_inactive_icon_corner_radius": "2dp",
+   "integer/kami_slider_shape": 3,
+   "integer/kami_footer_button_shape": 1,
+   "dimen/notification_corner_radius": "4dp",
+   "dimen/notification_corner_radius_small": "2dp",
+   "dimen/notification_scrim_corner_radius": "6dp",
+   "bool/kami_blur_enabled": true,
+   "color/shade_panel_fallback_fg": {
+    "day": "#FF5D9C36",
+    "night": "#FF2F5A1C"
+   },
+   "color/shade_panel_fallback_bg": {
+    "day": "#FFE3D8BC",
+    "night": "#FF1C1A17"
+   },
+   "color/shade_panel_fallback": {
+    "day": "#FFD9C9A3",
+    "night": "#FF2A2622"
+   },
+   "color/notification_scrim_base": {
+    "day": "#FFE3D8BC",
+    "night": "#FF1C1A17"
+   },
+   "color/kami_notification_bg": {
+    "day": "#F2E8D9B5",
+    "night": "#F032302B"
+   },
+   "drawable/kami_notification_image": "files/kami_notification_image.webp",
+   "drawable/kami_shade_background": "files/kami_shade_background.webp",
+   "color/kami_back_arrow": "#FFFFFFFF",
+   "color/kami_back_arrow_bg": "#FF1B4D12",
+   "integer/config_backGestureArrowMode": 2,
+   "string/config_backGestureArrowPathData": "M 1,-1 L 0.3,-0.45 L 0.3,0.45 L 1,1 M 0.3,0 L 2.6,0",
+   "dimen/navigation_edge_arrow_thickness": "3dp",
+   "color/kami_qs_tile_active_bg": {
+    "day": "#FF6AB23A",
+    "night": "#FF67AF32"
+   },
+   "color/kami_qs_tile_active_fg": {
+    "day": "#FFFFFFFF",
+    "night": "#FFFFFFFF"
+   },
+   "color/kami_qs_tile_inactive_bg": {
+    "day": "#FF8B8B8B",
+    "night": "#FF3A3A3A"
+   },
+   "color/kami_qs_tile_inactive_fg": {
+    "day": "#FFF2F2F2",
+    "night": "#FFC6C6C6"
+   },
+   "color/kami_brightness_slider_active": {
+    "day": "#FF5D9C36",
+    "night": "#FF55FF55"
+   },
+   "color/kami_brightness_slider_inactive": {
+    "day": "#FF8B8B8B",
+    "night": "#FF3A3A3A"
+   },
+   "dimen/volume_dialog_background_corner_radius": "6dp",
+   "color/kami_volume_dialog_background": {
+    "day": "#F2D9C9A3",
+    "night": "#F2262626"
+   },
+   "color/kami_volume_slider_active": {
+    "day": "#FF5D9C36",
+    "night": "#FF55FF55"
+   },
+   "color/kami_volume_slider_inactive": {
+    "day": "#FF8B8B8B",
+    "night": "#FF3A3A3A"
+   },
+   "integer/kami_volume_slider_corner": 2,
+   "drawable/stat_sys_ringer_vibrate": "files/stat_sys_ringer_vibrate.webp",
+   "drawable/stat_sys_airplane_mode": "files/stat_sys_airplane_mode.webp",
+   "drawable/stat_sys_alarm": "files/stat_sys_alarm.webp",
+   "drawable/stat_sys_ringer_silent": "files/stat_sys_ringer_silent.webp",
+   "drawable/kami_battery_frame": "files/kami_battery_frame.png",
+   "drawable/kami_battery_fill": "files/kami_battery_fill.png",
+   "drawable/kami_battery_charging": "files/kami_battery_charging.webp",
+   "integer/kami_battery_fill_direction": 0,
+   "drawable/stat_sys_nfc": "files/stat_sys_nfc.webp",
+   "drawable/stat_sys_hotspot": "files/stat_sys_hotspot.webp",
+   "drawable/stat_sys_data_saver": "files/stat_sys_data_saver.png",
+   "drawable/stat_sys_data_bluetooth_connected": "files/stat_sys_bt.png",
+   "drawable/stat_sys_rotate_portrait": "files/stat_sys_rotate.png",
+   "drawable/stat_sys_cast": "files/stat_sys_cast.png",
+   "drawable/stat_sys_headset": "files/stat_sys_headset.png",
+   "drawable/stat_sys_vpn_ic": "files/stat_sys_vpn.png",
+   "drawable/ic_music_note": "files/ic_music_note.png",
+   "drawable/ic_volume_ringer_vibrate": "files/ic_volume_ringer_vibrate.png",
+   "drawable/ic_volume_media": "files/ic_volume_media.png",
+   "drawable/ic_volume_media_low": "files/ic_volume_media_low.png",
+   "drawable/ic_volume_media_mute": "files/ic_volume_media_mute.png",
+   "drawable/ic_volume_ringer": "files/ic_volume_ringer.png",
+   "drawable/ic_volume_ringer_mute": "files/ic_volume_ringer_mute.png",
+   "drawable/ic_ring_volume": "files/ic_ring_volume.png",
+   "drawable/ic_ring_volume_off": "files/ic_ring_volume_off.png",
+   "drawable/ic_volume_alarm_mute": "files/ic_volume_alarm_mute.png",
+   "drawable/ic_alarm": "files/ic_alarm.png",
+   "drawable/ic_volume_system": "files/ic_volume_system.png",
+   "drawable/ic_volume_system_mute": "files/ic_volume_system_mute.png",
+   "drawable/ic_notifications_active": "files/ic_notifications_active.png",
+   "drawable/ic_notifications_off": "files/ic_notifications_off.png",
+   "drawable/ic_tuner": "files/ic_tuner.png",
+   "drawable/ic_volume_odi_captions": "files/ic_volume_odi_captions.png",
+   "drawable/ic_mobile_vibrate": "files/ic_mobile_vibrate.png",
+   "drawable/kami_volume_dialog_image": "files/volume_dirt.png",
+   "drawable/kami_volume_slider_image": "files/volume_slider_grass.png",
+   "drawable/kami_brightness_slider_image": "files/brightness_glowstone.png",
+   "color/shade_scrim_background_dark": {
+    "day": "#FF0E1607",
+    "night": "#FF050804"
+   },
+   "dimen/volume_dialog_width": "64dp",
+   "dimen/volume_dialog_slider_height": "240dp",
+   "dimen/volume_dialog_components_spacing": "6dp",
+   "dimen/volume_dialog_window_margin": "8dp",
+   "dimen/volume_dialog_background_surface_blur_radius": "8dp",
+   "integer/kami_volume_slider_thickness": 28,
+   "drawable/kami_qs_tile_active_image": "files/qs_tile_active_grass.png",
+   "drawable/kami_qs_tile_inactive_image": "files/qs_tile_inactive_stone.png",
+   "string/kami_qs_tile_picture_map": "flashlight:1,wifi:2,internet:2,cell:2,bt:2",
+   "drawable/kami_qs_tile_active_image_1": "files/qs_tile_torch_on_glowstone.png",
+   "drawable/kami_qs_tile_active_image_2": "files/qs_tile_dirt_wifi_data_bt.png"
+  },
+  "com.android.settings": {
+   "color/kami_page_bg": {
+    "day": "#FFE9E2D0",
+    "night": "#FF1E1B18"
+   },
+   "color/kami_bento_tile": {
+    "day": "#FFD9C9A3",
+    "night": "#FF3A332B"
+   },
+   "color/kami_bento_hero": {
+    "day": "#FF7EC0EE",
+    "night": "#FF14213D"
+   },
+   "drawable/kami_hero_image": "files/kami_hero_image.webp",
+   "dimen/kami_bento_radius": "4dp",
+   "dimen/kami_hero_radius": "6dp",
+   "dimen/kami_bento_icon_radius": "4dp",
+   "dimen/kami_bento_gap": "4dp",
+   "dimen/kami_bento_tile_height": "120dp",
+   "integer/kami_bento_columns": 2,
+   "bool/kami_page_translucent": false,
+   "bool/kami_page_show_wallpaper": false,
+   "dimen/kami_page_blur": "0dp"
+  },
+  "com.android.launcher3": {
+   "dimen/kami_launch_duration_scale": 0.8
+  }
+ }
+}
