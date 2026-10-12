@@ -21,7 +21,9 @@
       "description": "Replaces the gesture pill with an animated Pacman munching on your display's pixels",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/pacman-pill.zip",
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pacman-pill/thumbnail.png",
-      "screenshots": []
+      "screenshots": [
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pacman-pill/screenshots/Screenshot_20261012-165932_KamiOS Home.png"
+      ]
     },
     {
       "id": "spiderverse",
