@@ -7,7 +7,21 @@
       "version": "1.0",
       "author": "yourname",
       "description": "A starter module. Copy this folder to make your own.",
-      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/hello-module.zip"
+      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/hello-module.zip",
+      "thumbnail": null,
+      "screenshots": []
+    },
+    {
+      "id": "nyan-cat-pill",
+      "name": "Nyan Cat Pill",
+      "version": "1.0",
+      "author": "MrSteelballs",
+      "description": "Replaces the gesture pill with an animated Nyan Cat. Also rounds the quick settings panel and uses 4 tile columns.",
+      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/nyan-cat-pill.zip",
+      "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nyan-cat-pill/thumbnail.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nyan-cat-pill/screenshots/1.gif"
+      ]
     }
   ]
 }
