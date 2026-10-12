@@ -1,4 +1,13 @@
 {
   "updated": "2026-10-12",
-  "modules": []
+  "modules": [
+    {
+      "id": "hello-module",
+      "name": "Hello Module",
+      "version": "1.0",
+      "author": "yourname",
+      "description": "A starter module. Copy this folder to make your own.",
+      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/hello-module.zip"
+    }
+  ]
 }
