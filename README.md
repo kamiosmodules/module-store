@@ -42,6 +42,22 @@ description=One line on what it does.
 
 Update a module by changing its files and bumping `version`.
 
+## Thumbnail and screenshots (optional)
+
+Drop images into the module folder. No config, the build detects them:
+
+```
+modules/my-module/
+├── module.prop
+├── thumbnail.png          # square icon, shown next to the name
+└── screenshots/
+    ├── 1.png
+    └── 2.png
+```
+
+They show up in `modules.json` as `thumbnail` (a URL, or `null`) and
+`screenshots` (a list of URLs, empty if none). They are left out of the module zip.
+
 ## Contributing
 
 Fork, add your folder under `modules/`, open a pull request. Every module is
@@ -59,7 +75,9 @@ reviewed before merging because users install these on their phones.
       "version": "1.0",
       "author": "yourname",
       "description": "One line on what it does.",
-      "download": "https://github.com/OWNER/REPO/releases/download/latest/my-module.zip"
+      "download": "https://github.com/OWNER/REPO/releases/download/latest/my-module.zip",
+      "thumbnail": "https://raw.githubusercontent.com/OWNER/REPO/main/modules/my-module/thumbnail.png",
+      "screenshots": ["https://raw.githubusercontent.com/OWNER/REPO/main/modules/my-module/screenshots/1.png"]
     }
   ]
 }
