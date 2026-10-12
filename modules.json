@@ -2,6 +2,22 @@
   "updated": "2026-10-12",
   "modules": [
     {
+      "id": "minecraft",
+      "name": "Minecraft",
+      "version": "1.0",
+      "author": "MrSteelballs",
+      "description": "A Minecraft look for KamiOS: square blocky tiles, grass-green accents, enchantment-glint notifications, XP-orb shade animation, classic battery, pixel icons for the volume panel and status bar, textured volume and brightness sliders. Use with Minecraft XP pill for best experience",
+      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/minecraft.zip",
+      "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/minecraft/thumbnail.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/minecraft/screenshots/6226466226079209847_119.jpg",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/minecraft/screenshots/6226466226079209848_119.jpg",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/minecraft/screenshots/6226466226079209849_119.jpg",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/minecraft/screenshots/6226466226079209850_119.jpg",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/minecraft/screenshots/6226466226079209851_119.jpg"
+      ]
+    },
+    {
       "id": "minecraft-xp",
       "name": "Minecraft XP Glowing Pill",
       "version": "1.0",
