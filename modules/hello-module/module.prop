@@ -1,0 +1,5 @@
+id=hello-module
+name=Hello Module
+version=1.0
+author=yourname
+description=A starter module. Copy this folder to make your own.

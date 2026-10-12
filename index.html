@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Module Store</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#f3f5f9;--card:#fff;--ink:#14181f;--mute:#5d6675;--line:#e1e5ec;--acc:#3b5bdb;--acc-ink:#fff;--tile:#e4e9ff;--tile-ink:#2c46b8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10131a;--card:#181c26;--ink:#eef1f7;--mute:#98a2b5;--line:#272d3b;--acc:#7c93ff;--acc-ink:#0d1230;--tile:#232a4a;--tile-ink:#b6c3ff}}
+:root[data-theme="dark"]{--bg:#10131a;--card:#181c26;--ink:#eef1f7;--mute:#98a2b5;--line:#272d3b;--acc:#7c93ff;--acc-ink:#0d1230;--tile:#232a4a;--tile-ink:#b6c3ff}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 "DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:640px;margin:0 auto;padding:28px 16px 48px}
+h1{font-size:32px;line-height:1.1;margin:0 0 6px;font-weight:700;letter-spacing:-.02em}
+.sub{color:var(--mute);margin:0 0 20px}
+.search{width:100%;padding:13px 16px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;margin-bottom:14px}
+.search:focus-visible,.btn:focus-visible,summary:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.list{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.row{display:flex;gap:14px;align-items:center;padding:16px;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.tile{flex:none;width:44px;height:44px;border-radius:12px;background:var(--tile);color:var(--tile-ink);display:grid;place-items:center;font-weight:700;font-size:18px}
+.info{flex:1;min-width:0}
+.name{font-weight:700;margin:0}
+.meta{color:var(--mute);font-size:13px;margin:0 0 2px}
+.desc{margin:0;color:var(--ink);font-size:14px}
+.btn{flex:none;background:var(--acc);color:var(--acc-ink);text-decoration:none;font-weight:700;font-size:14px;padding:10px 16px;border-radius:999px}
+.btn:active{transform:scale(.97)}
+.empty{padding:28px 16px;color:var(--mute);text-align:center}
+.note{font-size:13px;color:var(--mute);margin:14px 4px}
+details{margin-top:18px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 16px}
+summary{cursor:pointer;font-weight:500}
+pre{overflow-x:auto;font-size:12px;line-height:1.5;margin:10px 0 0;color:var(--mute)}
+@media (max-width:420px){.row{flex-wrap:wrap}.btn{margin-left:58px}}
+</style>
+</head>
+<body>
+<main>
+  <h1>Module Store</h1>
+  <p class="sub">Browse modules and download the zip in one tap.</p>
+  <input id="q" class="search" type="search" placeholder="Search modules" aria-label="Search modules">
+  <div id="list" class="list" aria-live="polite"></div>
+  <p class="note" id="src"></p>
+  <details>
+    <summary>See the modules.json behind this page</summary>
+    <pre id="json"></pre>
+  </details>
+</main>
+<script>
+// Sample data. On GitHub Pages this is replaced by the real modules.json next to index.html.
+var SAMPLE = {
+  updated: "2026-10-12",
+  modules: [
+    {id:"better-battery",name:"Better Battery",version:"1.2",author:"shoaib",description:"Tunes kernel and doze settings to cut idle drain.",download:"https://github.com/USER/module-store/releases/download/latest/better-battery.zip"},
+    {id:"fast-charge-tweaks",name:"Fast Charge Tweaks",version:"0.9",author:"devname",description:"Raises the charge current limit on supported devices.",download:"https://github.com/USER/module-store/releases/download/latest/fast-charge-tweaks.zip"},
+    {id:"dark-everything",name:"Dark Everything",version:"2.0",author:"devname",description:"Forces dark mode on apps that do not support it.",download:"https://github.com/USER/module-store/releases/download/latest/dark-everything.zip"},
+    {id:"debloat-lite",name:"Debloat Lite",version:"1.0",author:"shoaib",description:"Disables a safe list of preinstalled apps without deleting them.",download:"https://github.com/USER/module-store/releases/download/latest/debloat-lite.zip"},
+    {id:"gaming-boost",name:"Gaming Boost",version:"1.5",author:"someone",description:"Locks the CPU and GPU governors to performance while a game is open.",download:"https://github.com/USER/module-store/releases/download/latest/gaming-boost.zip"}
+  ]
+};
+var data = SAMPLE, listEl = document.getElementById('list'), q = document.getElementById('q');
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function render(){
+  var t = q.value.trim().toLowerCase();
+  var items = data.modules.filter(function(m){return (m.name+' '+m.description+' '+m.author).toLowerCase().indexOf(t)>-1});
+  if(!items.length){listEl.innerHTML='<div class="empty">No modules match "'+esc(q.value)+'". Try a different word.</div>';return}
+  listEl.innerHTML = items.map(function(m){
+    return '<div class="row"><div class="tile">'+esc(m.name.charAt(0))+'</div>'+
+      '<div class="info"><p class="name">'+esc(m.name)+'</p>'+
+      '<p class="meta">v'+esc(m.version)+' by '+esc(m.author)+'</p>'+
+      '<p class="desc">'+esc(m.description)+'</p></div>'+
+      '<a class="btn" href="'+esc(m.download)+'" target="_blank" rel="noopener" download>Download</a></div>';
+  }).join('');
+}
+function show(src){
+  document.getElementById('src').textContent = src;
+  document.getElementById('json').textContent = JSON.stringify(data,null,2);
+  render();
+}
+q.addEventListener('input',render);
+// Try the real file first (works on GitHub Pages), otherwise keep the sample.
+fetch('modules.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){
+  if(j&&j.modules){data=j;show('Loaded modules.json from this site.')}else throw 0;
+}).catch(function(){show('Showing sample data. Download links point to a placeholder repo (USER/module-store).')});
+</script>
+</body>
+</html>
