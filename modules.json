@@ -2,6 +2,18 @@
   "updated": "2026-10-12",
   "modules": [
     {
+      "id": "minecraft-xp",
+      "name": "Minecraft XP Glowing Pill",
+      "version": "1.0",
+      "author": "MrSteelballs",
+      "description": "What's your xp?",
+      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/minecraft-xp.zip",
+      "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/minecraft-xp/thumbnail.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/minecraft-xp/screenshots/Screenshot_20261012-173143_KamiOS Home.png"
+      ]
+    },
+    {
       "id": "nyan-cat-pill",
       "name": "Nyan Cat Pill",
       "version": "1.0",
