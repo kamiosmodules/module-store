@@ -12,6 +12,22 @@
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nyan-cat-pill/screenshots/Screenshot 2026-10-12 151243.png"
       ]
+    },
+    {
+      "id": "spiderverse",
+      "name": "Spider-Verse",
+      "version": "1.0",
+      "author": "MrSteelballs",
+      "description": "Spider-Man theme: red/blue palette, web-cut battery, spider-sense icons, animated shade, hero card, silk gesture pill and web-flow sliders.",
+      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/spiderverse.zip",
+      "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/spiderverse/thumbnail.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/spiderverse/screenshots/Screenshot_20261012-164538_System UI.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/spiderverse/screenshots/Screenshot_20261012-164542_System UI.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/spiderverse/screenshots/Screenshot_20261012-164619_System UI.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/spiderverse/screenshots/Screenshot_20261012-164626_Settings.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/spiderverse/screenshots/Screenshot_20261012-164642_Settings.png"
+      ]
     }
   ]
 }
