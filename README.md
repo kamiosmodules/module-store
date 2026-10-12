@@ -1,84 +1,144 @@
-# Module Store
+# KamiOS Module Store
 
-A simple module repository. The ROM's settings app (or the website) reads
-`modules.json`, shows each module with its description, and the Download
-button links straight to the module zip on GitHub.
+A public store of modules for KamiOS. Browse them on the website, or in the
+ROM's settings. Every module has a description, optional screenshots, and a
+one-tap download straight from GitHub.
+
+- Website: https://kamiosmodules.github.io/module-store/
+- Index for apps: https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules.json
 
 ## How it works
 
-1. Each module is a folder in `modules/` with a `module.json` (KamiOS format) or a `module.prop`.
-2. On every push, a GitHub Action zips each module, attaches the zips to the
-   `latest` release, and rewrites `modules.json`.
-3. The ROM app and the website read `modules.json`.
+1. Each module is a folder inside `modules/`.
+2. When something is added to `main`, a GitHub Action zips every module,
+   publishes the zips to the **latest** release, and rewrites `modules.json`.
+3. The website and the ROM read `modules.json`, so a new module appears by
+   itself. Nobody has to update the app.
 
-## Set it up
 
-1. Create a new GitHub repo and push these files to `main`.
-2. Settings > Actions > General > Workflow permissions: choose **Read and write permissions**.
-3. Settings > Pages: deploy from branch `main`, folder `/ (root)`.
-4. Push once (or run the workflow from the Actions tab). `modules.json` and the release get created.
+## Contributors
 
-Your links will be:
+We would love seeing what you build and want to make it as easy as possible to share your creations, making the experience available to everyone in the community.
 
-- Index for the ROM app: `https://raw.githubusercontent.com/OWNER/REPO/main/modules.json`
-- Website: `https://OWNER.github.io/REPO/`
-- A module zip: `https://github.com/OWNER/REPO/releases/download/latest/<id>.zip`
+Role          | How to Contribute
+Maintainers	  | Can push directly to the main branch.
+Contributors	| Fork the repository and open a Pull Request.
 
-## Add a module
 
-1. Make a folder `modules/<your-id>` (it must match the module id) and put the exported module files in it, including `module.json`.
-2. Optional: add `thumbnail.png` and a `screenshots/` folder.
-3. Commit and push. Done. Wait about a minute for the Action.
+What to Expect Next
 
-`module.prop` fields (all required):
+• Review: A maintainer will look over your Pull Request as soon as possible to help review and merge your changes.
+• Deployment: Once merged, your module will automatically go live within just 1–2 minutes.
+
+## What a module looks like
 
 ```
-id=my-module          # must match the folder name
-name=My Module
-version=1.0
-author=yourname
-description=One line on what it does.
+modules/
+└── my-module/              <- folder name = the module's id
+    ├── module.json         <- required (exported from the ROM)
+    ├── assets/ ...         <- the module's own files
+    ├── thumbnail.png       <- optional, square icon for the store
+    └── screenshots/        <- optional
+        ├── 1.png
+        └── 2.png
 ```
 
-Update a module by changing its files and bumping `version`.
+**Required**
+- `module.json` at the top level of the folder (not inside another folder).
+- The folder name must be **exactly** the `id` written inside `module.json`.
+  For example `"id": "nyan-cat-pill"` means the folder is `modules/nyan-cat-pill`.
+- `name`, `author` and `description` filled in. Write a real one-line
+  description, not a placeholder like "What it does".
 
-## Thumbnail and screenshots (optional)
+**Optional**
+- `thumbnail.png` (or `.jpg`, `.webp`, `.gif`): a small square icon shown next to the name.
+- `screenshots/`: images (PNG, JPG, WebP or GIF) directly inside this folder.
+  Sub-folders are not read. Files show in number order (1, 2, 10).
 
-Drop images into the module folder. No config, the build detects them:
+Thumbnail and screenshots are for the store only. They are left out of the
+module's download zip.
 
+Older modules can use a `module.prop` file instead of `module.json`
+(`id`, `name`, `author`, `description`, and optionally `version`).
+
+**Version note:** the store shows `1.0` for every module for now. The
+`"version"` number inside `module.json` is the file-format version, not the
+module's own version.
+
+## How to contribute
+
+### 1. Fork the repo
+Open https://github.com/kamiosmodules/module-store and click **Fork**.
+This gives you your own copy.
+
+### 2. Add your module to your fork
+Pick whichever method suits you.
+
+**A. In the browser (easiest, nothing to install)**
+1. Open your fork on GitHub and go into the `modules` folder.
+2. Click **Add file → Upload files**.
+3. Drag in your whole module folder (named after the module id).
+4. Click **Commit changes**.
+
+Browser uploads allow roughly 100 files at a time and 25 MB per file. For a
+bigger module, upload in two batches or use method B or C.
+
+**B. GitHub Desktop (buttons, no commands)**
+1. Install GitHub Desktop and sign in.
+2. **File → Clone repository**, and pick your fork.
+3. Copy your module folder into the `modules` folder.
+4. Type a message, click **Commit to main**, then **Push origin**.
+
+**C. Git commands**
 ```
-modules/my-module/
-├── module.prop
-├── thumbnail.png          # square icon, shown next to the name
-└── screenshots/
-    ├── 1.png
-    └── 2.png
+git clone https://github.com/YOURNAME/module-store.git
+cd module-store
+git checkout -b add-my-module
+# copy your module folder into modules/
+git add .
+git commit -m "Add My Module"
+git push -u origin add-my-module
 ```
 
-They show up in `modules.json` as `thumbnail` (a URL, or `null`) and
-`screenshots` (a list of URLs, empty if none). They are left out of the module zip.
+**D. github.dev (browser editor)**
+Open your fork and press the **.** key. Drag your folder into the file list,
+then use the Source Control tab to commit.
 
-## Contributing
+### 3. Open a pull request
+On your fork's page, click **Contribute → Open pull request** (or
+**Compare & pull request**). Check that it targets `kamiosmodules/module-store`
+on `main`, then click **Create pull request**. Put the module's name and a
+short line about what it does in the title or description.
 
-Fork, add your folder under `modules/`, open a pull request. Every module is
-reviewed before merging because users install these on their phones.
+### 4. Wait for review
+An owner will look at your module. They may ask for changes, for example a
+better description or a missing field. Make the change in your fork and push
+again, and the pull request updates itself. Once it is merged, your module
+appears in the store after about a minute or two.
 
-## modules.json format
+### Updating your module later
+Change the files in your module's folder, open a pull request again, and the
+store rebuilds the zip when it is merged.
 
-```json
-{
-  "updated": "2026-10-12",
-  "modules": [
-    {
-      "id": "my-module",
-      "name": "My Module",
-      "version": "1.0",
-      "author": "yourname",
-      "description": "One line on what it does.",
-      "download": "https://github.com/OWNER/REPO/releases/download/latest/my-module.zip",
-      "thumbnail": "https://raw.githubusercontent.com/OWNER/REPO/main/modules/my-module/thumbnail.png",
-      "screenshots": ["https://raw.githubusercontent.com/OWNER/REPO/main/modules/my-module/screenshots/1.png"]
-    }
-  ]
-}
-```
+## Rules
+
+- Only add or change **your own** module folder. Don't edit other people's modules.
+- **Don't edit `modules.json`.** It is generated automatically.
+- Everything must be safe to install. No hidden or harmful code, and don't
+  upload anything you don't have the right to share.
+- Use clear names and a real description so people know what the module does.
+- Keep the module small. Large unnecessary files slow down downloads for everyone.
+
+## Testing before you submit 
+
+You must test your module in your own phone before pushing it
+
+______________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Made with care by the KamiOS Team.
+
+Join the community on Telegram: t.me/kamiosmodules | t.me/kamiosofficial
+
+KamiOS. Released under open-source terms.
+
+
