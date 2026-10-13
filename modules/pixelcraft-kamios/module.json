@@ -1,14 +1,15 @@
+
 {
   "format": "kamios-module",
   "version": 1,
   "id": "pixelcraft-kamios",
   "name": "PixelCraft UI for KamiOS/CumOS-RE",
   "author": "Prabhu",
-  "description": "Cyber Pixel Full Pixel Art edition with square purple Quick Settings tiles, black pixel-art icons, rounded purple sliders and stock typography.",
+  "description": "Cyber Pixel UI with square black inactive QS tiles, purple active tiles, built-in QS transitions, pixel-art icons, rounded purple sliders, and a custom wallpaper",
   "settings": {
     "system/qs_panel_style": 0,
     "system/qs_tile_shape": 0,
-    "system/qs_tile_animation_style": 0,
+    "system/qs_tile_animation_style": 2,
     "system/qs_show_volume_slider": 0,
     "system/qs_brightness_slider_shape": 0,
     "system/qs_footer_show_edit": true,
@@ -77,10 +78,10 @@
       },
       "color/kami_qs_tile_active_fg": "#FF000000",
       "color/kami_qs_tile_inactive_bg": {
-        "day": "#FFCB96FF",
-        "night": "#FFCB96FF"
+        "day": "#FF000000",
+        "night": "#FF000000"
       },
-      "color/kami_qs_tile_inactive_fg": "#FF000000",
+      "color/kami_qs_tile_inactive_fg": "#FFCB96FF",
       "color/kami_brightness_slider_active": "#FFCB96FF",
       "color/kami_brightness_slider_inactive": {
         "day": "#FF52336B",
@@ -138,6 +139,7 @@
         "day": "#FF20152F",
         "night": "#FF20152F"
       },
+      "drawable/kami_page_wallpaper": "assets/wallpaper.png",
       "color/kami_bento_tile": {
         "day": "#FF52336B",
         "night": "#FF52336B"
@@ -146,8 +148,8 @@
         "day": "#FF52336B",
         "night": "#FF52336B"
       },
-      "bool/kami_page_translucent": false,
-      "bool/kami_page_show_wallpaper": false,
+      "bool/kami_page_translucent": true,
+      "bool/kami_page_show_wallpaper": true,
       "dimen/kami_bento_radius": "0dp",
       "dimen/kami_hero_radius": "0dp",
       "dimen/kami_bento_icon_radius": "0dp",
