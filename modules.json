@@ -110,7 +110,7 @@
       "name": "PixelCraft UI for KamiOS/CumOS-RE",
       "version": "1.0",
       "author": "Prabhu",
-      "description": "Cyber Pixel UI with square black inactive QS tiles, purple active tiles, pixel-art icons, rounded purple sliders, stock typography, and wallpaper-visible Settings pages.",
+      "description": "Cyber Pixel UI with square black inactive QS tiles, purple active tiles, pixel-art icons, rounded purple sliders and stock typography.",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/pixelcraft-kamios.zip",
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pixelcraft-kamios/thumbnail.png",
       "screenshots": []
