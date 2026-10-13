@@ -1,0 +1,20 @@
+{
+  "format": "kamios-module",
+  "version": 1,
+  "id": "volte-rounded-bold",
+  "name": "Volte Rounded Bold for KamiOS/CumOS-RE",
+  "author": "Prabhu",
+  "description": "Volte Rounded Bold static system font for KamiOS/CumOS-RE",
+  "restart": true,
+  "fonts": {
+    "regular": {
+      "file": "fonts/volterounded-bold.ttf"
+    },
+    "medium": {
+      "file": "fonts/volterounded-bold.ttf"
+    },
+    "bold": {
+      "file": "fonts/volterounded-bold.ttf"
+    }
+  }
+}

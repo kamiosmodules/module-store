@@ -1,0 +1,30 @@
+
+{
+  "format": "kamios-module",
+  "version": 1,
+  "id": "inter-font",
+  "name": "Inter Font for KamiOS/CumOS-RE",
+  "author": "Prabhu",
+  "description": "Inter Variable system font for KamiOS",
+  "restart": true,
+  "fonts": {
+    "regular": {
+      "file": "fonts/Inter.ttf",
+      "axes": {
+        "wght": 400
+      }
+    },
+    "medium": {
+      "file": "fonts/Inter.ttf",
+      "axes": {
+        "wght": 500
+      }
+    },
+    "bold": {
+      "file": "fonts/Inter.ttf",
+      "axes": {
+        "wght": 700
+      }
+    }
+  }
+}
