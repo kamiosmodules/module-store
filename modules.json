@@ -2,6 +2,18 @@
   "updated": "2026-10-13",
   "modules": [
     {
+      "id": "coloros-fusion",
+      "name": "ColorOS 0.001% Accuracy",
+      "version": "1.0",
+      "author": "Prabhu",
+      "description": "Module that barely tries to make it look like ColorOS, vibecoded",
+      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/coloros-fusion.zip",
+      "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/coloros-fusion/thumbnail.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/coloros-fusion/screenshots/6229034105421108520_119.jpg"
+      ]
+    },
+    {
       "id": "flyme-aios2",
       "name": "Flyme AIOS 2 for KamiOS/CumOS-RE",
       "version": "1.0",
@@ -15,6 +27,18 @@
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-aios2/screenshots/Screenshot_20261012-213522_KamiOS Home.png",
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-aios2/screenshots/Screenshot_20261012-213524_KamiOS Home.png",
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-aios2/screenshots/markup_738.png"
+      ]
+    },
+    {
+      "id": "inter-font",
+      "name": "Inter Font for KamiOS/CumOS-RE",
+      "version": "1.0",
+      "author": "Prabhu",
+      "description": "Inter Variable system font for KamiOS",
+      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/inter-font.zip",
+      "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/inter-font/thumbnail.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/inter-font/screenshots/6228986409809286116_119.jpg"
       ]
     },
     {
@@ -58,6 +82,18 @@
       ]
     },
     {
+      "id": "oneplus-sans",
+      "name": "OnePlus Sans (Oppo Sans 4.0)",
+      "version": "1.0",
+      "author": "Prabhu",
+      "description": "OPlus Sans variable system font",
+      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/oneplus-sans.zip",
+      "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/oneplus-sans/thumbnail.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/oneplus-sans/screenshots/6221762412256367766_119.jpg"
+      ]
+    },
+    {
       "id": "pacman-pill",
       "name": "Pacman Pill",
       "version": "1.0",
@@ -68,6 +104,16 @@
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pacman-pill/screenshots/Screenshot_20261012-165932_KamiOS Home.png"
       ]
+    },
+    {
+      "id": "pixelcraft-kamios",
+      "name": "PixelCraft UI for KamiOS/CumOS-RE",
+      "version": "1.0",
+      "author": "Prabhu",
+      "description": "Cyber Pixel Full Pixel Art edition with square purple Quick Settings tiles, black pixel-art icons, rounded purple sliders and stock typography.",
+      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/pixelcraft-kamios.zip",
+      "thumbnail": null,
+      "screenshots": []
     },
     {
       "id": "spiderverse",
@@ -83,6 +129,18 @@
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/spiderverse/screenshots/Screenshot_20261012-164619_System UI.png",
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/spiderverse/screenshots/Screenshot_20261012-164626_Settings.png",
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/spiderverse/screenshots/Screenshot_20261012-164642_Settings.png"
+      ]
+    },
+    {
+      "id": "volte-rounded-bold",
+      "name": "Volte Rounded Bold for KamiOS/CumOS-RE",
+      "version": "1.0",
+      "author": "Prabhu",
+      "description": "Volte Rounded Bold static system font for KamiOS/CumOS-RE",
+      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/volte-rounded-bold.zip",
+      "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/volte-rounded-bold/thumbnail.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/volte-rounded-bold/screenshots/6228986409809286118_119.jpg"
       ]
     }
   ]
