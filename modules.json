@@ -113,7 +113,10 @@
       "description": "Cyber Pixel UI with square black inactive QS tiles, purple active tiles, pixel-art icons, rounded purple sliders and stock typography.",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/pixelcraft-kamios.zip",
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pixelcraft-kamios/thumbnail.png",
-      "screenshots": []
+      "screenshots": [
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pixelcraft-kamios/screenshots/Screenshot_20261013-214331_System UI.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pixelcraft-kamios/screenshots/Screenshot_20261013-214347_System UI.png"
+      ]
     },
     {
       "id": "spiderverse",
