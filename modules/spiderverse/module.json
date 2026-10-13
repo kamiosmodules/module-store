@@ -5,6 +5,10 @@
   "name": "Spider-Verse",
   "author": "MrSteelballs",
   "description": "Spider-Man theme: red/blue palette, web-cut battery, spider-sense icons, animated shade, hero card, silk gesture pill and web-flow sliders.",
+  "wallpaper": {
+  "home": "assets/wallpaper.jpg",
+  "lock": "assets/wallpaper.jpg"
+  },
   "settings": {
     "system/statusbar_colored_icons": 0,
     "system/status_bar_clock_bold": 1,

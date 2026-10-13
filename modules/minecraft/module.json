@@ -5,6 +5,10 @@
  "name": "Minecraft",
  "author": "MrSteelballs",
  "description": "A Minecraft look for KamiOS: square blocky tiles, grass-green accents, enchantment-glint notifications, XP-orb shade animation, classic battery, pixel icons for the volume panel and status bar, textured volume and brightness sliders. Use with Minecraft XP pill for best experience",
+ "wallpaper": {
+  "home": "files/wallpaper.jpg",
+  "lock": "files/wallpaper.jpg"
+  },
  "settings": {
   "system/qs_tile_shape": 3,
   "system/qs_tile_animation_style": 1,
