@@ -136,7 +136,7 @@ ________________________________________________________________________________
 
 Made with care by the KamiOS Team.
 
-Join the community on Telegram: t.me/kamiosmodules | t.me/kamiosofficial
+Join the community on Telegram: https://t.me/kamiosmodules | https://t.me/kamiosofficial
 
 KamiOS. Released under open-source terms.
 
