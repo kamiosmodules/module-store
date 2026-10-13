@@ -14,19 +14,19 @@
       ]
     },
     {
-      "id": "flyme-aios2",
+      "id": "flyme-os",
       "name": "Flyme AIOS 2 for KamiOS/CumOS-RE",
       "version": "1.0",
       "author": "Prabhu",
       "description": "Flyme AIOS 2 inspired bare visual remaster for KamiOS 1.1. Original artwork, QS tiles, shade, Settings, notification, volume, battery and navigation. Unofficial community theme.",
-      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/flyme-aios2.zip",
-      "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-aios2/thumbnail.png",
+      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/flyme-os.zip",
+      "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-os/thumbnail.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-aios2/screenshots/Screenshot_20261012-213515_System UI.png",
-        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-aios2/screenshots/Screenshot_20261012-213518_System UI.png",
-        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-aios2/screenshots/Screenshot_20261012-213522_KamiOS Home.png",
-        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-aios2/screenshots/Screenshot_20261012-213524_KamiOS Home.png",
-        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-aios2/screenshots/markup_738.png"
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-os/screenshots/Screenshot_20261012-213515_System UI.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-os/screenshots/Screenshot_20261012-213518_System UI.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-os/screenshots/Screenshot_20261012-213522_KamiOS Home.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-os/screenshots/Screenshot_20261012-213524_KamiOS Home.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-os/screenshots/markup_738.png"
       ]
     },
     {
