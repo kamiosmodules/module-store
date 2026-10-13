@@ -1,0 +1,158 @@
+{
+  "format": "kamios-module",
+  "version": 1,
+  "id": "pixelcraft-kamios",
+  "name": "PixelCraft UI for KamiOS/CumOS-RE",
+  "author": "Prabhu",
+  "description": "Cyber Pixel Full Pixel Art edition with square purple Quick Settings tiles, black pixel-art icons, rounded purple sliders and stock typography.",
+  "settings": {
+    "system/qs_panel_style": 0,
+    "system/qs_tile_shape": 0,
+    "system/qs_tile_animation_style": 0,
+    "system/qs_show_volume_slider": 0,
+    "system/qs_brightness_slider_shape": 0,
+    "system/qs_footer_show_edit": true,
+    "system/qs_footer_show_settings": true,
+    "system/qs_footer_show_power_menu": true,
+    "system/qs_tile_gradient": false,
+    "system/qs_brightness_slider_gradient": false,
+    "system/volume_slider_gradient": false,
+    "system/kami_qs_dual_tone": false,
+    "system/kami_shade_dual_tone": false,
+    "system/kami_dialog_blur": false,
+    "lineage_system/status_bar_clock": 2,
+    "lineage_system/status_bar_battery_style": 0,
+    "lineage_system/status_bar_show_battery_percent": 1,
+    "system/status_bar_clock_bold": true,
+    "system/status_bar_clock_seconds": false,
+    "system/status_bar_clock_date_display": 0,
+    "system/statusbar_battery_bar": false,
+    "system/lockscreen_show_carrier": 0,
+    "system/lockscreen_weather_enabled": false,
+    "system/lockscreen_battery_info": false,
+    "system/screen_off_animation": 0,
+    "secure/lock_screen_custom_clock_size_scale": 1.15,
+    "secure/lock_screen_custom_clock_opacity": 100,
+    "lineage_secure/qs_show_brightness_slider": 2,
+    "lineage_secure/qs_brightness_slider_position": 1
+  },
+  "targets": {
+    "com.android.systemui": {
+      "dimen/common_tile_default_active_tile_corner_radius": "0dp",
+      "dimen/common_tile_default_inactive_tile_corner_radius": "0dp",
+      "dimen/common_tile_default_active_icon_corner_radius": "0dp",
+      "dimen/common_tile_default_inactive_icon_corner_radius": "0dp",
+      "dimen/qs_corner_radius": "0dp",
+      "integer/kami_slider_shape": 0,
+      "integer/kami_footer_button_shape": 0,
+      "bool/kami_blur_enabled": false,
+      "bool/kami_volume_all_sliders": false,
+      "color/shade_panel_fallback_fg": {
+        "day": "#FFCB96FF",
+        "night": "#FFCB96FF"
+      },
+      "color/shade_panel_fallback_bg": {
+        "day": "#FF20152F",
+        "night": "#FF20152F"
+      },
+      "color/shade_panel_fallback": {
+        "day": "#FF20152F",
+        "night": "#FF20152F"
+      },
+      "color/notification_scrim_base": {
+        "day": "#CC120B1D",
+        "night": "#CC120B1D"
+      },
+      "color/shade_scrim_background_dark": "#99000000",
+      "dimen/notification_corner_radius": "0dp",
+      "dimen/notification_corner_radius_small": "0dp",
+      "dimen/notification_scrim_corner_radius": "0dp",
+      "color/kami_notification_bg": {
+        "day": "#FF302044",
+        "night": "#FF302044"
+      },
+      "color/kami_qs_tile_active_bg": {
+        "day": "#FFCB96FF",
+        "night": "#FFCB96FF"
+      },
+      "color/kami_qs_tile_active_fg": "#FF000000",
+      "color/kami_qs_tile_inactive_bg": {
+        "day": "#FFCB96FF",
+        "night": "#FFCB96FF"
+      },
+      "color/kami_qs_tile_inactive_fg": "#FF000000",
+      "color/kami_brightness_slider_active": "#FFCB96FF",
+      "color/kami_brightness_slider_inactive": {
+        "day": "#FF52336B",
+        "night": "#FF52336B"
+      },
+      "color/kami_volume_slider_active": "#FFCB96FF",
+      "color/kami_volume_slider_inactive": "#FF52336B",
+      "dimen/volume_dialog_width": "64dp",
+      "dimen/volume_dialog_background_corner_radius": "28dp",
+      "dimen/volume_dialog_slider_height": "250dp",
+      "dimen/volume_dialog_components_spacing": "6dp",
+      "dimen/volume_dialog_window_margin": "10dp",
+      "dimen/volume_dialog_background_surface_blur_radius": "0dp",
+      "color/kami_volume_dialog_background": {
+        "day": "#FF20152F",
+        "night": "#FF20152F"
+      },
+      "integer/kami_volume_slider_corner": 26,
+      "integer/kami_volume_slider_thickness": 44,
+      "dimen/keyguard_affordance_fixed_width": "52dp",
+      "dimen/keyguard_affordance_fixed_height": "52dp",
+      "dimen/keyguard_affordance_fixed_radius": "0dp",
+      "dimen/keyguard_affordance_fixed_padding": "13dp",
+      "color/kami_lockscreen_shortcut_active_bg": "#FFCB96FF",
+      "color/kami_lockscreen_shortcut_active_fg": "#FF20152F",
+      "color/kami_lockscreen_shortcut_inactive_bg": "#FF52336B",
+      "color/kami_lockscreen_shortcut_inactive_fg": "#FFE9D5FF",
+      "color/kami_back_arrow": "#FFCB96FF",
+      "color/kami_back_arrow_bg": "#FF20152F",
+      "integer/config_backGestureArrowMode": 0,
+      "dimen/navigation_edge_arrow_thickness": "2dp",
+      "drawable/qs_airplane_icon_on": "assets/icons/airplane.png",
+      "drawable/qs_airplane_icon_off": "assets/icons/airplane.png",
+      "drawable/qs_flashlight_icon_on": "assets/icons/flashlight.png",
+      "drawable/qs_flashlight_icon_off": "assets/icons/flashlight.png",
+      "drawable/qs_bluetooth_icon_on": "assets/icons/bluetooth.png",
+      "drawable/qs_bluetooth_icon_off": "assets/icons/bluetooth.png",
+      "drawable/qs_dnd_icon_on": "assets/icons/dnd.png",
+      "drawable/qs_dnd_icon_off": "assets/icons/dnd.png",
+      "drawable/qs_location_icon_on": "assets/icons/location.png",
+      "drawable/qs_location_icon_off": "assets/icons/location.png",
+      "drawable/qs_hotspot_icon_on": "assets/icons/hotspot.png",
+      "drawable/qs_hotspot_icon_off": "assets/icons/hotspot.png",
+      "drawable/qs_nightlight_icon_on": "assets/icons/nightlight.png",
+      "drawable/qs_nightlight_icon_off": "assets/icons/nightlight.png",
+      "drawable/qs_auto_rotate_icon_on": "assets/icons/auto_rotate.png",
+      "drawable/qs_auto_rotate_icon_off": "assets/icons/auto_rotate.png",
+      "drawable/qs_battery_saver_icon_on": "assets/icons/battery_saver.png",
+      "drawable/qs_battery_saver_icon_off": "assets/icons/battery_saver.png",
+      "drawable/qs_data_saver_icon_on": "assets/icons/data_saver.png",
+      "drawable/qs_data_saver_icon_off": "assets/icons/data_saver.png"
+    },
+    "com.android.settings": {
+      "color/kami_page_bg": {
+        "day": "#FF20152F",
+        "night": "#FF20152F"
+      },
+      "color/kami_bento_tile": {
+        "day": "#FF52336B",
+        "night": "#FF52336B"
+      },
+      "color/kami_bento_hero": {
+        "day": "#FF52336B",
+        "night": "#FF52336B"
+      },
+      "bool/kami_page_translucent": false,
+      "bool/kami_page_show_wallpaper": false,
+      "dimen/kami_bento_radius": "0dp",
+      "dimen/kami_hero_radius": "0dp",
+      "dimen/kami_bento_icon_radius": "0dp",
+      "dimen/kami_bento_gap": "8dp"
+    }
+  },
+  "restart": true
+}
