@@ -767,7 +767,7 @@
  "id": "metro-launcher",
  "name": "Metro Launcher",
  "author": "KamiOS",
- "module_version": "1.6",
+ "module_version": "1.7",
  "description": "The Windows Phone look for the whole phone: the Metro launcher as the home app (Windows Phone 8, Windows 10 Mobile or Windows 11 style, chosen in its settings), and flat square quick settings, notifications, sliders and volume panel, a Metro switch, Settings as tiles on a pivot, a light font and turnstile transitions. Choose the accent colour (the same as in the launcher), the shade background, the transitions and the volume panel below.",
  "category": "launcher",
  "home_app": "com.metro.launcher",
