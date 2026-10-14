@@ -1,0 +1,782 @@
+{
+ "format": "kamios-module",
+ "version": 1,
+ "category": "theme",
+ "group": "shade-background",
+ "restart": true,
+ "accent": "#0050EF",
+ "accent_style": "VIBRANT",
+ "fonts": {
+  "regular": {
+   "file": "fonts/OpenSans.ttf",
+   "axes": {
+    "wght": 300,
+    "wdth": 100
+   }
+  },
+  "medium": {
+   "file": "fonts/OpenSans.ttf",
+   "axes": {
+    "wght": 400,
+    "wdth": 100
+   }
+  },
+  "bold": {
+   "file": "fonts/OpenSans.ttf",
+   "axes": {
+    "wght": 600,
+    "wdth": 100
+   }
+  }
+ },
+ "targets": {
+  "com.android.systemui": {
+   "dimen/common_tile_default_active_tile_corner_radius": "0dp",
+   "dimen/common_tile_default_inactive_tile_corner_radius": "0dp",
+   "dimen/common_tile_default_active_icon_corner_radius": "0dp",
+   "dimen/common_tile_default_inactive_icon_corner_radius": "0dp",
+   "dimen/qs_corner_radius": "0dp",
+   "dimen/notification_corner_radius": "0dp",
+   "dimen/notification_corner_radius_small": "0dp",
+   "dimen/notification_scrim_corner_radius": "0dp",
+   "bool/kami_blur_enabled": false,
+   "integer/kami_slider_shape": 3,
+   "integer/kami_footer_button_shape": 1,
+   "color/kami_qs_tile_active_fg": "#FFFFFFFF",
+   "color/kami_qs_tile_inactive_bg": {
+    "day": "#FFCFCFCF",
+    "night": "#FF3A3A3A"
+   },
+   "color/kami_qs_tile_inactive_fg": {
+    "day": "#FF1A1A1A",
+    "night": "#FFFFFFFF"
+   },
+   "color/kami_notification_bg": {
+    "day": "#FFE3E3E3",
+    "night": "#FF1F1F1F"
+   },
+   "color/kami_brightness_slider_inactive": {
+    "day": "#FFBDBDBD",
+    "night": "#FF4D4D4D"
+   },
+   "dimen/volume_dialog_width": "64dp",
+   "dimen/volume_dialog_background_corner_radius": "0dp",
+   "dimen/volume_dialog_background_surface_blur_radius": "0dp",
+   "dimen/volume_dialog_window_margin": "0dp",
+   "color/kami_volume_dialog_background": {
+    "day": "#FFF2F2F2",
+    "night": "#FF000000"
+   },
+   "color/kami_volume_slider_inactive": {
+    "day": "#FFBDBDBD",
+    "night": "#FF4D4D4D"
+   },
+   "integer/kami_volume_slider_corner": 0,
+   "integer/kami_volume_slider_thickness": 14,
+   "integer/kami_volume_enter_style": 0,
+   "dimen/volume_dialog_background_square_corner_radius": "0dp",
+   "dimen/volume_dialog_ringer_selected_button_background_radius": "0dp",
+   "color/kami_volume_ringer_selected_fg": "#FFFFFFFF",
+   "color/kami_volume_ringer_bg": {
+    "day": "#FFCFCFCF",
+    "night": "#FF3A3A3A"
+   },
+   "color/kami_volume_ringer_fg": {
+    "day": "#FF1A1A1A",
+    "night": "#FFFFFFFF"
+   },
+   "drawable/kami_battery_frame": "img/battery_frame.png",
+   "drawable/kami_battery_fill": "img/battery_fill.png",
+   "drawable/kami_battery_charging": "img/battery_bolt.png",
+   "bool/kami_battery_charging_cutout": true,
+   "dimen/keyguard_affordance_fixed_radius": "0dp",
+   "color/kami_lockscreen_shortcut_inactive_bg": {
+    "day": "#FFCFCFCF",
+    "night": "#FF3A3A3A"
+   },
+   "color/kami_lockscreen_shortcut_inactive_fg": {
+    "day": "#FF1A1A1A",
+    "night": "#FFFFFFFF"
+   },
+   "color/kami_splash_background": "#FF000000",
+   "integer/kami_splash_min_duration": 0,
+   "color/kami_back_arrow_bg": {
+    "day": "#FFE3E3E3",
+    "night": "#FF1F1F1F"
+   }
+  },
+  "com.android.launcher3": {
+   "dimen/kami_launch_duration_scale": 0.8,
+   "dimen/kami_close_speed": 1.2,
+   "dimen/kami_pill_height_scale": 0.6
+  },
+  "android": {
+   "string/kami_curve_standard": "M 0,0 C 0.1,0.9 0.2,1 1,1",
+   "string/kami_curve_fast_out_slow_in": "M 0,0 C 0.1,0.9 0.2,1 1,1",
+   "string/kami_curve_emphasized": "M 0,0 C 0.05,0.8 0.1,1 1,1",
+   "string/kami_curve_emphasized_decelerate": "M 0,0 C 0.05,0.8 0.1,1 1,1",
+   "integer/kami_activity_dur": 320,
+   "integer/kami_task_dur": 340,
+   "integer/config_shortAnimTime": 140,
+   "integer/config_mediumAnimTime": 240,
+   "integer/config_longAnimTime": 320
+  },
+  "com.android.settings": {
+   "dimen/kami_bento_radius": "0dp",
+   "dimen/kami_hero_radius": "0dp",
+   "dimen/kami_bento_icon_radius": "0dp",
+   "dimen/kami_bento_gap": "4dp",
+   "dimen/kami_bento_tile_height": "96dp",
+   "color/kami_bento_tile": {
+    "day": "#FFD6D6D6",
+    "night": "#FF252525"
+   },
+   "color/kami_page_bg": {
+    "day": "#FFFFFFFF",
+    "night": "#FF000000"
+   },
+   "color/kami_switch_track_off": "#FF6E6E6E",
+   "color/kami_switch_thumb_on": "#FFFFFFFF",
+   "color/kami_switch_thumb_off": "#FFFFFFFF",
+   "color/kami_slider_inactive": {
+    "day": "#FFBDBDBD",
+    "night": "#FF4D4D4D"
+   },
+   "integer/kami_switch_sheet_frames": 12,
+   "integer/kami_switch_duration": 260
+  }
+ },
+ "settings": {
+  "system/qs_tiles_columns": 4,
+  "system/volume_slider_gradient": false
+ },
+ "settings_layout": {
+  "main": {
+   "hero": false,
+   "style": "list",
+   "text": {
+    "title_size": 20,
+    "summary_size": 13,
+    "summary_lines": 1
+   }
+  },
+  "pages": {
+   "nav": "pivot",
+   "transition": "flip",
+   "title": {
+    "case": "lower",
+    "size": 40
+   }
+  }
+ },
+ "overlays": {
+  "android": {
+   "drawable/ic_signal_cellular_0_4_bar": "img/signal4_0.png",
+   "drawable/ic_signal_cellular_1_4_bar": "img/signal4_1.png",
+   "drawable/ic_signal_cellular_2_4_bar": "img/signal4_2.png",
+   "drawable/ic_signal_cellular_3_4_bar": "img/signal4_3.png",
+   "drawable/ic_signal_cellular_4_4_bar": "img/signal4_4.png",
+   "drawable/ic_signal_cellular_0_5_bar": "img/signal5_0.png",
+   "drawable/ic_signal_cellular_1_5_bar": "img/signal5_1.png",
+   "drawable/ic_signal_cellular_2_5_bar": "img/signal5_2.png",
+   "drawable/ic_signal_cellular_3_5_bar": "img/signal5_3.png",
+   "drawable/ic_signal_cellular_4_5_bar": "img/signal5_4.png",
+   "drawable/ic_signal_cellular_5_5_bar": "img/signal5_5.png",
+   "drawable/ic_wifi_signal_0": "img/wifi_0.png",
+   "drawable/ic_wifi_signal_1": "img/wifi_1.png",
+   "drawable/ic_wifi_signal_2": "img/wifi_2.png",
+   "drawable/ic_wifi_signal_3": "img/wifi_3.png",
+   "drawable/ic_wifi_signal_4": "img/wifi_4.png"
+  },
+  "com.android.systemui": {
+   "drawable/ic_mobile_0_4_bar": "img/signal4_0.png",
+   "drawable/ic_mobile_1_4_bar": "img/signal4_1.png",
+   "drawable/ic_mobile_2_4_bar": "img/signal4_2.png",
+   "drawable/ic_mobile_3_4_bar": "img/signal4_3.png",
+   "drawable/ic_mobile_4_4_bar": "img/signal4_4.png",
+   "drawable/ic_mobile_0_5_bar": "img/signal5_0.png",
+   "drawable/ic_mobile_1_5_bar": "img/signal5_1.png",
+   "drawable/ic_mobile_2_5_bar": "img/signal5_2.png",
+   "drawable/ic_mobile_3_5_bar": "img/signal5_3.png",
+   "drawable/ic_mobile_4_5_bar": "img/signal5_4.png",
+   "drawable/ic_mobile_5_5_bar": "img/signal5_5.png",
+   "drawable/ic_wifi_0": "img/wifi_0.png",
+   "drawable/ic_wifi_1": "img/wifi_1.png",
+   "drawable/ic_wifi_2": "img/wifi_3.png",
+   "drawable/ic_wifi_3": "img/wifi_4.png"
+  }
+ },
+ "options": {
+  "accent": {
+   "title": "Accent colour",
+   "default": "cobalt",
+   "choices": {
+    "lime": {
+     "title": "Lime",
+     "targets": {
+      "com.android.systemui": {
+       "color/kami_qs_tile_active_bg": "#FFA4C400",
+       "color/kami_brightness_slider_active": "#FFA4C400",
+       "color/kami_volume_slider_active": "#FFA4C400",
+       "color/kami_back_arrow": "#FFA4C400",
+       "color/kami_lockscreen_shortcut_active_bg": "#FFA4C400",
+       "color/kami_volume_ringer_selected_bg": "#FFA4C400"
+      },
+      "com.android.launcher3": {
+       "color/taskbar_stashed_handle_light_color": "#FFA4C400",
+       "color/taskbar_stashed_handle_dark_color": "#FFA4C400"
+      },
+      "com.android.settings": {
+       "color/kami_slider_active": "#FFA4C400",
+       "color/kami_bento_hero": "#FFA4C400",
+       "color/kami_bento_row_icon": "#FFA4C400",
+       "drawable/kami_switch_sheet": "img/switch_lime.png",
+       "color/kami_switch_track_on": "#FFA4C400"
+      }
+     }
+    },
+    "green": {
+     "title": "Green",
+     "targets": {
+      "com.android.systemui": {
+       "color/kami_qs_tile_active_bg": "#FF60A917",
+       "color/kami_brightness_slider_active": "#FF60A917",
+       "color/kami_volume_slider_active": "#FF60A917",
+       "color/kami_back_arrow": "#FF60A917",
+       "color/kami_lockscreen_shortcut_active_bg": "#FF60A917",
+       "color/kami_volume_ringer_selected_bg": "#FF60A917"
+      },
+      "com.android.launcher3": {
+       "color/taskbar_stashed_handle_light_color": "#FF60A917",
+       "color/taskbar_stashed_handle_dark_color": "#FF60A917"
+      },
+      "com.android.settings": {
+       "color/kami_slider_active": "#FF60A917",
+       "color/kami_bento_hero": "#FF60A917",
+       "color/kami_bento_row_icon": "#FF60A917",
+       "drawable/kami_switch_sheet": "img/switch_green.png",
+       "color/kami_switch_track_on": "#FF60A917"
+      }
+     }
+    },
+    "emerald": {
+     "title": "Emerald",
+     "targets": {
+      "com.android.systemui": {
+       "color/kami_qs_tile_active_bg": "#FF008A00",
+       "color/kami_brightness_slider_active": "#FF008A00",
+       "color/kami_volume_slider_active": "#FF008A00",
+       "color/kami_back_arrow": "#FF008A00",
+       "color/kami_lockscreen_shortcut_active_bg": "#FF008A00",
+       "color/kami_volume_ringer_selected_bg": "#FF008A00"
+      },
+      "com.android.launcher3": {
+       "color/taskbar_stashed_handle_light_color": "#FF008A00",
+       "color/taskbar_stashed_handle_dark_color": "#FF008A00"
+      },
+      "com.android.settings": {
+       "color/kami_slider_active": "#FF008A00",
+       "color/kami_bento_hero": "#FF008A00",
+       "color/kami_bento_row_icon": "#FF008A00",
+       "drawable/kami_switch_sheet": "img/switch_emerald.png",
+       "color/kami_switch_track_on": "#FF008A00"
+      }
+     }
+    },
+    "teal": {
+     "title": "Teal",
+     "targets": {
+      "com.android.systemui": {
+       "color/kami_qs_tile_active_bg": "#FF00ABA9",
+       "color/kami_brightness_slider_active": "#FF00ABA9",
+       "color/kami_volume_slider_active": "#FF00ABA9",
+       "color/kami_back_arrow": "#FF00ABA9",
+       "color/kami_lockscreen_shortcut_active_bg": "#FF00ABA9",
+       "color/kami_volume_ringer_selected_bg": "#FF00ABA9"
+      },
+      "com.android.launcher3": {
+       "color/taskbar_stashed_handle_light_color": "#FF00ABA9",
+       "color/taskbar_stashed_handle_dark_color": "#FF00ABA9"
+      },
+      "com.android.settings": {
+       "color/kami_slider_active": "#FF00ABA9",
+       "color/kami_bento_hero": "#FF00ABA9",
+       "color/kami_bento_row_icon": "#FF00ABA9",
+       "drawable/kami_switch_sheet": "img/switch_teal.png",
+       "color/kami_switch_track_on": "#FF00ABA9"
+      }
+     }
+    },
+    "cyan": {
+     "title": "Cyan",
+     "targets": {
+      "com.android.systemui": {
+       "color/kami_qs_tile_active_bg": "#FF1BA1E2",
+       "color/kami_brightness_slider_active": "#FF1BA1E2",
+       "color/kami_volume_slider_active": "#FF1BA1E2",
+       "color/kami_back_arrow": "#FF1BA1E2",
+       "color/kami_lockscreen_shortcut_active_bg": "#FF1BA1E2",
+       "color/kami_volume_ringer_selected_bg": "#FF1BA1E2"
+      },
+      "com.android.launcher3": {
+       "color/taskbar_stashed_handle_light_color": "#FF1BA1E2",
+       "color/taskbar_stashed_handle_dark_color": "#FF1BA1E2"
+      },
+      "com.android.settings": {
+       "color/kami_slider_active": "#FF1BA1E2",
+       "color/kami_bento_hero": "#FF1BA1E2",
+       "color/kami_bento_row_icon": "#FF1BA1E2",
+       "drawable/kami_switch_sheet": "img/switch_cyan.png",
+       "color/kami_switch_track_on": "#FF1BA1E2"
+      }
+     }
+    },
+    "cobalt": {
+     "title": "Cobalt",
+     "targets": {
+      "com.android.systemui": {
+       "color/kami_qs_tile_active_bg": "#FF0050EF",
+       "color/kami_brightness_slider_active": "#FF0050EF",
+       "color/kami_volume_slider_active": "#FF0050EF",
+       "color/kami_back_arrow": "#FF0050EF",
+       "color/kami_lockscreen_shortcut_active_bg": "#FF0050EF",
+       "color/kami_volume_ringer_selected_bg": "#FF0050EF"
+      },
+      "com.android.launcher3": {
+       "color/taskbar_stashed_handle_light_color": "#FF0050EF",
+       "color/taskbar_stashed_handle_dark_color": "#FF0050EF"
+      },
+      "com.android.settings": {
+       "color/kami_slider_active": "#FF0050EF",
+       "color/kami_bento_hero": "#FF0050EF",
+       "color/kami_bento_row_icon": "#FF0050EF",
+       "drawable/kami_switch_sheet": "img/switch_cobalt.png",
+       "color/kami_switch_track_on": "#FF0050EF"
+      }
+     }
+    },
+    "indigo": {
+     "title": "Indigo",
+     "targets": {
+      "com.android.systemui": {
+       "color/kami_qs_tile_active_bg": "#FF6A00FF",
+       "color/kami_brightness_slider_active": "#FF6A00FF",
+       "color/kami_volume_slider_active": "#FF6A00FF",
+       "color/kami_back_arrow": "#FF6A00FF",
+       "color/kami_lockscreen_shortcut_active_bg": "#FF6A00FF",
+       "color/kami_volume_ringer_selected_bg": "#FF6A00FF"
+      },
+      "com.android.launcher3": {
+       "color/taskbar_stashed_handle_light_color": "#FF6A00FF",
+       "color/taskbar_stashed_handle_dark_color": "#FF6A00FF"
+      },
+      "com.android.settings": {
+       "color/kami_slider_active": "#FF6A00FF",
+       "color/kami_bento_hero": "#FF6A00FF",
+       "color/kami_bento_row_icon": "#FF6A00FF",
+       "drawable/kami_switch_sheet": "img/switch_indigo.png",
+       "color/kami_switch_track_on": "#FF6A00FF"
+      }
+     }
+    },
+    "violet": {
+     "title": "Violet",
+     "targets": {
+      "com.android.systemui": {
+       "color/kami_qs_tile_active_bg": "#FFAA00FF",
+       "color/kami_brightness_slider_active": "#FFAA00FF",
+       "color/kami_volume_slider_active": "#FFAA00FF",
+       "color/kami_back_arrow": "#FFAA00FF",
+       "color/kami_lockscreen_shortcut_active_bg": "#FFAA00FF",
+       "color/kami_volume_ringer_selected_bg": "#FFAA00FF"
+      },
+      "com.android.launcher3": {
+       "color/taskbar_stashed_handle_light_color": "#FFAA00FF",
+       "color/taskbar_stashed_handle_dark_color": "#FFAA00FF"
+      },
+      "com.android.settings": {
+       "color/kami_slider_active": "#FFAA00FF",
+       "color/kami_bento_hero": "#FFAA00FF",
+       "color/kami_bento_row_icon": "#FFAA00FF",
+       "drawable/kami_switch_sheet": "img/switch_violet.png",
+       "color/kami_switch_track_on": "#FFAA00FF"
+      }
+     }
+    },
+    "pink": {
+     "title": "Pink",
+     "targets": {
+      "com.android.systemui": {
+       "color/kami_qs_tile_active_bg": "#FFF472D0",
+       "color/kami_brightness_slider_active": "#FFF472D0",
+       "color/kami_volume_slider_active": "#FFF472D0",
+       "color/kami_back_arrow": "#FFF472D0",
+       "color/kami_lockscreen_shortcut_active_bg": "#FFF472D0",
+       "color/kami_volume_ringer_selected_bg": "#FFF472D0"
+      },
+      "com.android.launcher3": {
+       "color/taskbar_stashed_handle_light_color": "#FFF472D0",
+       "color/taskbar_stashed_handle_dark_color": "#FFF472D0"
+      },
+      "com.android.settings": {
+       "color/kami_slider_active": "#FFF472D0",
+       "color/kami_bento_hero": "#FFF472D0",
+       "color/kami_bento_row_icon": "#FFF472D0",
+       "drawable/kami_switch_sheet": "img/switch_pink.png",
+       "color/kami_switch_track_on": "#FFF472D0"
+      }
+     }
+    },
+    "magenta": {
+     "title": "Magenta",
+     "targets": {
+      "com.android.systemui": {
+       "color/kami_qs_tile_active_bg": "#FFD80073",
+       "color/kami_brightness_slider_active": "#FFD80073",
+       "color/kami_volume_slider_active": "#FFD80073",
+       "color/kami_back_arrow": "#FFD80073",
+       "color/kami_lockscreen_shortcut_active_bg": "#FFD80073",
+       "color/kami_volume_ringer_selected_bg": "#FFD80073"
+      },
+      "com.android.launcher3": {
+       "color/taskbar_stashed_handle_light_color": "#FFD80073",
+       "color/taskbar_stashed_handle_dark_color": "#FFD80073"
+      },
+      "com.android.settings": {
+       "color/kami_slider_active": "#FFD80073",
+       "color/kami_bento_hero": "#FFD80073",
+       "color/kami_bento_row_icon": "#FFD80073",
+       "drawable/kami_switch_sheet": "img/switch_magenta.png",
+       "color/kami_switch_track_on": "#FFD80073"
+      }
+     }
+    },
+    "crimson": {
+     "title": "Crimson",
+     "targets": {
+      "com.android.systemui": {
+       "color/kami_qs_tile_active_bg": "#FFA20025",
+       "color/kami_brightness_slider_active": "#FFA20025",
+       "color/kami_volume_slider_active": "#FFA20025",
+       "color/kami_back_arrow": "#FFA20025",
+       "color/kami_lockscreen_shortcut_active_bg": "#FFA20025",
+       "color/kami_volume_ringer_selected_bg": "#FFA20025"
+      },
+      "com.android.launcher3": {
+       "color/taskbar_stashed_handle_light_color": "#FFA20025",
+       "color/taskbar_stashed_handle_dark_color": "#FFA20025"
+      },
+      "com.android.settings": {
+       "color/kami_slider_active": "#FFA20025",
+       "color/kami_bento_hero": "#FFA20025",
+       "color/kami_bento_row_icon": "#FFA20025",
+       "drawable/kami_switch_sheet": "img/switch_crimson.png",
+       "color/kami_switch_track_on": "#FFA20025"
+      }
+     }
+    },
+    "red": {
+     "title": "Red",
+     "targets": {
+      "com.android.systemui": {
+       "color/kami_qs_tile_active_bg": "#FFE51400",
+       "color/kami_brightness_slider_active": "#FFE51400",
+       "color/kami_volume_slider_active": "#FFE51400",
+       "color/kami_back_arrow": "#FFE51400",
+       "color/kami_lockscreen_shortcut_active_bg": "#FFE51400",
+       "color/kami_volume_ringer_selected_bg": "#FFE51400"
+      },
+      "com.android.launcher3": {
+       "color/taskbar_stashed_handle_light_color": "#FFE51400",
+       "color/taskbar_stashed_handle_dark_color": "#FFE51400"
+      },
+      "com.android.settings": {
+       "color/kami_slider_active": "#FFE51400",
+       "color/kami_bento_hero": "#FFE51400",
+       "color/kami_bento_row_icon": "#FFE51400",
+       "drawable/kami_switch_sheet": "img/switch_red.png",
+       "color/kami_switch_track_on": "#FFE51400"
+      }
+     }
+    },
+    "orange": {
+     "title": "Orange",
+     "targets": {
+      "com.android.systemui": {
+       "color/kami_qs_tile_active_bg": "#FFFA6800",
+       "color/kami_brightness_slider_active": "#FFFA6800",
+       "color/kami_volume_slider_active": "#FFFA6800",
+       "color/kami_back_arrow": "#FFFA6800",
+       "color/kami_lockscreen_shortcut_active_bg": "#FFFA6800",
+       "color/kami_volume_ringer_selected_bg": "#FFFA6800"
+      },
+      "com.android.launcher3": {
+       "color/taskbar_stashed_handle_light_color": "#FFFA6800",
+       "color/taskbar_stashed_handle_dark_color": "#FFFA6800"
+      },
+      "com.android.settings": {
+       "color/kami_slider_active": "#FFFA6800",
+       "color/kami_bento_hero": "#FFFA6800",
+       "color/kami_bento_row_icon": "#FFFA6800",
+       "drawable/kami_switch_sheet": "img/switch_orange.png",
+       "color/kami_switch_track_on": "#FFFA6800"
+      }
+     }
+    },
+    "amber": {
+     "title": "Amber",
+     "targets": {
+      "com.android.systemui": {
+       "color/kami_qs_tile_active_bg": "#FFF0A30A",
+       "color/kami_brightness_slider_active": "#FFF0A30A",
+       "color/kami_volume_slider_active": "#FFF0A30A",
+       "color/kami_back_arrow": "#FFF0A30A",
+       "color/kami_lockscreen_shortcut_active_bg": "#FFF0A30A",
+       "color/kami_volume_ringer_selected_bg": "#FFF0A30A"
+      },
+      "com.android.launcher3": {
+       "color/taskbar_stashed_handle_light_color": "#FFF0A30A",
+       "color/taskbar_stashed_handle_dark_color": "#FFF0A30A"
+      },
+      "com.android.settings": {
+       "color/kami_slider_active": "#FFF0A30A",
+       "color/kami_bento_hero": "#FFF0A30A",
+       "color/kami_bento_row_icon": "#FFF0A30A",
+       "drawable/kami_switch_sheet": "img/switch_amber.png",
+       "color/kami_switch_track_on": "#FFF0A30A"
+      }
+     }
+    },
+    "brown": {
+     "title": "Brown",
+     "targets": {
+      "com.android.systemui": {
+       "color/kami_qs_tile_active_bg": "#FF825A2C",
+       "color/kami_brightness_slider_active": "#FF825A2C",
+       "color/kami_volume_slider_active": "#FF825A2C",
+       "color/kami_back_arrow": "#FF825A2C",
+       "color/kami_lockscreen_shortcut_active_bg": "#FF825A2C",
+       "color/kami_volume_ringer_selected_bg": "#FF825A2C"
+      },
+      "com.android.launcher3": {
+       "color/taskbar_stashed_handle_light_color": "#FF825A2C",
+       "color/taskbar_stashed_handle_dark_color": "#FF825A2C"
+      },
+      "com.android.settings": {
+       "color/kami_slider_active": "#FF825A2C",
+       "color/kami_bento_hero": "#FF825A2C",
+       "color/kami_bento_row_icon": "#FF825A2C",
+       "drawable/kami_switch_sheet": "img/switch_brown.png",
+       "color/kami_switch_track_on": "#FF825A2C"
+      }
+     }
+    },
+    "steel": {
+     "title": "Steel",
+     "targets": {
+      "com.android.systemui": {
+       "color/kami_qs_tile_active_bg": "#FF647687",
+       "color/kami_brightness_slider_active": "#FF647687",
+       "color/kami_volume_slider_active": "#FF647687",
+       "color/kami_back_arrow": "#FF647687",
+       "color/kami_lockscreen_shortcut_active_bg": "#FF647687",
+       "color/kami_volume_ringer_selected_bg": "#FF647687"
+      },
+      "com.android.launcher3": {
+       "color/taskbar_stashed_handle_light_color": "#FF647687",
+       "color/taskbar_stashed_handle_dark_color": "#FF647687"
+      },
+      "com.android.settings": {
+       "color/kami_slider_active": "#FF647687",
+       "color/kami_bento_hero": "#FF647687",
+       "color/kami_bento_row_icon": "#FF647687",
+       "drawable/kami_switch_sheet": "img/switch_steel.png",
+       "color/kami_switch_track_on": "#FF647687"
+      }
+     }
+    }
+   }
+  },
+  "background": {
+   "title": "Shade background",
+   "default": "bw",
+   "choices": {
+    "bw": {
+     "title": "Black and white",
+     "targets": {
+      "com.android.systemui": {
+       "color/shade_panel_fallback": {
+        "day": "#FFFFFFFF",
+        "night": "#FF000000"
+       },
+       "color/shade_panel_fallback_fg": {
+        "day": "#FFFFFFFF",
+        "night": "#FF000000"
+       },
+       "color/shade_panel_fallback_bg": {
+        "day": "#FFFFFFFF",
+        "night": "#FF000000"
+       },
+       "color/notification_scrim_base": {
+        "day": "#FFFFFFFF",
+        "night": "#FF000000"
+       },
+       "color/shade_scrim_background_dark": {
+        "day": "#FFFFFFFF",
+        "night": "#FF000000"
+       }
+      }
+     }
+    },
+    "monet": {
+     "title": "Material You",
+     "targets": {
+      "com.android.systemui": {
+       "color/shade_panel_fallback": {
+        "day": "@android:color/system_accent1_100",
+        "night": "@android:color/system_accent1_900"
+       },
+       "color/shade_panel_fallback_fg": {
+        "day": "@android:color/system_accent1_100",
+        "night": "@android:color/system_accent1_900"
+       },
+       "color/shade_panel_fallback_bg": {
+        "day": "@android:color/system_accent1_100",
+        "night": "@android:color/system_accent1_900"
+       },
+       "color/notification_scrim_base": {
+        "day": "@android:color/system_accent1_100",
+        "night": "@android:color/system_accent1_900"
+       },
+       "color/shade_scrim_background_dark": {
+        "day": "@android:color/system_accent1_100",
+        "night": "@android:color/system_accent1_900"
+       }
+      }
+     }
+    },
+    "stock": {
+     "title": "Stock shade"
+    }
+   }
+  },
+  "settings_page": {
+   "title": "Settings main page",
+   "default": "list",
+   "choices": {
+    "list": {
+     "title": "List (like Windows Phone: a symbol in the accent colour, the name and a line beside it)",
+     "settings_layout": {
+      "main": {
+       "hero": false,
+       "style": "list",
+       "text": {
+        "title_size": 20,
+        "summary_size": 13,
+        "summary_lines": 1
+       }
+      }
+     }
+    },
+    "bento": {
+     "title": "Tiles (flat tiles in two columns)",
+     "settings_layout": {
+      "main": {
+       "hero": false,
+       "columns": 2,
+       "text": {
+        "title_size": 16,
+        "summary_size": 11,
+        "summary_lines": 1
+       }
+      }
+     }
+    }
+   }
+  },
+  "quick_settings": {
+   "title": "Quick settings tiles",
+   "default": "metro",
+   "choices": {
+    "metro": {
+     "title": "Windows Phone (flat boxes, symbol top left, name bottom left)",
+     "targets": {
+      "com.android.systemui": {
+       "bool/kami_qs_tile_metro": true,
+       "dimen/qs_tile_margin_horizontal": "2dp",
+       "dimen/qs_tile_margin_vertical": "2dp"
+      }
+     }
+    },
+    "flat": {
+     "title": "Flat (the stock layout of the tiles, square)"
+    }
+   }
+  },
+  "transitions": {
+   "title": "Opening and leaving apps",
+   "default": "turnstile",
+   "choices": {
+    "turnstile": {
+     "title": "Turnstile (apps and the back swipe turn like a door)",
+     "targets": {
+      "com.android.systemui": {
+       "string/kami_open_style": "flip",
+       "string/kami_close_style": "flip",
+       "string/kami_back_style": "flip",
+       "integer/kami_back_duration": 320,
+       "integer/kami_transition_duration": 300
+      }
+     }
+    },
+    "fade": {
+     "title": "Fade",
+     "targets": {
+      "com.android.systemui": {
+       "string/kami_open_style": "fade",
+       "string/kami_close_style": "fade",
+       "string/kami_back_style": "fade",
+       "integer/kami_back_duration": 240,
+       "integer/kami_transition_duration": 220
+      }
+     }
+    },
+    "stock": {
+     "title": "Stock"
+    }
+   }
+  },
+  "volume": {
+   "title": "Volume panel",
+   "default": "one",
+   "choices": {
+    "one": {
+     "title": "One slider"
+    },
+    "all": {
+     "title": "All sliders (ringer, notifications, alarm, call, system)",
+     "targets": {
+      "com.android.systemui": {
+       "bool/kami_volume_all_sliders": true
+      }
+     }
+    }
+   }
+  }
+ },
+ "id": "metro-launcher",
+ "name": "Metro Launcher",
+ "author": "KamiOS",
+ "module_version": "1.6",
+ "description": "The Windows Phone look for the whole phone: the Metro launcher as the home app (Windows Phone 8, Windows 10 Mobile or Windows 11 style, chosen in its settings), and flat square quick settings, notifications, sliders and volume panel, a Metro switch, Settings as tiles on a pivot, a light font and turnstile transitions. Choose the accent colour (the same as in the launcher), the shade background, the transitions and the volume panel below.",
+ "category": "launcher",
+ "home_app": "com.metro.launcher",
+ "apps": [
+  {
+   "package": "com.metro.launcher",
+   "apk": "apk/app.apk",
+   "cert": "4c7dcaca804ed064185288af6a5614e392ea196a7ae824782619dc11ddbd20c2",
+   "keep_data": true
+  }
+ ]
+}
