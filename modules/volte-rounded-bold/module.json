@@ -5,6 +5,7 @@
   "name": "Volte Rounded Bold for KamiOS/CumOS-RE",
   "author": "Prabhu",
   "description": "Volte Rounded Bold static system font for KamiOS/CumOS-RE",
+  "category": "fonts",
   "restart": true,
   "fonts": {
     "regular": {

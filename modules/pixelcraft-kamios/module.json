@@ -5,6 +5,7 @@
   "name": "PixelCraft UI for KamiOS/CumOS-RE",
   "author": "Prabhu",
   "description": "Cyber Pixel UI with square black inactive QS tiles, purple active tiles, pixel-art icons, rounded purple sliders and stock typography.",
+  "category": "theme",
   "wallpaper": {
   "home": "assets/wallpaper.png",
   "lock": "assets/wallpaper.png"

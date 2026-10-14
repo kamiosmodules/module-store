@@ -5,6 +5,7 @@
   "name": "Flyme AIOS 2 for KamiOS/CumOS-RE",
   "author": "Prabhu",
   "description": "Flyme AIOS 2 inspired bare visual remaster for KamiOS 1.1. Original artwork, QS tiles, shade, Settings, notification, volume, battery and navigation. Unofficial community theme.",
+  "category": "theme",
   "restart": true,
   "targets": {
     "com.android.systemui": {

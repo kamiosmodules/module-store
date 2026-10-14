@@ -6,6 +6,7 @@
   "name": "Inter Font for KamiOS/CumOS-RE",
   "author": "Prabhu",
   "description": "Inter Variable system font for KamiOS",
+  "category": "fonts",
   "restart": true,
   "fonts": {
     "regular": {

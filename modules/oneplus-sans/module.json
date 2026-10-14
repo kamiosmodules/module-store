@@ -6,6 +6,7 @@
   "name": "OnePlus Sans (Oppo Sans 4.0)",
   "author": "Prabhu",
   "description": "OPlus Sans variable system font",
+  "category": "fonts",
   "restart": true,
   "fonts": {
     "regular": {

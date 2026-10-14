@@ -5,6 +5,7 @@
   "name": "ColorOS 0.001% Accuracy",
   "author": "Prabhu",
   "description": "Module that barely tries to make it look like ColorOS, vibecoded",
+  "category": "theme",
   "restart": true,
   "targets": {
     "com.android.systemui": {
