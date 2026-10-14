@@ -1,8 +1,8 @@
 {
   "coloros-fusion": {
-    "asset": 640859695,
+    "asset": 640888571,
     "base": 0,
-    "count": 0
+    "count": 1
   },
   "flyme-aios2": {
     "asset": 637443115,
@@ -10,58 +10,58 @@
     "count": 0
   },
   "flyme-os": {
-    "asset": 640859671,
+    "asset": 640888566,
     "base": 0,
-    "count": 0
+    "count": 2
   },
   "inter-font": {
-    "asset": 640859677,
+    "asset": 640888580,
     "base": 0,
     "count": 0
   },
   "metro-launcher": {
-    "asset": 640859673,
+    "asset": 640888570,
     "base": 0,
-    "count": 0
+    "count": 8
   },
   "minecraft": {
-    "asset": 640859693,
+    "asset": 640888562,
     "base": 0,
     "count": 0
   },
   "minecraft-xp": {
-    "asset": 640859688,
+    "asset": 640888574,
     "base": 0,
     "count": 0
   },
   "nyan-cat-pill": {
-    "asset": 640859678,
+    "asset": 640888563,
     "base": 0,
-    "count": 0
+    "count": 1
   },
   "oneplus-sans": {
-    "asset": 640859692,
+    "asset": 640888561,
     "base": 0,
-    "count": 0
+    "count": 1
   },
   "pacman-pill": {
-    "asset": 640859686,
+    "asset": 640888560,
     "base": 0,
     "count": 0
   },
   "pixelcraft-kamios": {
-    "asset": 640859674,
+    "asset": 640888577,
     "base": 0,
     "count": 0
   },
   "spiderverse": {
-    "asset": 640859679,
+    "asset": 640888579,
     "base": 0,
     "count": 0
   },
   "volte-rounded-bold": {
-    "asset": 640859675,
+    "asset": 640888550,
     "base": 0,
-    "count": 0
+    "count": 1
   }
 }
