@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13",
+  "updated": "2026-10-14",
   "modules": [
     {
       "id": "coloros-fusion",
@@ -39,6 +39,27 @@
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/inter-font/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/inter-font/screenshots/6228986409809286116_119.jpg"
+      ]
+    },
+    {
+      "id": "metro-launcher",
+      "name": "Metro Launcher",
+      "version": "1.6",
+      "author": "KamiOS",
+      "description": "The Windows Phone look for the whole phone: the Metro launcher as the home app (Windows Phone 8, Windows 10 Mobile or Windows 11 style, chosen in its settings), and flat square quick settings, notifications, sliders and volume panel, a Metro switch, Settings as tiles on a pivot, a light font and turnstile transitions. Choose the accent colour (the same as in the launcher), the shade background, the transitions and the volume panel below.",
+      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/metro-launcher.zip",
+      "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/metro-launcher/thumbnail.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/metro-launcher/screenshots/1.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/metro-launcher/screenshots/10.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/metro-launcher/screenshots/2.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/metro-launcher/screenshots/3.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/metro-launcher/screenshots/4.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/metro-launcher/screenshots/5.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/metro-launcher/screenshots/6.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/metro-launcher/screenshots/7.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/metro-launcher/screenshots/8.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/metro-launcher/screenshots/9.png"
       ]
     },
     {
