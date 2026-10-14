@@ -7,7 +7,10 @@
       "version": "1.0",
       "author": "Prabhu",
       "description": "Module that barely tries to make it look like ColorOS, vibecoded",
+      "category": "theme",
+      "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/coloros-fusion.zip",
+      "downloads": 0,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/coloros-fusion/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/coloros-fusion/screenshots/Screenshot 2026-10-13 205717.png"
@@ -19,7 +22,10 @@
       "version": "1.0",
       "author": "Prabhu",
       "description": "Flyme AIOS 2 inspired bare visual remaster for KamiOS 1.1. Original artwork, QS tiles, shade, Settings, notification, volume, battery and navigation. Unofficial community theme.",
+      "category": "theme",
+      "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/flyme-os.zip",
+      "downloads": 0,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-os/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-os/screenshots/Screenshot_20261012-213515_System UI.png",
@@ -35,7 +41,10 @@
       "version": "1.0",
       "author": "Prabhu",
       "description": "Inter Variable system font for KamiOS",
+      "category": "fonts",
+      "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/inter-font.zip",
+      "downloads": 0,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/inter-font/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/inter-font/screenshots/6228986409809286116_119.jpg"
@@ -47,7 +56,10 @@
       "version": "1.6",
       "author": "KamiOS",
       "description": "The Windows Phone look for the whole phone: the Metro launcher as the home app (Windows Phone 8, Windows 10 Mobile or Windows 11 style, chosen in its settings), and flat square quick settings, notifications, sliders and volume panel, a Metro switch, Settings as tiles on a pivot, a light font and turnstile transitions. Choose the accent colour (the same as in the launcher), the shade background, the transitions and the volume panel below.",
+      "category": "launcher",
+      "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/metro-launcher.zip",
+      "downloads": 0,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/metro-launcher/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/metro-launcher/screenshots/1.png",
@@ -68,7 +80,10 @@
       "version": "1.0",
       "author": "MrSteelballs",
       "description": "A Minecraft look for KamiOS: square blocky tiles, grass-green accents, enchantment-glint notifications, XP-orb shade animation, classic battery, pixel icons for the volume panel and status bar, textured volume and brightness sliders. Use with Minecraft XP pill for best experience",
+      "category": "theme",
+      "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/minecraft.zip",
+      "downloads": 0,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/minecraft/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/minecraft/screenshots/6226466226079209847_119.jpg",
@@ -84,7 +99,10 @@
       "version": "1.0",
       "author": "MrSteelballs",
       "description": "What's your xp?",
+      "category": "pill",
+      "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/minecraft-xp.zip",
+      "downloads": 0,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/minecraft-xp/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/minecraft-xp/screenshots/Screenshot_20261012-173143_KamiOS Home.png"
@@ -96,7 +114,10 @@
       "version": "1.0",
       "author": "MrSteelballs",
       "description": "Replaces the gesture pill with an animated Nyan Cat. Also rounds the quick settings panel and uses 4 tile columns.",
+      "category": "pill",
+      "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/nyan-cat-pill.zip",
+      "downloads": 0,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nyan-cat-pill/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nyan-cat-pill/screenshots/Screenshot 2026-10-12 151243.png"
@@ -108,7 +129,10 @@
       "version": "1.0",
       "author": "Prabhu",
       "description": "OPlus Sans variable system font",
+      "category": "fonts",
+      "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/oneplus-sans.zip",
+      "downloads": 0,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/oneplus-sans/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/oneplus-sans/screenshots/6221762412256367766_119.jpg"
@@ -120,7 +144,10 @@
       "version": "1.0",
       "author": "MrSteelballs",
       "description": "Replaces the gesture pill with an animated Pacman munching on your display's pixels",
+      "category": "pill",
+      "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/pacman-pill.zip",
+      "downloads": 0,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pacman-pill/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pacman-pill/screenshots/Screenshot_20261012-165932_KamiOS Home.png"
@@ -132,7 +159,10 @@
       "version": "1.0",
       "author": "Prabhu",
       "description": "Cyber Pixel UI with square black inactive QS tiles, purple active tiles, pixel-art icons, rounded purple sliders and stock typography.",
+      "category": "theme",
+      "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/pixelcraft-kamios.zip",
+      "downloads": 0,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pixelcraft-kamios/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pixelcraft-kamios/screenshots/Screenshot_20261013-214331_System UI.png",
@@ -145,7 +175,10 @@
       "version": "1.0",
       "author": "MrSteelballs",
       "description": "Spider-Man theme: red/blue palette, web-cut battery, spider-sense icons, animated shade, hero card, silk gesture pill and web-flow sliders.",
+      "category": "theme",
+      "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/spiderverse.zip",
+      "downloads": 0,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/spiderverse/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/spiderverse/screenshots/Screenshot_20261012-164538_System UI.png",
@@ -161,7 +194,10 @@
       "version": "1.0",
       "author": "Prabhu",
       "description": "Volte Rounded Bold static system font for KamiOS/CumOS-RE",
+      "category": "fonts",
+      "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/volte-rounded-bold.zip",
+      "downloads": 0,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/volte-rounded-bold/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/volte-rounded-bold/screenshots/6228986409809286118_119.jpg"
