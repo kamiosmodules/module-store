@@ -50,6 +50,14 @@ modules/
   description, not a placeholder like "What it does".
 
 **Optional**
+- `"category"` in `module.json`: where the store lists the module. One of `theme`, `launcher`,
+  `tweak`, `sounds`, `bootanimation`, `emoji`, `fonts`, `wallpaper`, `icons`, `apps`, `quicksettings`,
+  `pill`, `volume`, `lockscreen`. A missing or unknown one lands under "Other".
+  The newest ids (`quicksettings`, `pill`, `volume`, `lockscreen`) are rejected by phones on an older
+  ROM when they sit in `module.json`. For those, put `category=pill` (for example) in a `module.prop`
+  next to it instead; the store reads it and the phone ignores that file.
+- `"module_version"` in `module.json` (like `1.2`): the module's own version. The store compares it to
+  the installed one for the "Updates" list. Raise it with every change you want phones to pick up.
 - `thumbnail.png` (or `.jpg`, `.webp`, `.gif`): a small square icon shown next to the name.
 - `screenshots/`: images (PNG, JPG, WebP or GIF) directly inside this folder.
   Sub-folders are not read. Files show in number order (1, 2, 10).
@@ -60,9 +68,8 @@ module's download zip.
 Older modules can use a `module.prop` file instead of `module.json`
 (`id`, `name`, `author`, `description`, and optionally `version`).
 
-**Version note:** the store shows `1.0` for every module for now. The
-`"version"` number inside `module.json` is the file-format version, not the
-module's own version.
+**Version note:** the `"version"` number inside `module.json` is the file-format version, not the
+module's own version. The store shows `module_version` and falls back to `1.0` when it is not set.
 
 ## How to contribute
 

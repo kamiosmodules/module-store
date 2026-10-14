@@ -4,7 +4,7 @@
 Each module folder needs a module.json (KamiOS format) or a module.prop with
 id, name, author and description. version defaults to 1.0.
 """
-import json, os, sys, zipfile, datetime
+import json, os, subprocess, sys, zipfile, datetime
 
 BRANCH = os.environ.get("STORE_BRANCH", "main")
 IMG = (".png", ".jpg", ".jpeg", ".webp", ".gif")
@@ -25,6 +25,23 @@ def read_prop(path):
                 prop[k.strip()] = v.strip()
     return prop
 
+# The categories the phone knows (the filter of the store). A module names one in its module.json ("category") or in
+# module.prop (category=). A missing or unknown one is left out of the index and the phone lists the module under "Other".
+CATEGORIES = ("theme", "launcher", "tweak", "sounds", "bootanimation", "emoji", "fonts", "wallpaper", "icons", "apps",
+              "quicksettings", "pill", "volume", "lockscreen")
+
+def clean_category(value):
+    value = str(value).strip().lower() if value else ""
+    return value if value in CATEGORIES else None
+
+def last_changed(folder):
+    """The date (YYYY-MM-DD) of the last commit that touched the folder; needs the whole history (fetch-depth: 0)."""
+    try:
+        out = subprocess.run(["git", "log", "-1", "--format=%cs", "--", folder], capture_output=True, text=True, check=True)
+        return out.stdout.strip() or None
+    except (OSError, subprocess.CalledProcessError):
+        return None
+
 def read_meta(folder):
     """KamiOS module.json first, module.prop as a fallback."""
     jpath = os.path.join(folder, "module.json")
@@ -35,6 +52,12 @@ def read_meta(folder):
         # so the module's own version comes from "module_version" if present.
         meta = {k: str(j.get(k, "")).strip() for k in ("id", "name", "author", "description")}
         meta["version"] = str(j.get("module_version", "")).strip() or DEFAULT_VERSION
+        meta["category"] = j.get("category")
+        if not meta["category"]:
+            # a store-only category in module.prop: a phone that does not know the new ids yet rejects them in module.json
+            ppath = os.path.join(folder, "module.prop")
+            if os.path.isfile(ppath):
+                meta["category"] = read_prop(ppath).get("category")
         return meta
     ppath = os.path.join(folder, "module.prop")
     if os.path.isfile(ppath):
@@ -93,6 +116,12 @@ def main():
                         continue  # store art stays out of the module zip
                     z.write(full, rel)
         entry = {k: prop[k] for k in REQUIRED}
+        category = clean_category(prop.get("category"))
+        if category:
+            entry["category"] = category
+        changed = last_changed(folder)
+        if changed:
+            entry["updated"] = changed
         entry["download"] = f"https://github.com/{REPO}/releases/download/{TAG}/{d}.zip"
         thumb, shots = find_media(folder, d)
         entry["thumbnail"] = thumb      # null when the module has none

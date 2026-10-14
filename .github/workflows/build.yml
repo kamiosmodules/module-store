@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # the builder dates each module from its git history
 
       - name: Zip modules and build modules.json
         run: python3 scripts/build.py
