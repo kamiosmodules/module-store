@@ -68,6 +68,11 @@ module's download zip.
 Older modules can use a `module.prop` file instead of `module.json`
 (`id`, `name`, `author`, `description`, and optionally `version`).
 
+**Download numbers:** `modules.json` has a `downloads` number per module, shown in the store and used by
+"Popular". GitHub restarts a file's counter whenever the workflow uploads the zips again, so
+`downloads.json` keeps the running total (do not edit it by hand). A scheduled run refreshes the numbers
+every six hours without touching the zips.
+
 **Version note:** the `"version"` number inside `module.json` is the file-format version, not the
 module's own version. The store shows `module_version` and falls back to `1.0` when it is not set.
 

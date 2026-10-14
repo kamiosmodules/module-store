@@ -3,8 +3,11 @@
 
 Each module folder needs a module.json (KamiOS format) or a module.prop with
 id, name, author and description. version defaults to 1.0.
+
+    build.py                  zip the modules, write modules.json (run before the zips are uploaded)
+    build.py --refresh-counts only update the download numbers in modules.json (no zips, run on a schedule)
 """
-import json, os, subprocess, sys, zipfile, datetime
+import json, os, subprocess, sys, urllib.request, zipfile, datetime
 
 BRANCH = os.environ.get("STORE_BRANCH", "main")
 IMG = (".png", ".jpg", ".jpeg", ".webp", ".gif")
@@ -88,9 +91,71 @@ def is_media(rel):
     name, ext = os.path.splitext(rel.lower())
     return rel.startswith("screenshots/") or (name == "thumbnail" and ext in IMG)
 
+# Download numbers. GitHub counts the downloads of a release file, but the workflow uploads fresh zips on every build and a new
+# file starts at 0. So downloads.json keeps, for each module, "base" (what the retired files had) plus the file that is online now
+# ("asset" is its id, "count" the highest number seen for it). Seeing the same file twice never counts twice; the last look at an old
+# file happens right before the build replaces it, so only the downloads of the last minutes are lost.
+STATE = "downloads.json"
+
+def load_state():
+    try:
+        with open(STATE, encoding="utf-8") as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return {}
+
+def save_state(state):
+    with open(STATE, "w", encoding="utf-8") as f:
+        json.dump(state, f, indent=2, sort_keys=True)
+        f.write("\n")
+
+def live_assets():
+    """{module id: (asset id, download count)} of the files on the release, or None when GitHub cannot be asked."""
+    req = urllib.request.Request(f"https://api.github.com/repos/{REPO}/releases/tags/{TAG}",
+                                 headers={"Accept": "application/vnd.github+json", "User-Agent": "module-store-build"})
+    if os.environ.get("GITHUB_TOKEN"):
+        req.add_header("Authorization", "Bearer " + os.environ["GITHUB_TOKEN"])
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            assets = json.load(r).get("assets", [])
+    except (OSError, ValueError) as e:
+        print(f"note: could not read the download counts ({e}); keeping the numbers from the last run")
+        return None
+    return {a["name"][:-4]: (a["id"], int(a.get("download_count", 0))) for a in assets if a.get("name", "").endswith(".zip")}
+
+def update_counts(state, live):
+    """Fold what GitHub reports now into the state."""
+    for d, (asset, count) in (live or {}).items():
+        s = state.setdefault(d, {"base": 0, "asset": asset, "count": 0})
+        if s["asset"] == asset:
+            s["count"] = max(s["count"], count)
+        else:                       # the file was replaced: the old one is final
+            s["base"] += s["count"]
+            s["asset"], s["count"] = asset, count
+
+def total(state, d):
+    s = state.get(d)
+    return s["base"] + s["count"] if s else 0
+
+def refresh_counts():
+    """Only the numbers: take modules.json as it is and update `downloads` in it."""
+    state = load_state()
+    update_counts(state, live_assets())
+    with open("modules.json", encoding="utf-8") as f:
+        index = json.load(f)
+    for m in index["modules"]:
+        m["downloads"] = total(state, m["id"])
+    save_state(state)
+    with open("modules.json", "w", encoding="utf-8") as f:
+        json.dump(index, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+    print(f"updated the download numbers of {len(index['modules'])} module(s)")
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     modules, errors = [], []
+    state = load_state()
+    update_counts(state, live_assets())     # the files online now are replaced by this build: count them one last time
     for d in sorted(os.listdir("modules")):
         folder = os.path.join("modules", d)
         if not os.path.isdir(folder):
@@ -124,6 +189,7 @@ def main():
             entry["updated"] = changed
         entry["download"] = f"https://github.com/{REPO}/releases/download/{TAG}/{d}.zip"
         thumb, shots = find_media(folder, d)
+        entry["downloads"] = total(state, d)
         entry["thumbnail"] = thumb      # null when the module has none
         entry["screenshots"] = shots    # empty list when the module has none
         modules.append(entry)
@@ -131,6 +197,7 @@ def main():
     if errors:
         print("\n".join("ERROR " + e for e in errors))
         sys.exit(1)
+    save_state(state)
     index = {"updated": datetime.date.today().isoformat(), "modules": modules}
     with open("modules.json", "w", encoding="utf-8") as f:
         json.dump(index, f, indent=2, ensure_ascii=False)
@@ -138,4 +205,7 @@ def main():
     print(f"wrote modules.json with {len(modules)} module(s)")
 
 if __name__ == "__main__":
-    main()
+    if "--refresh-counts" in sys.argv[1:]:
+        refresh_counts()
+    else:
+        main()

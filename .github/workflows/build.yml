@@ -4,10 +4,17 @@ on:
   push:
     branches: [main]
     paths: ["modules/**", "scripts/**"]
+  schedule:
+    - cron: "17 */6 * * *"   # only refreshes the download numbers
   workflow_dispatch:
 
 permissions:
   contents: write
+
+# one run at a time: a refresh must not overlap a build that replaces the zips
+concurrency:
+  group: module-store
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -18,9 +25,19 @@ jobs:
           fetch-depth: 0  # the builder dates each module from its git history
 
       - name: Zip modules and build modules.json
+        if: github.event_name != 'schedule'
         run: python3 scripts/build.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Refresh the download numbers
+        if: github.event_name == 'schedule'
+        run: python3 scripts/build.py --refresh-counts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish zips to the "latest" release
+        if: github.event_name != 'schedule'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
@@ -31,5 +48,5 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add modules.json
+          git add modules.json downloads.json
           git diff --cached --quiet || (git commit -m "Update modules.json" && git push)
