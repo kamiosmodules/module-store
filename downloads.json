@@ -22,7 +22,7 @@
   "metro-launcher": {
     "asset": 641763233,
     "base": 8,
-    "count": 0
+    "count": 5
   },
   "minecraft": {
     "asset": 641763228,
@@ -42,7 +42,7 @@
   "oneplus-sans": {
     "asset": 641763220,
     "base": 1,
-    "count": 0
+    "count": 1
   },
   "pacman-pill": {
     "asset": 641763230,
@@ -57,11 +57,11 @@
   "spiderverse": {
     "asset": 641763234,
     "base": 0,
-    "count": 0
+    "count": 1
   },
   "volte-rounded-bold": {
     "asset": 641763217,
     "base": 1,
-    "count": 0
+    "count": 1
   }
 }
