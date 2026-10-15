@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
   "modules": [
     {
       "id": "coloros-fusion",
@@ -57,7 +57,7 @@
       "author": "KamiOS",
       "description": "The Windows Phone look for the whole phone: the Metro launcher as the home app (Windows Phone 8, Windows 10 Mobile or Windows 11 style, chosen in its settings), and flat square quick settings, notifications, sliders and volume panel, a Metro switch, Settings as tiles on a pivot, a light font and turnstile transitions. Choose the accent colour (the same as in the launcher), the shade background, the transitions and the volume panel below.",
       "category": "launcher",
-      "updated": "2026-10-14",
+      "updated": "2026-10-15",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/metro-launcher.zip",
       "downloads": 13,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/metro-launcher/thumbnail.png",
