@@ -1,0 +1,12 @@
+{
+ "format": "kamios-module",
+ "version": 1,
+ "module_version": "1.0",
+ "category": "font", 
+ "id": "ios-emoji",
+ "name": "iOS emoji",
+ "author": "KamiKaonashi",
+ "description": "Replaces the emojis of the whole system.",
+ "emoji": "emoji.ttf",
+  "restart": true
+}
