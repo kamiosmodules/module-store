@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15",
+  "updated": "2026-10-16",
   "modules": [
     {
       "id": "coloros-fusion",
@@ -10,7 +10,7 @@
       "category": "theme",
       "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/coloros-fusion.zip",
-      "downloads": 11,
+      "downloads": 12,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/coloros-fusion/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/coloros-fusion/screenshots/Screenshot 2026-10-13 205717.png"
@@ -132,7 +132,7 @@
       "category": "fonts",
       "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/oneplus-sans.zip",
-      "downloads": 4,
+      "downloads": 6,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/oneplus-sans/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/oneplus-sans/screenshots/6221762412256367766_119.jpg"
@@ -174,9 +174,9 @@
       "name": "Spider-Verse",
       "version": "1.0",
       "author": "MrSteelballs",
-      "description": "Spider-Man theme: red/blue palette, web-cut battery, spider-sense icons, animated shade, hero card, silk gesture pill and web-flow sliders.",
+      "description": "NEW UPDATE: Added ui sound. Spider-Man theme: red/blue palette, web-cut battery, spider-sense icons, animated shade, hero card, silk gesture pill and web-flow sliders.",
       "category": "theme",
-      "updated": "2026-10-14",
+      "updated": "2026-10-16",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/spiderverse.zip",
       "downloads": 11,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/spiderverse/thumbnail.png",
