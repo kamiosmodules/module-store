@@ -2,7 +2,7 @@
   "coloros-fusion": {
     "asset": 647558330,
     "base": 12,
-    "count": 0
+    "count": 1
   },
   "flyme-aios2": {
     "asset": 637443115,
@@ -27,7 +27,7 @@
   "minecraft": {
     "asset": 647558338,
     "base": 1,
-    "count": 0
+    "count": 2
   },
   "minecraft-xp": {
     "asset": 647558331,
@@ -57,16 +57,16 @@
   "spiderverse": {
     "asset": 647558347,
     "base": 13,
-    "count": 2
+    "count": 4
   },
   "volte-rounded-bold": {
     "asset": 647558339,
     "base": 3,
-    "count": 0
+    "count": 1
   },
   "waifu-ui": {
     "asset": 647558333,
     "base": 0,
-    "count": 1
+    "count": 3
   }
 }
