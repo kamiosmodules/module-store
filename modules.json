@@ -202,6 +202,24 @@
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/volte-rounded-bold/screenshots/6228986409809286118_119.jpg"
       ]
+    },
+    {
+      "id": "waifu-ui",
+      "name": "Waifu UI",
+      "version": "1.0",
+      "author": "MrSteelballs",
+      "description": "Can't get enough of this waifu, Sounds, walls, shade, pill, everything gets a revamp",
+      "category": "theme",
+      "updated": "2026-10-16",
+      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/waifu-ui.zip",
+      "downloads": 0,
+      "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/waifu-ui/thumbnail.jpg",
+      "screenshots": [
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/waifu-ui/screenshots/6230981658341479682_119.jpg",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/waifu-ui/screenshots/6230981658341479683_119.jpg",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/waifu-ui/screenshots/6230981658341479684_119.jpg",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/waifu-ui/screenshots/6230981658341479685_119.jpg"
+      ]
     }
   ]
 }
