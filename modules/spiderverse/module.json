@@ -1,6 +1,7 @@
 {
   "format": "kamios-module",
-  "version": 1.2,
+  "version": 1,
+  "module_version": "1.2",
   "id": "spiderverse",
   "name": "Spider-Verse",
   "author": "MrSteelballs",
