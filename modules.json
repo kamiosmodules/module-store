@@ -51,6 +51,20 @@
       ]
     },
     {
+      "id": "ios-emoji",
+      "name": "iOS emoji",
+      "version": "1.0",
+      "author": "KamiKaonashi",
+      "description": "Replaces the emojis of the whole system.",
+      "updated": "2026-10-17",
+      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/ios-emoji.zip",
+      "downloads": 0,
+      "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/ios-emoji/thumbnail.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/ios-emoji/screenshots/5938181870778519210_119.jpg"
+      ]
+    },
+    {
       "id": "metro-launcher",
       "name": "Metro Launcher",
       "version": "1.7",
@@ -59,7 +73,7 @@
       "category": "launcher",
       "updated": "2026-10-15",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/metro-launcher.zip",
-      "downloads": 28,
+      "downloads": 29,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/metro-launcher/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/metro-launcher/screenshots/1.png",
