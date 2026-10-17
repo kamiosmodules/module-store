@@ -12,7 +12,7 @@
   "flyme-os": {
     "asset": 648682602,
     "base": 8,
-    "count": 1
+    "count": 2
   },
   "inter-font": {
     "asset": 648682593,
@@ -22,12 +22,12 @@
   "ios-emoji": {
     "asset": 648682568,
     "base": 0,
-    "count": 2
+    "count": 4
   },
   "metro-launcher": {
     "asset": 648682604,
     "base": 29,
-    "count": 1
+    "count": 3
   },
   "minecraft": {
     "asset": 648682588,
@@ -72,6 +72,6 @@
   "waifu-ui": {
     "asset": 648682574,
     "base": 3,
-    "count": 1
+    "count": 2
   }
 }
