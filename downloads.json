@@ -2,7 +2,7 @@
   "coloros-fusion": {
     "asset": 648682591,
     "base": 13,
-    "count": 1
+    "count": 2
   },
   "flyme-aios2": {
     "asset": 637443115,
@@ -12,7 +12,7 @@
   "flyme-os": {
     "asset": 648682602,
     "base": 8,
-    "count": 0
+    "count": 1
   },
   "inter-font": {
     "asset": 648682593,
@@ -22,12 +22,12 @@
   "ios-emoji": {
     "asset": 648682568,
     "base": 0,
-    "count": 0
+    "count": 2
   },
   "metro-launcher": {
     "asset": 648682604,
     "base": 29,
-    "count": 0
+    "count": 1
   },
   "minecraft": {
     "asset": 648682588,
@@ -42,7 +42,7 @@
   "nyan-cat-pill": {
     "asset": 648682587,
     "base": 4,
-    "count": 0
+    "count": 1
   },
   "oneplus-sans": {
     "asset": 648682599,
@@ -72,6 +72,6 @@
   "waifu-ui": {
     "asset": 648682574,
     "base": 3,
-    "count": 0
+    "count": 1
   }
 }
