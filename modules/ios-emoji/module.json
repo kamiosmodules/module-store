@@ -2,7 +2,7 @@
  "format": "kamios-module",
  "version": 1,
  "module_version": "1.0",
- "category": "font", 
+ "category": "fonts", 
  "id": "ios-emoji",
  "name": "iOS emoji",
  "author": "KamiKaonashi",
