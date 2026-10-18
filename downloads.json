@@ -2,7 +2,7 @@
   "coloros-fusion": {
     "asset": 653272191,
     "base": 19,
-    "count": 0
+    "count": 2
   },
   "flyme-aios2": {
     "asset": 637443115,
@@ -12,7 +12,7 @@
   "flyme-os": {
     "asset": 653272190,
     "base": 14,
-    "count": 0
+    "count": 2
   },
   "inter-font": {
     "asset": 653272199,
@@ -22,7 +22,7 @@
   "ios-emoji": {
     "asset": 653272200,
     "base": 13,
-    "count": 0
+    "count": 1
   },
   "metro-launcher": {
     "asset": 653272202,
@@ -62,7 +62,7 @@
   "spiderverse": {
     "asset": 653272188,
     "base": 19,
-    "count": 0
+    "count": 1
   },
   "volte-rounded-bold": {
     "asset": 653272193,
@@ -72,6 +72,6 @@
   "waifu-ui": {
     "asset": 653272187,
     "base": 11,
-    "count": 0
+    "count": 3
   }
 }
