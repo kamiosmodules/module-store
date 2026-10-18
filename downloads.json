@@ -27,17 +27,17 @@
   "metro-launcher": {
     "asset": 653272202,
     "base": 37,
-    "count": 0
+    "count": 1
   },
   "minecraft": {
     "asset": 653272197,
     "base": 5,
-    "count": 0
+    "count": 1
   },
   "minecraft-xp": {
     "asset": 653272195,
     "base": 3,
-    "count": 0
+    "count": 1
   },
   "nyan-cat-pill": {
     "asset": 653272198,
