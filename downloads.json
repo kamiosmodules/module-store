@@ -2,7 +2,7 @@
   "coloros-fusion": {
     "asset": 653272191,
     "base": 19,
-    "count": 2
+    "count": 3
   },
   "flyme-aios2": {
     "asset": 637443115,
@@ -12,7 +12,7 @@
   "flyme-os": {
     "asset": 653272190,
     "base": 14,
-    "count": 4
+    "count": 5
   },
   "inter-font": {
     "asset": 653272199,
@@ -22,17 +22,17 @@
   "ios-emoji": {
     "asset": 653272200,
     "base": 13,
-    "count": 1
+    "count": 3
   },
   "metro-launcher": {
     "asset": 653272202,
     "base": 37,
-    "count": 3
+    "count": 5
   },
   "minecraft": {
     "asset": 653272197,
     "base": 5,
-    "count": 3
+    "count": 4
   },
   "minecraft-xp": {
     "asset": 653272195,
@@ -52,7 +52,7 @@
   "pacman-pill": {
     "asset": 653272203,
     "base": 5,
-    "count": 0
+    "count": 1
   },
   "pixelcraft-kamios": {
     "asset": 653272186,
@@ -72,6 +72,6 @@
   "waifu-ui": {
     "asset": 653272187,
     "base": 11,
-    "count": 3
+    "count": 4
   }
 }
