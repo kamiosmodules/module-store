@@ -12,7 +12,7 @@
   "flyme-os": {
     "asset": 653272190,
     "base": 14,
-    "count": 2
+    "count": 3
   },
   "inter-font": {
     "asset": 653272199,
@@ -27,12 +27,12 @@
   "metro-launcher": {
     "asset": 653272202,
     "base": 37,
-    "count": 1
+    "count": 3
   },
   "minecraft": {
     "asset": 653272197,
     "base": 5,
-    "count": 1
+    "count": 2
   },
   "minecraft-xp": {
     "asset": 653272195,
@@ -57,12 +57,12 @@
   "pixelcraft-kamios": {
     "asset": 653272186,
     "base": 4,
-    "count": 0
+    "count": 1
   },
   "spiderverse": {
     "asset": 653272188,
     "base": 19,
-    "count": 1
+    "count": 2
   },
   "volte-rounded-bold": {
     "asset": 653272193,
