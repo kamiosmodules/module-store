@@ -12,7 +12,7 @@
   "flyme-os": {
     "asset": 653272190,
     "base": 14,
-    "count": 3
+    "count": 4
   },
   "inter-font": {
     "asset": 653272199,
@@ -32,7 +32,7 @@
   "minecraft": {
     "asset": 653272197,
     "base": 5,
-    "count": 2
+    "count": 3
   },
   "minecraft-xp": {
     "asset": 653272195,
@@ -42,7 +42,7 @@
   "nyan-cat-pill": {
     "asset": 653272198,
     "base": 6,
-    "count": 0
+    "count": 1
   },
   "oneplus-sans": {
     "asset": 653272194,
