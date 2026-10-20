@@ -8,8 +8,8 @@
   "module_version": "1.0",
   "category": "theme",
   "restart": true,
-  "accent": "#2FB866",
-  "accent_style": "VIBRANT",
+  "accent": "#51966D",
+  "accent_style": "SPRITZ",
   "wallpaper": {
     "home": "USER_ADD/home_wallpaper.jpg",
     "lock": "USER_ADD/lock_wallpaper.jpg"
@@ -17,11 +17,11 @@
   "bootanimation": "bootanimation.zip",
   "sounds": {
     "lock": "sounds/lock.wav",
-  "unlock": "sounds/unlock.wav",
-  "charging": "sounds/charging.wav",
-  "wireless_charging": "sounds/wireless_charging.wav",
-  "low_battery": "sounds/low_battery.wav",
-  "screenshot": "sounds/screenshot.wav"
+    "unlock": "sounds/unlock.wav",
+    "charging": "sounds/charging.wav",
+    "wireless_charging": "sounds/wireless_charging.wav",
+    "low_battery": "sounds/low_battery.wav",
+    "screenshot": "sounds/screenshot.wav"
   },
   "settings_layout": {
     "main": {
@@ -34,73 +34,19 @@
         "summary_lines": 2
       },
       "tiles": [
-        {
-          "page": "themes",
-          "color": "#FF123A1C",
-          "text_color": "#FF39FF14",
-          "size": "full"
-        },
-        {
-          "page": "kamios",
-          "color": "#FF0B2814",
-          "text_color": "#FF39FF14",
-          "size": "full"
-        },
-        {
-          "page": "network",
-          "color": "#FF123A1C",
-          "text_color": "#FFD5E0DE"
-        },
-        {
-          "page": "connected_devices",
-          "color": "#FF0B2814",
-          "text_color": "#FFD5E0DE"
-        },
-        {
-          "page": "sound",
-          "color": "#FF123A1C",
-          "text_color": "#FFD5E0DE"
-        },
-        {
-          "page": "display",
-          "color": "#FF0B2814",
-          "text_color": "#FFD5E0DE"
-        },
-        {
-          "page": "notifications",
-          "color": "#FF123A1C",
-          "text_color": "#FFD5E0DE"
-        },
-        {
-          "page": "modes",
-          "color": "#FF0B2814",
-          "text_color": "#FFD5E0DE"
-        },
-        {
-          "page": "wallpaper",
-          "color": "#FF123A1C",
-          "text_color": "#FFD5E0DE"
-        },
-        {
-          "page": "battery",
-          "color": "#FF0B2814",
-          "text_color": "#FFD5E0DE"
-        },
-        {
-          "page": "storage",
-          "color": "#FF123A1C",
-          "text_color": "#FFD5E0DE"
-        },
-        {
-          "page": "apps",
-          "color": "#FF0B2814",
-          "text_color": "#FFD5E0DE"
-        },
-        {
-          "page": "system",
-          "color": "#FF123A1C",
-          "text_color": "#FFD5E0DE"
-        }
+        { "page": "themes", "color": "#FF1C3021", "text_color": "#FFA6BAA6", "size": "full" },
+        { "page": "kamios", "color": "#FF122117", "text_color": "#FFA6BAA6", "size": "full" },
+        { "page": "network", "color": "#FF1C3021", "text_color": "#FFDCE1E0" },
+        { "page": "connected_devices", "color": "#FF122117", "text_color": "#FFDCE1E0" },
+        { "page": "sound", "color": "#FF1C3021", "text_color": "#FFDCE1E0" },
+        { "page": "display", "color": "#FF122117", "text_color": "#FFDCE1E0" },
+        { "page": "notifications", "color": "#FF1C3021", "text_color": "#FFDCE1E0" },
+        { "page": "modes", "color": "#FF122117", "text_color": "#FFDCE1E0" },
+        { "page": "wallpaper", "color": "#FF1C3021", "text_color": "#FFDCE1E0" },
+        { "page": "battery", "color": "#FF122117", "text_color": "#FFDCE1E0" },
+        { "page": "storage", "color": "#FF1C3021", "text_color": "#FFDCE1E0" },
+        { "page": "apps", "color": "#FF122117", "text_color": "#FFDCE1E0" },
+        { "page": "system", "color": "#FF1C3021", "text_color": "#FFDCE1E0" }
       ]
     },
     "pages": {
@@ -120,13 +66,13 @@
         "case": "upper",
         "size": 28,
         "app": true,
-        "app_color": "#FF4FD17F"
+        "app_color": "#FF81BA96"
       },
       "colors": {
         "selected": "#FFFFFFFF",
-        "unselected": "#FF8FA3A0",
-        "indicator": "#664FD17F",
-        "bar": "#660B2814"
+        "unselected": "#FFA1AAA8",
+        "indicator": "#6681BA96",
+        "bar": "#66122117"
       },
       "dock": {
         "items": 5,
@@ -137,86 +83,82 @@
   },
   "targets": {
     "com.android.systemui": {
-      "dimen/common_tile_default_active_tile_corner_radius": "16dp",
-      "dimen/common_tile_default_inactive_tile_corner_radius": "16dp",
-      "dimen/common_tile_default_active_icon_corner_radius": "12dp",
-      "dimen/common_tile_default_inactive_icon_corner_radius": "12dp",
-      "dimen/qs_corner_radius": "8dp",
+      "dimen/qs_corner_radius": "16dp",
       "integer/kami_slider_shape": 1,
       "integer/kami_footer_button_shape": 1,
       "color/kami_qs_tile_active_bg": {
-        "day": "#FF3C9A5F",
-        "night": "#FF2F8F52"
+        "day": "#FF538265",
+        "night": "#FF477759"
       },
       "color/kami_qs_tile_active_fg": {
-        "day": "#FFF3FFF6",
-        "night": "#FFEAFFF0"
+        "day": "#FFF7FCF8",
+        "night": "#FFF1FAF4"
       },
       "color/kami_qs_tile_inactive_bg": {
-        "day": "#FFC9D8D0",
-        "night": "#FF14301F"
+        "day": "#FFD3D9D6",
+        "night": "#FF1B2920"
       },
       "color/kami_qs_tile_inactive_fg": {
-        "day": "#FF1E4630",
-        "night": "#FFB4C8BC"
+        "day": "#FF283C31",
+        "night": "#FFC1CAC5"
       },
       "drawable/kami_shade_background": "img/shade.webp",
       "color/shade_panel_fallback_fg": {
-        "day": "#FFBFD1CC",
-        "night": "#FF0F3A1E"
+        "day": "#FFCBD3D0",
+        "night": "#FF1A2F21"
       },
       "color/shade_panel_fallback_bg": {
-        "day": "#FFE3EBE9",
-        "night": "#FF06140A"
+        "day": "#FFE8ECEB",
+        "night": "#FF0A100C"
       },
       "color/shade_panel_fallback": {
-        "day": "#FFCFDDD9",
-        "night": "#FF0B2814"
+        "day": "#FFD8DEDC",
+        "night": "#FF122117"
       },
       "color/notification_scrim_base": {
-        "day": "#FFDCE6E3",
-        "night": "#FF08180D"
+        "day": "#FFE2E7E5",
+        "night": "#FF0C140F"
       },
-      "color/shade_scrim_background_dark": "#FF030A05",
+      "color/shade_scrim_background_dark": "#FF050806",
       "dimen/notification_corner_radius": "8dp",
       "dimen/notification_corner_radius_small": "3dp",
       "dimen/notification_scrim_corner_radius": "10dp",
       "color/kami_notification_bg": {
-        "day": "#D9E8F0EC",
-        "night": "#D90B2814"
+        "day": "#D9EDF0EE",
+        "night": "#D9122117"
       },
       "drawable/kami_notification_image": "img/notif.webp",
       "dimen/kami_shade_clock_size": "56sp",
       "dimen/kami_shade_date_size": "15sp",
       "color/kami_shade_clock_color": {
-        "day": "#FF1E7A44",
-        "night": "#FF4FD17F"
+        "day": "#FF356348",
+        "night": "#FF81BA96"
       },
       "color/kami_shade_date_color": {
-        "day": "#FF3C5A4A",
-        "night": "#FFAEBFBC"
+        "day": "#FF44524A",
+        "night": "#FFBBC3C2"
       },
-      "color/kami_brightness_slider_active": "#FF4FD17F",
+      "color/kami_brightness_slider_active": "#FF81BA96",
       "color/kami_brightness_slider_inactive": {
-        "day": "#331E8A3A",
-        "night": "#33AEBFBC"
+        "day": "#33396F47",
+        "night": "#33BBC3C2"
       },
-      "color/kami_volume_slider_active": "#FF4FD17F",
+      "color/kami_volume_slider_active": "#FF81BA96",
       "color/kami_volume_slider_inactive": {
-        "day": "#331E8A3A",
-        "night": "#33AEBFBC"
+        "day": "#33396F47",
+        "night": "#33BBC3C2"
       },
       "dimen/volume_dialog_width": "64dp",
       "dimen/volume_dialog_background_corner_radius": "10dp",
       "color/kami_volume_dialog_background": {
-        "day": "#E6DCE6E3",
-        "night": "#E60B2814"
+        "day": "#E6E2E7E5",
+        "night": "#E6122117"
       },
       "integer/kami_volume_slider_corner": 24,
       "integer/kami_volume_slider_thickness": 44,
       "color/kami_sheet_tint": {
-        "day": "#99DCE6E3",
-        "night": "#990B2814"
+        "day": "#99E2E7E5",
+        "night": "#99122117"
       },
       "integer/kami_sheet_corner": 10,
       "integer/kami_sheet_blur": 28,
@@ -224,42 +166,42 @@
       "integer/kami_sheet_shine": 55,
       "integer/kami_sheet_gloss": 38,
       "integer/kami_sheet_rim": 80,
-      "color/kami_lockscreen_shortcut_active_bg": "#FF4FD17F",
-      "color/kami_lockscreen_shortcut_active_fg": "#FF031A06",
+      "color/kami_lockscreen_shortcut_active_bg": "#FF81BA96",
+      "color/kami_lockscreen_shortcut_active_fg": "#FF09140A",
       "color/kami_lockscreen_shortcut_inactive_bg": {
         "day": "#B3FFFFFF",
-        "night": "#66123A1C"
+        "night": "#661C3021"
       },
       "color/kami_lockscreen_shortcut_inactive_fg": {
-        "day": "#FF1B7A34",
-        "night": "#FFB8C4C2"
+        "day": "#FF33623F",
+        "night": "#FFC3C8C8"
       },
-      "color/kami_back_arrow": "#FF031A06",
-      "color/kami_back_arrow_bg": "#FF4FD17F",
+      "color/kami_back_arrow": "#FF09140A",
+      "color/kami_back_arrow_bg": "#FF81BA96",
       "string/kami_open_style": "book",
       "string/kami_close_style": "book",
       "integer/kami_transition_duration": 380,
       "integer/kami_wake_style": 1,
       "integer/kami_wake_duration": 180,
-      "color/kami_splash_background": "#FF050807",
+      "color/kami_splash_background": "#FF060707",
       "drawable/kami_splash_background_image": "img/launch_fog.webp"
     },
     "com.android.launcher3": {
-      "color/taskbar_stashed_handle_light_color": "#FF1E8A3A",
-      "color/taskbar_stashed_handle_dark_color": "#FF4FD17F"
+      "color/taskbar_stashed_handle_light_color": "#FF396F47",
+      "color/taskbar_stashed_handle_dark_color": "#FF81BA96"
     },
     "com.android.settings": {
       "color/kami_page_bg": {
-        "day": "#FFEAF1EE",
-        "night": "#FF06140A"
+        "day": "#FFEEF1F0",
+        "night": "#FF0A100C"
       },
       "color/kami_bento_tile": {
-        "day": "#FFC2D6CA",
-        "night": "#FF1A4A2E"
+        "day": "#FFCED7D1",
+        "night": "#FF263E30"
       },
       "color/kami_bento_hero": {
-        "day": "#FF2F8F52",
-        "night": "#FF14452A"
+        "day": "#FF477759",
+        "night": "#FF20392B"
       },
       "drawable/kami_hero_image": "img/hero.webp",
       "dimen/kami_bento_radius": "8dp",
@@ -269,35 +211,35 @@
       "dimen/kami_bento_tile_height": "96dp",
       "integer/kami_bento_columns": 2,
       "integer/kami_switch_duration": 600,
-      "color/kami_switch_track_on": "#FF2F8F52",
+      "color/kami_switch_track_on": "#FF477759",
       "color/kami_switch_track_off": {
-        "day": "#FFB8C4C2",
-        "night": "#FF2A3A30"
+        "day": "#FFC3C8C8",
+        "night": "#FF2E3631"
       },
-      "color/kami_switch_thumb_on": "#FF4FD17F",
+      "color/kami_switch_thumb_on": "#FF81BA96",
       "color/kami_switch_thumb_off": {
         "day": "#FFFFFFFF",
-        "night": "#FFAEBFBC"
+        "night": "#FFBBC3C2"
       },
-      "color/kami_slider_active": "#FF4FD17F",
+      "color/kami_slider_active": "#FF81BA96",
       "color/kami_slider_inactive": {
-        "day": "#331E8A3A",
-        "night": "#33AEBFBC"
+        "day": "#33396F47",
+        "night": "#33BBC3C2"
       }
     }
   },
   "settings": {
     "system/qs_tiles_columns": 5,
-    "system/qs_tile_shape": 2,
+    "system/qs_tile_shape": 0,
     "system/qs_tile_label_hide": true,
-    "system/qs_panel_style": 1,
+    "system/qs_panel_style": 0,
     "system/kami_blur_strength": 110,
     "system/volume_slider_gradient": true,
     "system/qs_brightness_slider_gradient": true,
     "system/qs_tile_gradient": true,
     "system/custom_gradient_color_mode": 1,
-    "system/custom_gradient_start_color": -10960261,
-    "system/custom_gradient_end_color": -15906266,
+    "system/custom_gradient_start_color": -8146285,
+    "system/custom_gradient_end_color": -14927063,
     "global/window_animation_scale": 0.8,
     "global/transition_animation_scale": 0.8,
     "global/animator_duration_scale": 0.8,
