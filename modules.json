@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18",
+  "updated": "2026-10-20",
   "modules": [
     {
       "id": "coloros-fusion",
@@ -10,11 +10,24 @@
       "category": "theme",
       "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/coloros-fusion.zip",
-      "downloads": 23,
+      "downloads": 24,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/coloros-fusion/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/coloros-fusion/screenshots/Screenshot 2026-10-13 205717.png"
       ]
+    },
+    {
+      "id": "doctor-doom",
+      "name": "Doctor Doom",
+      "version": "1.0",
+      "author": "you",
+      "description": "MCU Doctor Doom: Latverian cloak green, gunmetal mask bootanimation. Sharp corners, steel glass.",
+      "category": "theme",
+      "updated": "2026-10-20",
+      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/doctor-doom.zip",
+      "downloads": 0,
+      "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/doctor-doom/thumbnail.png",
+      "screenshots": []
     },
     {
       "id": "flyme-os",
