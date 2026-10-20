@@ -1,6 +1,6 @@
 {
   "coloros-fusion": {
-    "asset": 660231350,
+    "asset": 660243296,
     "base": 24,
     "count": 0
   },
@@ -9,73 +9,78 @@
     "base": 6,
     "count": 0
   },
+  "doom-ui": {
+    "asset": 660243276,
+    "base": 0,
+    "count": 1
+  },
   "flyme-aios2": {
     "asset": 637443115,
     "base": 0,
     "count": 0
   },
   "flyme-os": {
-    "asset": 660231347,
+    "asset": 660243288,
     "base": 21,
     "count": 0
   },
   "inter-font": {
-    "asset": 660231352,
+    "asset": 660243287,
     "base": 1,
     "count": 0
   },
   "ios-emoji": {
-    "asset": 660231343,
+    "asset": 660243291,
     "base": 19,
     "count": 0
   },
   "metro-launcher": {
-    "asset": 660231349,
+    "asset": 660243302,
     "base": 44,
     "count": 0
   },
   "minecraft": {
-    "asset": 660231344,
+    "asset": 660243301,
     "base": 11,
     "count": 0
   },
   "minecraft-xp": {
-    "asset": 660231357,
+    "asset": 660243293,
     "base": 4,
     "count": 0
   },
   "nyan-cat-pill": {
-    "asset": 660231353,
+    "asset": 660243286,
     "base": 7,
     "count": 0
   },
   "oneplus-sans": {
-    "asset": 660231358,
+    "asset": 660243295,
     "base": 8,
     "count": 0
   },
   "pacman-pill": {
-    "asset": 660231348,
+    "asset": 660243300,
     "base": 6,
     "count": 0
   },
   "pixelcraft-kamios": {
-    "asset": 660231346,
+    "asset": 660243297,
     "base": 6,
     "count": 0
   },
   "spiderverse": {
-    "asset": 660231355,
+    "asset": 660243289,
     "base": 23,
     "count": 0
   },
   "volte-rounded-bold": {
-    "asset": 660231354,
+    "asset": 660243298,
     "base": 5,
     "count": 0
   },
   "waifu-ui": {
-    "asset": 660231345,
+    "asset": 660243283,
     "base": 16,
     "count": 0
   }

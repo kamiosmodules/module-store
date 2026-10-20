@@ -25,9 +25,16 @@
       "category": "theme",
       "updated": "2026-10-21",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/doom-ui.zip",
-      "downloads": 0,
+      "downloads": 1,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/doom-ui/thumbnail.png",
-      "screenshots": []
+      "screenshots": [
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/doom-ui/screenshots/6249170960804156052_121.jpg",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/doom-ui/screenshots/6249170960804156056_121.jpg",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/doom-ui/screenshots/6249170960804156059_121.jpg",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/doom-ui/screenshots/6249170960804156060_121.jpg",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/doom-ui/screenshots/6249170960804156062_121.jpg",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/doom-ui/screenshots/Screenshot 2026-10-21 014447.png"
+      ]
     },
     {
       "id": "flyme-os",
