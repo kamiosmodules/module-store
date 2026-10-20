@@ -1,0 +1,306 @@
+{
+  "format": "kamios-module",
+  "version": 1,
+  "id": "doctor-doom",
+  "name": "Doctor Doom",
+  "author": "you",
+  "description": "MCU Doctor Doom: Latverian cloak green, gunmetal mask bootanimation. Sharp corners, steel glass.",
+  "module_version": "1.0",
+  "category": "theme",
+  "restart": true,
+  "accent": "#2FB866",
+  "accent_style": "VIBRANT",
+  "wallpaper": {
+    "home": "USER_ADD/home_wallpaper.jpg",
+    "lock": "USER_ADD/lock_wallpaper.jpg"
+  },
+  "bootanimation": "bootanimation.zip",
+  "sounds": {
+    "lock": "sounds/lock.wav",
+  "unlock": "sounds/unlock.wav",
+  "charging": "sounds/charging.wav",
+  "wireless_charging": "sounds/wireless_charging.wav",
+  "low_battery": "sounds/low_battery.wav",
+  "screenshot": "sounds/screenshot.wav"
+  },
+  "settings_layout": {
+    "main": {
+      "hero": true,
+      "columns": 2,
+      "text": {
+        "title_size": 18,
+        "title_lines": 1,
+        "summary_size": 12,
+        "summary_lines": 2
+      },
+      "tiles": [
+        {
+          "page": "themes",
+          "color": "#FF123A1C",
+          "text_color": "#FF39FF14",
+          "size": "full"
+        },
+        {
+          "page": "kamios",
+          "color": "#FF0B2814",
+          "text_color": "#FF39FF14",
+          "size": "full"
+        },
+        {
+          "page": "network",
+          "color": "#FF123A1C",
+          "text_color": "#FFD5E0DE"
+        },
+        {
+          "page": "connected_devices",
+          "color": "#FF0B2814",
+          "text_color": "#FFD5E0DE"
+        },
+        {
+          "page": "sound",
+          "color": "#FF123A1C",
+          "text_color": "#FFD5E0DE"
+        },
+        {
+          "page": "display",
+          "color": "#FF0B2814",
+          "text_color": "#FFD5E0DE"
+        },
+        {
+          "page": "notifications",
+          "color": "#FF123A1C",
+          "text_color": "#FFD5E0DE"
+        },
+        {
+          "page": "modes",
+          "color": "#FF0B2814",
+          "text_color": "#FFD5E0DE"
+        },
+        {
+          "page": "wallpaper",
+          "color": "#FF123A1C",
+          "text_color": "#FFD5E0DE"
+        },
+        {
+          "page": "battery",
+          "color": "#FF0B2814",
+          "text_color": "#FFD5E0DE"
+        },
+        {
+          "page": "storage",
+          "color": "#FF123A1C",
+          "text_color": "#FFD5E0DE"
+        },
+        {
+          "page": "apps",
+          "color": "#FF0B2814",
+          "text_color": "#FFD5E0DE"
+        },
+        {
+          "page": "system",
+          "color": "#FF123A1C",
+          "text_color": "#FFD5E0DE"
+        }
+      ]
+    },
+    "pages": {
+      "nav": "dock",
+      "transition": "depth",
+      "blur": 28,
+      "glass": {
+        "blur": 28,
+        "shine": 55,
+        "gloss": 38,
+        "frost": 8,
+        "rim": 80,
+        "vibrance": 25,
+        "shade": 15
+      },
+      "title": {
+        "case": "upper",
+        "size": 28,
+        "app": true,
+        "app_color": "#FF4FD17F"
+      },
+      "colors": {
+        "selected": "#FFFFFFFF",
+        "unselected": "#FF8FA3A0",
+        "indicator": "#664FD17F",
+        "bar": "#660B2814"
+      },
+      "dock": {
+        "items": 5,
+        "size": 54
+      },
+      "swipe": true
+    }
+  },
+  "targets": {
+    "com.android.systemui": {
+      "dimen/common_tile_default_active_tile_corner_radius": "16dp",
+      "dimen/common_tile_default_inactive_tile_corner_radius": "16dp",
+      "dimen/common_tile_default_active_icon_corner_radius": "12dp",
+      "dimen/common_tile_default_inactive_icon_corner_radius": "12dp",
+      "dimen/qs_corner_radius": "8dp",
+      "integer/kami_slider_shape": 1,
+      "integer/kami_footer_button_shape": 1,
+      "color/kami_qs_tile_active_bg": {
+        "day": "#FF3C9A5F",
+        "night": "#FF2F8F52"
+      },
+      "color/kami_qs_tile_active_fg": {
+        "day": "#FFF3FFF6",
+        "night": "#FFEAFFF0"
+      },
+      "color/kami_qs_tile_inactive_bg": {
+        "day": "#FFC9D8D0",
+        "night": "#FF14301F"
+      },
+      "color/kami_qs_tile_inactive_fg": {
+        "day": "#FF1E4630",
+        "night": "#FFB4C8BC"
+      },
+      "drawable/kami_shade_background": "img/shade.webp",
+      "color/shade_panel_fallback_fg": {
+        "day": "#FFBFD1CC",
+        "night": "#FF0F3A1E"
+      },
+      "color/shade_panel_fallback_bg": {
+        "day": "#FFE3EBE9",
+        "night": "#FF06140A"
+      },
+      "color/shade_panel_fallback": {
+        "day": "#FFCFDDD9",
+        "night": "#FF0B2814"
+      },
+      "color/notification_scrim_base": {
+        "day": "#FFDCE6E3",
+        "night": "#FF08180D"
+      },
+      "color/shade_scrim_background_dark": "#FF030A05",
+      "dimen/notification_corner_radius": "8dp",
+      "dimen/notification_corner_radius_small": "3dp",
+      "dimen/notification_scrim_corner_radius": "10dp",
+      "color/kami_notification_bg": {
+        "day": "#D9E8F0EC",
+        "night": "#D90B2814"
+      },
+      "drawable/kami_notification_image": "img/notif.webp",
+      "dimen/kami_shade_clock_size": "56sp",
+      "dimen/kami_shade_date_size": "15sp",
+      "color/kami_shade_clock_color": {
+        "day": "#FF1E7A44",
+        "night": "#FF4FD17F"
+      },
+      "color/kami_shade_date_color": {
+        "day": "#FF3C5A4A",
+        "night": "#FFAEBFBC"
+      },
+      "color/kami_brightness_slider_active": "#FF4FD17F",
+      "color/kami_brightness_slider_inactive": {
+        "day": "#331E8A3A",
+        "night": "#33AEBFBC"
+      },
+      "color/kami_volume_slider_active": "#FF4FD17F",
+      "color/kami_volume_slider_inactive": {
+        "day": "#331E8A3A",
+        "night": "#33AEBFBC"
+      },
+      "dimen/volume_dialog_width": "64dp",
+      "dimen/volume_dialog_background_corner_radius": "10dp",
+      "color/kami_volume_dialog_background": {
+        "day": "#E6DCE6E3",
+        "night": "#E60B2814"
+      },
+      "integer/kami_volume_slider_corner": 24,
+      "integer/kami_volume_slider_thickness": 44,
+      "color/kami_sheet_tint": {
+        "day": "#99DCE6E3",
+        "night": "#990B2814"
+      },
+      "integer/kami_sheet_corner": 10,
+      "integer/kami_sheet_blur": 28,
+      "integer/kami_sheet_frost": 8,
+      "integer/kami_sheet_shine": 55,
+      "integer/kami_sheet_gloss": 38,
+      "integer/kami_sheet_rim": 80,
+      "color/kami_lockscreen_shortcut_active_bg": "#FF4FD17F",
+      "color/kami_lockscreen_shortcut_active_fg": "#FF031A06",
+      "color/kami_lockscreen_shortcut_inactive_bg": {
+        "day": "#B3FFFFFF",
+        "night": "#66123A1C"
+      },
+      "color/kami_lockscreen_shortcut_inactive_fg": {
+        "day": "#FF1B7A34",
+        "night": "#FFB8C4C2"
+      },
+      "color/kami_back_arrow": "#FF031A06",
+      "color/kami_back_arrow_bg": "#FF4FD17F",
+      "string/kami_open_style": "book",
+      "string/kami_close_style": "book",
+      "integer/kami_transition_duration": 380,
+      "integer/kami_wake_style": 1,
+      "integer/kami_wake_duration": 180,
+      "color/kami_splash_background": "#FF050807",
+      "drawable/kami_splash_background_image": "img/launch_fog.webp"
+    },
+    "com.android.launcher3": {
+      "color/taskbar_stashed_handle_light_color": "#FF1E8A3A",
+      "color/taskbar_stashed_handle_dark_color": "#FF4FD17F"
+    },
+    "com.android.settings": {
+      "color/kami_page_bg": {
+        "day": "#FFEAF1EE",
+        "night": "#FF06140A"
+      },
+      "color/kami_bento_tile": {
+        "day": "#FFC2D6CA",
+        "night": "#FF1A4A2E"
+      },
+      "color/kami_bento_hero": {
+        "day": "#FF2F8F52",
+        "night": "#FF14452A"
+      },
+      "drawable/kami_hero_image": "img/hero.webp",
+      "dimen/kami_bento_radius": "8dp",
+      "dimen/kami_hero_radius": "10dp",
+      "dimen/kami_bento_icon_radius": "6dp",
+      "dimen/kami_bento_gap": "8dp",
+      "dimen/kami_bento_tile_height": "96dp",
+      "integer/kami_bento_columns": 2,
+      "integer/kami_switch_duration": 600,
+      "color/kami_switch_track_on": "#FF2F8F52",
+      "color/kami_switch_track_off": {
+        "day": "#FFB8C4C2",
+        "night": "#FF2A3A30"
+      },
+      "color/kami_switch_thumb_on": "#FF4FD17F",
+      "color/kami_switch_thumb_off": {
+        "day": "#FFFFFFFF",
+        "night": "#FFAEBFBC"
+      },
+      "color/kami_slider_active": "#FF4FD17F",
+      "color/kami_slider_inactive": {
+        "day": "#331E8A3A",
+        "night": "#33AEBFBC"
+      }
+    }
+  },
+  "settings": {
+    "system/qs_tiles_columns": 5,
+    "system/qs_tile_shape": 2,
+    "system/qs_tile_label_hide": true,
+    "system/qs_panel_style": 1,
+    "system/kami_blur_strength": 110,
+    "system/volume_slider_gradient": true,
+    "system/qs_brightness_slider_gradient": true,
+    "system/qs_tile_gradient": true,
+    "system/custom_gradient_color_mode": 1,
+    "system/custom_gradient_start_color": -10960261,
+    "system/custom_gradient_end_color": -15906266,
+    "global/window_animation_scale": 0.8,
+    "global/transition_animation_scale": 0.8,
+    "global/animator_duration_scale": 0.8,
+    "system/screen_off_animation": 14
+  }
+}
