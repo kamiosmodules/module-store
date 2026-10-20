@@ -17,19 +17,6 @@
       ]
     },
     {
-      "id": "doctor-doom",
-      "name": "Doctor Doom",
-      "version": "1.0",
-      "author": "MrSteelballs",
-      "description": "MCU Doctor Doom: Latverian cloak green, gunmetal mask bootanimation. Sharp corners, steel glass.",
-      "category": "theme",
-      "updated": "2026-10-20",
-      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/doctor-doom.zip",
-      "downloads": 6,
-      "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/doctor-doom/thumbnail.png",
-      "screenshots": []
-    },
-    {
       "id": "flyme-os",
       "name": "Flyme AIOS 2 for KamiOS/CumOS-RE",
       "version": "1.0",
@@ -38,7 +25,7 @@
       "category": "theme",
       "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/flyme-os.zip",
-      "downloads": 20,
+      "downloads": 21,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-os/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-os/screenshots/Screenshot_20261012-213515_System UI.png",
