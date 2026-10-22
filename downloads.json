@@ -2,7 +2,7 @@
   "coloros-fusion": {
     "asset": 660391312,
     "base": 24,
-    "count": 0
+    "count": 2
   },
   "doctor-doom": {
     "asset": 659935965,
@@ -22,17 +22,17 @@
   "flyme-os": {
     "asset": 660391308,
     "base": 21,
-    "count": 0
+    "count": 2
   },
   "inter-font": {
     "asset": 660391305,
     "base": 1,
-    "count": 0
+    "count": 2
   },
   "ios-emoji": {
     "asset": 660391314,
     "base": 19,
-    "count": 0
+    "count": 2
   },
   "metro-launcher": {
     "asset": 660391303,
@@ -57,12 +57,12 @@
   "oneplus-sans": {
     "asset": 660391306,
     "base": 8,
-    "count": 1
+    "count": 4
   },
   "pacman-pill": {
     "asset": 660391316,
     "base": 6,
-    "count": 0
+    "count": 2
   },
   "pixelcraft-kamios": {
     "asset": 660391299,
