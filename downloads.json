@@ -17,22 +17,22 @@
   "flyme-aios2": {
     "asset": 637443115,
     "base": 0,
-    "count": 0
+    "count": 1
   },
   "flyme-os": {
     "asset": 660391308,
     "base": 21,
-    "count": 2
+    "count": 3
   },
   "inter-font": {
     "asset": 660391305,
     "base": 1,
-    "count": 2
+    "count": 3
   },
   "ios-emoji": {
     "asset": 660391314,
     "base": 19,
-    "count": 6
+    "count": 7
   },
   "metro-launcher": {
     "asset": 660391303,
