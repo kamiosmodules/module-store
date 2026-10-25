@@ -2,7 +2,7 @@
   "coloros-fusion": {
     "asset": 660391312,
     "base": 24,
-    "count": 3
+    "count": 4
   },
   "doctor-doom": {
     "asset": 659935965,
@@ -37,7 +37,7 @@
   "metro-launcher": {
     "asset": 660391303,
     "base": 44,
-    "count": 3
+    "count": 4
   },
   "minecraft": {
     "asset": 660391304,
@@ -57,7 +57,7 @@
   "oneplus-sans": {
     "asset": 660391306,
     "base": 8,
-    "count": 5
+    "count": 6
   },
   "pacman-pill": {
     "asset": 660391316,
@@ -77,11 +77,11 @@
   "volte-rounded-bold": {
     "asset": 660391298,
     "base": 5,
-    "count": 2
+    "count": 3
   },
   "waifu-ui": {
     "asset": 660391300,
     "base": 16,
-    "count": 3
+    "count": 4
   }
 }
