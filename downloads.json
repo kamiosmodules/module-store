@@ -2,7 +2,7 @@
   "coloros-fusion": {
     "asset": 660391312,
     "base": 24,
-    "count": 10
+    "count": 12
   },
   "doctor-doom": {
     "asset": 659935965,
@@ -22,7 +22,7 @@
   "flyme-os": {
     "asset": 660391308,
     "base": 21,
-    "count": 5
+    "count": 6
   },
   "inter-font": {
     "asset": 660391305,
@@ -32,7 +32,7 @@
   "ios-emoji": {
     "asset": 660391314,
     "base": 19,
-    "count": 8
+    "count": 9
   },
   "metro-launcher": {
     "asset": 660391303,
@@ -42,7 +42,7 @@
   "minecraft": {
     "asset": 660391304,
     "base": 11,
-    "count": 0
+    "count": 1
   },
   "minecraft-xp": {
     "asset": 660391301,
@@ -82,6 +82,6 @@
   "waifu-ui": {
     "asset": 660391300,
     "base": 16,
-    "count": 6
+    "count": 8
   }
 }
