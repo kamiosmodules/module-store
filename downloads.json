@@ -2,7 +2,7 @@
   "coloros-fusion": {
     "asset": 660391312,
     "base": 24,
-    "count": 8
+    "count": 10
   },
   "doctor-doom": {
     "asset": 659935965,
@@ -12,7 +12,7 @@
   "doom-ui": {
     "asset": 660391327,
     "base": 1,
-    "count": 3
+    "count": 4
   },
   "flyme-aios2": {
     "asset": 637443115,
@@ -22,7 +22,7 @@
   "flyme-os": {
     "asset": 660391308,
     "base": 21,
-    "count": 4
+    "count": 5
   },
   "inter-font": {
     "asset": 660391305,
@@ -82,6 +82,6 @@
   "waifu-ui": {
     "asset": 660391300,
     "base": 16,
-    "count": 4
+    "count": 6
   }
 }
