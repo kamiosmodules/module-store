@@ -2,7 +2,7 @@
   "coloros-fusion": {
     "asset": 660391312,
     "base": 24,
-    "count": 12
+    "count": 15
   },
   "doctor-doom": {
     "asset": 659935965,
@@ -12,7 +12,7 @@
   "doom-ui": {
     "asset": 660391327,
     "base": 1,
-    "count": 4
+    "count": 5
   },
   "flyme-aios2": {
     "asset": 637443115,
@@ -22,7 +22,7 @@
   "flyme-os": {
     "asset": 660391308,
     "base": 21,
-    "count": 6
+    "count": 8
   },
   "inter-font": {
     "asset": 660391305,
@@ -32,12 +32,12 @@
   "ios-emoji": {
     "asset": 660391314,
     "base": 19,
-    "count": 9
+    "count": 12
   },
   "metro-launcher": {
     "asset": 660391303,
     "base": 44,
-    "count": 5
+    "count": 10
   },
   "minecraft": {
     "asset": 660391304,
@@ -72,16 +72,16 @@
   "spiderverse": {
     "asset": 660391310,
     "base": 23,
-    "count": 2
+    "count": 3
   },
   "volte-rounded-bold": {
     "asset": 660391298,
     "base": 5,
-    "count": 4
+    "count": 6
   },
   "waifu-ui": {
     "asset": 660391300,
     "base": 16,
-    "count": 8
+    "count": 9
   }
 }
