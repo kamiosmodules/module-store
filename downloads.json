@@ -2,7 +2,7 @@
   "coloros-fusion": {
     "asset": 660391312,
     "base": 24,
-    "count": 15
+    "count": 16
   },
   "doctor-doom": {
     "asset": 659935965,
@@ -22,7 +22,7 @@
   "flyme-os": {
     "asset": 660391308,
     "base": 21,
-    "count": 8
+    "count": 9
   },
   "inter-font": {
     "asset": 660391305,
@@ -57,7 +57,7 @@
   "oneplus-sans": {
     "asset": 660391306,
     "base": 8,
-    "count": 7
+    "count": 8
   },
   "pacman-pill": {
     "asset": 660391316,
@@ -67,7 +67,7 @@
   "pixelcraft-kamios": {
     "asset": 660391299,
     "base": 6,
-    "count": 0
+    "count": 1
   },
   "spiderverse": {
     "asset": 660391310,
@@ -82,6 +82,6 @@
   "waifu-ui": {
     "asset": 660391300,
     "base": 16,
-    "count": 9
+    "count": 10
   }
 }
