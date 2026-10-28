@@ -21,9 +21,9 @@
   "lock": "user/wallpaper1.jpg"
   },
   "fonts": {
-  "regular": { "file": "fonts/SamsungSharpSans-Regular.ttf" },
-  "medium":  { "file": "fonts/SamsungSharpSans-Medium.ttf" },
-  "bold":    { "file": "fonts/SamsungSharpSans-Bold.ttf" }
+  "regular": { "file": "fonts/NewSECKeypad-Regular.ttf" },
+  "medium":  { "file": "fonts/NewSECKeypad-Medium.ttf" },
+  "bold":    { "file": "fonts/NewSECKeypad-Bold.ttf" }
   },
   "bootanimation": "bootanimation.zip",
   "sounds": {
