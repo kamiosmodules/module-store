@@ -2,7 +2,7 @@
   "coloros-fusion": {
     "asset": 660391312,
     "base": 24,
-    "count": 18
+    "count": 21
   },
   "doctor-doom": {
     "asset": 659935965,
@@ -12,7 +12,7 @@
   "doom-ui": {
     "asset": 660391327,
     "base": 1,
-    "count": 5
+    "count": 7
   },
   "flyme-aios2": {
     "asset": 637443115,
@@ -22,47 +22,47 @@
   "flyme-os": {
     "asset": 660391308,
     "base": 21,
-    "count": 10
+    "count": 12
   },
   "inter-font": {
     "asset": 660391305,
     "base": 1,
-    "count": 4
+    "count": 5
   },
   "ios-emoji": {
     "asset": 660391314,
     "base": 19,
-    "count": 14
+    "count": 15
   },
   "metro-launcher": {
     "asset": 660391303,
     "base": 44,
-    "count": 13
+    "count": 14
   },
   "minecraft": {
     "asset": 660391304,
     "base": 11,
-    "count": 1
+    "count": 2
   },
   "minecraft-xp": {
     "asset": 660391301,
     "base": 4,
-    "count": 1
+    "count": 2
   },
   "nyan-cat-pill": {
     "asset": 660391313,
     "base": 7,
-    "count": 1
+    "count": 2
   },
   "oneplus-sans": {
     "asset": 660391306,
     "base": 8,
-    "count": 10
+    "count": 14
   },
   "pacman-pill": {
     "asset": 660391316,
     "base": 6,
-    "count": 4
+    "count": 5
   },
   "pixelcraft-kamios": {
     "asset": 660391299,
@@ -72,16 +72,16 @@
   "spiderverse": {
     "asset": 660391310,
     "base": 23,
-    "count": 3
+    "count": 4
   },
   "volte-rounded-bold": {
     "asset": 660391298,
     "base": 5,
-    "count": 7
+    "count": 9
   },
   "waifu-ui": {
     "asset": 660391300,
     "base": 16,
-    "count": 12
+    "count": 13
   }
 }
