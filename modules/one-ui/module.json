@@ -4,7 +4,7 @@
   "id": "one-ui",
   "name": "One UI",
   "author": "MrSteelballs",
-  "description": "One UI look: pill tiles, wide Wi-Fi/Bluetooth, soft cards, grouped Settings rows, sine-curve motion",
+  "description": "One UI look: pill tiles, wide Wi-Fi/Bluetooth, soft cards, grouped Settings rows, sine-curve motion, bootanimation, fonts and sounds.",
   "module_version": "1.0",
   "category": "theme",
   "restart": true,
