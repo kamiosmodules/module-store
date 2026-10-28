@@ -167,7 +167,13 @@
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/one-ui.zip",
       "downloads": 0,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/thumbnail.png",
-      "screenshots": []
+      "screenshots": [
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/screenshots/Screenshot_20261028-170733_KamiOS Home.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/screenshots/Screenshot_20261028-170741_System UI.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/screenshots/Screenshot_20261028-170744_System UI.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/screenshots/Screenshot_20261028-170749_System UI.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/screenshots/Screenshot_20261028-170757_Settings.png"
+      ]
     },
     {
       "id": "oneplus-sans",
