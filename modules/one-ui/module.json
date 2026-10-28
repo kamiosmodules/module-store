@@ -21,9 +21,9 @@
   "lock": "user/wallpaper1.jpg"
   },
   "fonts": {
-  "regular": { "file": "fonts/NewSECKeypad-Regular.ttf" },
-  "medium":  { "file": "fonts/NewSECKeypad-Medium.ttf" },
-  "bold":    { "file": "fonts/NewSECKeypad-Bold.ttf" }
+  "regular": { "file": "fonts/Rosemary.ttf", "axes": { "wght": 400 } },
+  "medium":  { "file": "fonts/Rosemary.ttf", "axes": { "wght": 500 } },
+  "bold":    { "file": "fonts/Rosemary.ttf", "axes": { "wght": 700 } }
   },
   "bootanimation": "bootanimation.zip",
   "sounds": {
