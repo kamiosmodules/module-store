@@ -161,7 +161,7 @@
       "name": "One UI",
       "version": "1.0",
       "author": "MrSteelballs",
-      "description": "One UI look: pill tiles, wide Wi-Fi/Bluetooth, soft cards, grouped Settings rows, sine-curve motion",
+      "description": "One UI look: pill tiles, wide Wi-Fi/Bluetooth, soft cards, grouped Settings rows, sine-curve motion, bootanimation, fonts and sounds.",
       "category": "theme",
       "updated": "2026-10-28",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/one-ui.zip",
