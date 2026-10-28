@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20",
+  "updated": "2026-10-28",
   "modules": [
     {
       "id": "coloros-fusion",
@@ -10,7 +10,7 @@
       "category": "theme",
       "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/coloros-fusion.zip",
-      "downloads": 45,
+      "downloads": 48,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/coloros-fusion/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/coloros-fusion/screenshots/Screenshot 2026-10-13 205717.png"
@@ -45,7 +45,7 @@
       "category": "theme",
       "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/flyme-os.zip",
-      "downloads": 33,
+      "downloads": 35,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-os/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-os/screenshots/Screenshot_20261012-213515_System UI.png",
@@ -64,7 +64,7 @@
       "category": "fonts",
       "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/inter-font.zip",
-      "downloads": 6,
+      "downloads": 7,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/inter-font/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/inter-font/screenshots/6228986409809286116_119.jpg"
@@ -79,7 +79,7 @@
       "category": "fonts",
       "updated": "2026-10-18",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/ios-emoji.zip",
-      "downloads": 34,
+      "downloads": 36,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/ios-emoji/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/ios-emoji/screenshots/5938181870778519210_119.jpg"
@@ -94,7 +94,7 @@
       "category": "launcher",
       "updated": "2026-10-15",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/metro-launcher.zip",
-      "downloads": 58,
+      "downloads": 63,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/metro-launcher/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/metro-launcher/screenshots/1.png",
@@ -157,6 +157,19 @@
       ]
     },
     {
+      "id": "one-ui",
+      "name": "One UI",
+      "version": "1.0",
+      "author": "MrSteelballs",
+      "description": "One UI look: pill tiles, wide Wi-Fi/Bluetooth, soft cards, grouped Settings rows, sine-curve motion",
+      "category": "theme",
+      "updated": "2026-10-28",
+      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/one-ui.zip",
+      "downloads": 0,
+      "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/thumbnail.png",
+      "screenshots": []
+    },
+    {
       "id": "oneplus-sans",
       "name": "OnePlus Sans (Oppo Sans 4.0)",
       "version": "1.0",
@@ -180,7 +193,7 @@
       "category": "pill",
       "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/pacman-pill.zip",
-      "downloads": 11,
+      "downloads": 12,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pacman-pill/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pacman-pill/screenshots/Screenshot_20261012-165932_KamiOS Home.png"
@@ -195,7 +208,7 @@
       "category": "theme",
       "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/pixelcraft-kamios.zip",
-      "downloads": 8,
+      "downloads": 9,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pixelcraft-kamios/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pixelcraft-kamios/screenshots/Screenshot_20261013-214331_System UI.png",
@@ -211,7 +224,7 @@
       "category": "theme",
       "updated": "2026-10-16",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/spiderverse.zip",
-      "downloads": 27,
+      "downloads": 30,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/spiderverse/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/spiderverse/screenshots/Screenshot_20261012-164538_System UI.png",
@@ -245,7 +258,7 @@
       "category": "theme",
       "updated": "2026-10-16",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/waifu-ui.zip",
-      "downloads": 29,
+      "downloads": 30,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/waifu-ui/thumbnail.jpg",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/waifu-ui/screenshots/6230981658341479682_119.jpg",
