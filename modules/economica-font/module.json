@@ -1,0 +1,31 @@
+
+{
+  "format": "kamios-module",
+  "version": 1,
+  "id": "economica-font",
+  "name": "Económica Font for KamiOS",
+  "author": "Miguel",
+  "description": "Económica Variable system font for KamiOS",
+  "category": "fonts",
+  "restart": true,
+  "fonts": {
+    "regular": {
+      "file": "fonts/Economica-Regular.ttf",
+      "axes": {
+        "wght": 400
+      }
+    },
+    "medium": {
+      "file": "fonts/Economica-Regular.ttf",
+      "axes": {
+        "wght": 500
+      }
+    },
+    "bold": {
+      "file": "fonts/Economica-Regular.ttf",
+      "axes": {
+        "wght": 700
+      }
+    }
+  }
+}
