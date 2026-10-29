@@ -1,8 +1,8 @@
 {
   "coloros-fusion": {
-    "asset": 687758467,
+    "asset": 687796267,
     "base": 51,
-    "count": 0
+    "count": 3
   },
   "doctor-doom": {
     "asset": 659935965,
@@ -10,8 +10,13 @@
     "count": 0
   },
   "doom-ui": {
-    "asset": 687758476,
+    "asset": 687796249,
     "base": 8,
+    "count": 1
+  },
+  "economica-font": {
+    "asset": 687796238,
+    "base": 0,
     "count": 0
   },
   "flyme-aios2": {
@@ -20,78 +25,78 @@
     "count": 1
   },
   "flyme-os": {
-    "asset": 687758470,
+    "asset": 687796251,
     "base": 36,
-    "count": 0
+    "count": 2
   },
   "inter-font": {
-    "asset": 687758477,
+    "asset": 687796262,
     "base": 9,
     "count": 0
   },
   "ios-emoji": {
-    "asset": 687758468,
+    "asset": 687796250,
     "base": 40,
-    "count": 0
+    "count": 3
   },
   "metro-launcher": {
-    "asset": 687758473,
+    "asset": 687796243,
     "base": 69,
-    "count": 0
+    "count": 1
   },
   "minecraft": {
-    "asset": 687758471,
+    "asset": 687796261,
     "base": 13,
     "count": 0
   },
   "minecraft-xp": {
-    "asset": 687758480,
+    "asset": 687796253,
     "base": 6,
-    "count": 0
+    "count": 1
   },
   "nyan-cat-pill": {
-    "asset": 687758472,
+    "asset": 687796260,
     "base": 10,
     "count": 0
   },
   "one-ui": {
-    "asset": 687758479,
+    "asset": 687796268,
     "base": 26,
-    "count": 0
+    "count": 4
   },
   "oneplus-sans": {
-    "asset": 687758485,
+    "asset": 687796269,
     "base": 26,
-    "count": 0
+    "count": 1
   },
   "pacman-pill": {
-    "asset": 687758465,
+    "asset": 687796255,
     "base": 14,
     "count": 0
   },
   "pixelcraft-kamios": {
-    "asset": 687758481,
+    "asset": 687796248,
     "base": 10,
-    "count": 0
+    "count": 2
   },
   "spiderverse": {
-    "asset": 687758474,
+    "asset": 687796257,
     "base": 31,
-    "count": 0
+    "count": 2
   },
   "stealth-avionics-theme-by-isifat": {
-    "asset": 687758459,
+    "asset": 687796265,
     "base": 0,
-    "count": 0
+    "count": 2
   },
   "volte-rounded-bold": {
-    "asset": 687758487,
+    "asset": 687796247,
     "base": 15,
     "count": 0
   },
   "waifu-ui": {
-    "asset": 687758466,
+    "asset": 687796241,
     "base": 32,
-    "count": 0
+    "count": 1
   }
 }
