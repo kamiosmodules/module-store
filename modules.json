@@ -37,6 +37,21 @@
       ]
     },
     {
+      "id": "economica-font",
+      "name": "Económica Font for KamiOS",
+      "version": "1.0",
+      "author": "Miguel",
+      "description": "Económica Variable system font for KamiOS",
+      "category": "fonts",
+      "updated": "2026-10-29",
+      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/economica-font.zip",
+      "downloads": 0,
+      "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/economica-font/thumbnail.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/economica-font/screenshots/6276098275446296927_121.jpg"
+      ]
+    },
+    {
       "id": "flyme-os",
       "name": "Flyme AIOS 2 for KamiOS/CumOS-RE",
       "version": "1.0",
