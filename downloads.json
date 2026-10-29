@@ -22,7 +22,7 @@
   "flyme-os": {
     "asset": 684802678,
     "base": 35,
-    "count": 0
+    "count": 1
   },
   "inter-font": {
     "asset": 684802672,
@@ -32,7 +32,7 @@
   "ios-emoji": {
     "asset": 684802682,
     "base": 36,
-    "count": 3
+    "count": 4
   },
   "metro-launcher": {
     "asset": 684802674,
@@ -57,12 +57,12 @@
   "one-ui": {
     "asset": 684802677,
     "base": 0,
-    "count": 24
+    "count": 26
   },
   "oneplus-sans": {
     "asset": 684802687,
     "base": 22,
-    "count": 3
+    "count": 4
   },
   "pacman-pill": {
     "asset": 684802670,
