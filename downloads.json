@@ -2,7 +2,7 @@
   "coloros-fusion": {
     "asset": 687796267,
     "base": 51,
-    "count": 3
+    "count": 4
   },
   "doctor-doom": {
     "asset": 659935965,
@@ -27,17 +27,17 @@
   "flyme-os": {
     "asset": 687796251,
     "base": 36,
-    "count": 2
+    "count": 3
   },
   "inter-font": {
     "asset": 687796262,
     "base": 9,
-    "count": 0
+    "count": 1
   },
   "ios-emoji": {
     "asset": 687796250,
     "base": 40,
-    "count": 5
+    "count": 6
   },
   "metro-launcher": {
     "asset": 687796243,
@@ -97,6 +97,6 @@
   "waifu-ui": {
     "asset": 687796241,
     "base": 32,
-    "count": 2
+    "count": 3
   }
 }
