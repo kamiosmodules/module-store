@@ -2,7 +2,7 @@
   "coloros-fusion": {
     "asset": 687796267,
     "base": 51,
-    "count": 8
+    "count": 9
   },
   "doctor-doom": {
     "asset": 659935965,
@@ -27,7 +27,7 @@
   "flyme-os": {
     "asset": 687796251,
     "base": 36,
-    "count": 5
+    "count": 6
   },
   "inter-font": {
     "asset": 687796262,
@@ -37,12 +37,12 @@
   "ios-emoji": {
     "asset": 687796250,
     "base": 40,
-    "count": 11
+    "count": 13
   },
   "metro-launcher": {
     "asset": 687796243,
     "base": 69,
-    "count": 5
+    "count": 7
   },
   "minecraft": {
     "asset": 687796261,
@@ -62,7 +62,7 @@
   "one-ui": {
     "asset": 687796268,
     "base": 26,
-    "count": 12
+    "count": 14
   },
   "oneplus-sans": {
     "asset": 687796269,
@@ -82,12 +82,12 @@
   "spiderverse": {
     "asset": 687796257,
     "base": 31,
-    "count": 8
+    "count": 13
   },
   "stealth-avionics-theme-by-isifat": {
     "asset": 687796265,
     "base": 0,
-    "count": 13
+    "count": 16
   },
   "volte-rounded-bold": {
     "asset": 687796247,
@@ -97,6 +97,6 @@
   "waifu-ui": {
     "asset": 687796241,
     "base": 32,
-    "count": 7
+    "count": 11
   }
 }
