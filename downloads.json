@@ -37,12 +37,12 @@
   "ios-emoji": {
     "asset": 687796250,
     "base": 40,
-    "count": 8
+    "count": 9
   },
   "metro-launcher": {
     "asset": 687796243,
     "base": 69,
-    "count": 4
+    "count": 5
   },
   "minecraft": {
     "asset": 687796261,
@@ -67,7 +67,7 @@
   "oneplus-sans": {
     "asset": 687796269,
     "base": 26,
-    "count": 4
+    "count": 5
   },
   "pacman-pill": {
     "asset": 687796255,
@@ -87,7 +87,7 @@
   "stealth-avionics-theme-by-isifat": {
     "asset": 687796265,
     "base": 0,
-    "count": 10
+    "count": 11
   },
   "volte-rounded-bold": {
     "asset": 687796247,
@@ -97,6 +97,6 @@
   "waifu-ui": {
     "asset": 687796241,
     "base": 32,
-    "count": 5
+    "count": 6
   }
 }
