@@ -10,6 +10,15 @@
   "restart": true,
   "accent": "#3E91FF",
   "accent_style": "TONAL_SPOT",
+   "home_app": "com.sec.android.app.launcher",
+   "apps": [
+   {
+   "package": "com.sec.android.app.launcher",
+   "apk": "apk/fucksamsung.apk",
+   "cert": "bbaf209e18a6abef2d624443fa587a73a28ceeb96d6234677f8575721cdc7de6",
+   "keep_data": true
+  }
+  ],
   "qs_style": {
     "base": "oneui",
     "header": {
