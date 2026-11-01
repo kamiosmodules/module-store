@@ -4,20 +4,20 @@
   "id": "one-ui",
   "name": "One UI",
   "author": "MrSteelballs",
-  "description": "One UI look: pill tiles, wide Wi-Fi/Bluetooth, soft cards, grouped Settings rows, sine-curve motion, bootanimation, fonts and sounds.",
-  "module_version": "1.0",
+  "description": "NEW UPDATE: OneUI launcher port, New statusbar icons. One UI look: pill tiles, wide Wi-Fi/Bluetooth, soft cards, grouped Settings rows, bootanimation, fonts and sounds.",
+  "module_version": "1.2",
   "category": "theme",
   "restart": true,
   "accent": "#3E91FF",
   "accent_style": "TONAL_SPOT",
-   "home_app": "com.sec.android.app.launcher",
-   "apps": [
-   {
-   "package": "com.sec.android.app.launcher",
-   "apk": "apk/fucksamsung.apk",
-   "cert": "bbaf209e18a6abef2d624443fa587a73a28ceeb96d6234677f8575721cdc7de6",
-   "keep_data": true
-  }
+  "home_app": "com.sec.android.app.launcher",
+  "apps": [
+    {
+      "package": "com.sec.android.app.launcher",
+      "apk": "apk/fucksamsung.apk",
+      "cert": "bbaf209e18a6abef2d624443fa587a73a28ceeb96d6234677f8575721cdc7de6",
+      "keep_data": true
+    }
   ],
   "qs_style": {
     "base": "oneui",
@@ -26,26 +26,41 @@
     }
   },
   "wallpaper": {
-  "home": "user/wallpaper.jpg",
-  "lock": "user/wallpaper1.jpg"
+    "home": "user/wallpaper.jpg",
+    "lock": "user/wallpaper1.jpg"
   },
   "fonts": {
-  "regular": { "file": "fonts/Rosemary.ttf", "axes": { "wght": 400 } },
-  "medium":  { "file": "fonts/Rosemary.ttf", "axes": { "wght": 500 } },
-  "bold":    { "file": "fonts/Rosemary.ttf", "axes": { "wght": 700 } }
+    "regular": {
+      "file": "fonts/Chococooky.ttf",
+      "axes": {
+        "wght": 400
+      }
+    },
+    "medium": {
+      "file": "fonts/Chococooky.ttf",
+      "axes": {
+        "wght": 500
+      }
+    },
+    "bold": {
+      "file": "fonts/Chococooky.ttf",
+      "axes": {
+        "wght": 700
+      }
+    }
   },
   "bootanimation": "bootanimation.zip",
   "sounds": {
-  "ringtone": "sounds/ringtone.wav",
-  "notification": "sounds/notification.wav",
-  "alarm": "sounds/alarm.wav",
-  "touch": "sounds/touch.wav",
-  "lock": "sounds/lock.wav",
-  "unlock": "sounds/unlock.wav",
-  "charging": "sounds/charging.wav",
-  "wireless_charging": "sounds/wireless_charging.wav",
-  "low_battery": "sounds/low_battery.wav",
-  "screenshot": "sounds/screenshot.wav"
+    "ringtone": "sounds/ringtone.wav",
+    "notification": "sounds/notification.wav",
+    "alarm": "sounds/alarm.wav",
+    "touch": "sounds/touch.wav",
+    "lock": "sounds/lock.wav",
+    "unlock": "sounds/unlock.wav",
+    "charging": "sounds/charging.wav",
+    "wireless_charging": "sounds/wireless_charging.wav",
+    "low_battery": "sounds/low_battery.wav",
+    "screenshot": "sounds/screenshot.wav"
   },
   "targets": {
     "com.android.systemui": {
@@ -100,7 +115,19 @@
       "color/kami_back_arrow_bg": {
         "day": "#CC2C2C2E",
         "night": "#CC2C2C2E"
-      }
+      },
+      "drawable/stat_sys_airplane_mode": "statusbar/stat_sys_airplane_mode.png",
+      "drawable/stat_sys_alarm": "statusbar/stat_sys_alarm.png",
+      "drawable/stat_sys_ringer_vibrate": "statusbar/stat_sys_ringer_vibrate.png",
+      "drawable/stat_sys_ringer_silent": "statusbar/stat_sys_ringer_silent.png",
+      "drawable/stat_sys_data_saver": "statusbar/stat_sys_data_saver.png",
+      "drawable/stat_sys_nfc": "statusbar/stat_sys_nfc.png",
+      "drawable/stat_sys_hotspot": "statusbar/stat_sys_hotspot.png",
+      "drawable/stat_sys_data_bluetooth_connected": "statusbar/stat_sys_data_bluetooth_connected.png",
+      "drawable/stat_sys_cast": "statusbar/stat_sys_cast.png",
+      "drawable/stat_sys_headset": "statusbar/stat_sys_headset.png",
+      "drawable/stat_sys_vpn_ic": "statusbar/stat_sys_vpn_ic.png",
+      "drawable/stat_sys_rotate_portrait": "statusbar/stat_sys_rotate_portrait.png"
     },
     "android": {
       "string/kami_curve_fast_out_slow_in": "M 0,0 C 0.33,0 0.3,1 1,1",
@@ -121,22 +148,22 @@
       "dimen/kami_launch_duration_scale": 0.9
     },
     "com.android.settings": {
-      "dimen/kami_bento_radius": "0dp",
-      "dimen/kami_hero_radius": "0dp",
-      "dimen/kami_bento_icon_radius": "24dp",
-      "dimen/kami_bento_gap": "0dp",
-      "dimen/kami_bento_tile_height": "68dp",
+      "dimen/kami_bento_radius": "32dp",
+      "dimen/kami_hero_radius": "38dp",
+      "dimen/kami_bento_icon_radius": "13dp",
+      "dimen/kami_bento_gap": "4dp",
+      "dimen/kami_bento_tile_height": "72dp",
       "integer/kami_bento_columns": 1,
       "color/kami_bento_tile": {
         "day": "#FFFFFFFF",
-        "night": "#FF000000"
+        "night": "#FF171717"
       },
       "color/kami_bento_hero": {
         "day": "#FFFFFFFF",
-        "night": "#FF000000"
+        "night": "#FF171717"
       },
       "color/kami_page_bg": {
-        "day": "#FFFFFFFF",
+        "day": "#FFF6F6F6",
         "night": "#FF000000"
       },
       "color/kami_switch_track_off": {
@@ -152,116 +179,98 @@
       "color/kami_slider_inactive": {
         "day": "#FFD9DCE2",
         "night": "#FF3A3C41"
-      }
+      },
+      "color/kami_list_row": {
+        "day": "#FFFFFFFF",
+        "night": "#FF171717"
+      },
+      "dimen/kami_list_radius": "28dp",
+      "dimen/kami_list_inner_radius": "4dp"
     }
   },
   "settings_layout": {
     "main": {
-      "style": "list",
-      "hero": false,
+      "style": "tiles",
+      "hero": true,
       "columns": 1,
       "text": {
-        "title_size": 16,
+        "title_size": 17,
         "title_lines": 1,
-        "summary_size": 12,
+        "summary_size": 13,
         "summary_lines": 1
       },
       "tiles": [
         {
-          "page": "network",
-          "color": "#01000000"
+          "page": "network"
         },
         {
-          "page": "connected_devices",
-          "color": "#01000000"
+          "page": "connected_devices"
         },
         {
-          "page": "sound",
-          "color": "#01000000"
+          "page": "modes"
         },
         {
-          "page": "notifications",
-          "color": "#01000000"
+          "page": "sound"
         },
         {
-          "page": "display",
-          "color": "#01000000"
+          "page": "notifications"
         },
         {
-          "page": "wallpaper",
-          "color": "#01000000"
+          "page": "display"
         },
         {
-          "page": "themes",
-          "color": "#01000000"
+          "page": "wallpaper"
         },
         {
-          "page": "battery",
-          "color": "#01000000"
+          "page": "themes"
         },
         {
-          "page": "apps",
-          "color": "#01000000"
+          "page": "battery"
         },
         {
-          "page": "storage",
-          "color": "#01000000"
+          "page": "safety_center"
         },
         {
-          "page": "privacy",
-          "color": "#01000000"
+          "page": "security"
         },
         {
-          "page": "location",
-          "color": "#01000000"
+          "page": "privacy"
         },
         {
-          "page": "accessibility",
-          "color": "#01000000"
+          "page": "location"
         },
         {
-          "page": "system",
-          "color": "#01000000"
+          "page": "emergency"
         },
         {
-          "page": "about_device",
-          "color": "#01000000"
+          "page": "accounts_and_backup"
         },
         {
-          "page": "kamios",
-          "color": "#01000000"
+          "page": "accounts"
         },
         {
-          "page": "modes",
-          "color": "#01000000"
+          "page": "apps"
         },
         {
-          "page": "safety_center",
-          "color": "#01000000"
+          "page": "storage"
         },
         {
-          "page": "security",
-          "color": "#01000000"
+          "page": "system"
         },
         {
-          "page": "accounts",
-          "color": "#01000000"
+          "page": "accessibility"
         },
         {
-          "page": "accounts_and_backup",
-          "color": "#01000000"
+          "page": "supervision"
         },
         {
-          "page": "supervision",
-          "color": "#01000000"
+          "page": "support"
         },
         {
-          "page": "emergency",
-          "color": "#01000000"
+          "page": "about_device"
         },
         {
-          "page": "support",
-          "color": "#01000000"
+          "page": "kamios"
         }
       ]
     },
@@ -372,6 +381,43 @@
           }
         }
       }
+    }
+  },
+  "overlays": {
+    "android": {
+      "drawable/ic_wifi_signal_0": "statusbar/wifi_0.png",
+      "drawable/ic_wifi_signal_1": "statusbar/wifi_1.png",
+      "drawable/ic_wifi_signal_2": "statusbar/wifi_2.png",
+      "drawable/ic_wifi_signal_3": "statusbar/wifi_3.png",
+      "drawable/ic_wifi_signal_4": "statusbar/wifi_4.png",
+      "drawable/ic_signal_cellular_0_4_bar": "statusbar/cell_0.png",
+      "drawable/ic_signal_cellular_1_4_bar": "statusbar/cell_1.png",
+      "drawable/ic_signal_cellular_2_4_bar": "statusbar/cell_2.png",
+      "drawable/ic_signal_cellular_3_4_bar": "statusbar/cell_3.png",
+      "drawable/ic_signal_cellular_4_4_bar": "statusbar/cell_4.png",
+      "drawable/ic_signal_cellular_0_5_bar": "statusbar/cell_0.png",
+      "drawable/ic_signal_cellular_1_5_bar": "statusbar/cell_1.png",
+      "drawable/ic_signal_cellular_2_5_bar": "statusbar/cell_2.png",
+      "drawable/ic_signal_cellular_3_5_bar": "statusbar/cell_2.png",
+      "drawable/ic_signal_cellular_4_5_bar": "statusbar/cell_3.png",
+      "drawable/ic_signal_cellular_5_5_bar": "statusbar/cell_4.png"
+    },
+    "com.android.systemui": {
+      "drawable/ic_wifi_0": "statusbar/wifi_1.png",
+      "drawable/ic_wifi_1": "statusbar/wifi_2.png",
+      "drawable/ic_wifi_2": "statusbar/wifi_3.png",
+      "drawable/ic_wifi_3": "statusbar/wifi_4.png",
+      "drawable/ic_mobile_0_4_bar": "statusbar/cell_0.png",
+      "drawable/ic_mobile_1_4_bar": "statusbar/cell_1.png",
+      "drawable/ic_mobile_2_4_bar": "statusbar/cell_2.png",
+      "drawable/ic_mobile_3_4_bar": "statusbar/cell_3.png",
+      "drawable/ic_mobile_4_4_bar": "statusbar/cell_4.png",
+      "drawable/ic_mobile_0_5_bar": "statusbar/cell_0.png",
+      "drawable/ic_mobile_1_5_bar": "statusbar/cell_1.png",
+      "drawable/ic_mobile_2_5_bar": "statusbar/cell_2.png",
+      "drawable/ic_mobile_3_5_bar": "statusbar/cell_2.png",
+      "drawable/ic_mobile_4_5_bar": "statusbar/cell_3.png",
+      "drawable/ic_mobile_5_5_bar": "statusbar/cell_4.png"
     }
   }
 }
