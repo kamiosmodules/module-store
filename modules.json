@@ -25,7 +25,7 @@
       "category": "theme",
       "updated": "2026-10-21",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/doom-ui.zip",
-      "downloads": 15,
+      "downloads": 16,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/doom-ui/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/doom-ui/screenshots/6249170960804156052_121.jpg",
@@ -60,7 +60,7 @@
       "category": "theme",
       "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/flyme-os.zip",
-      "downloads": 44,
+      "downloads": 45,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-os/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-os/screenshots/Screenshot_20261012-213515_System UI.png",
@@ -174,20 +174,20 @@
     {
       "id": "one-ui",
       "name": "One UI",
-      "version": "1.0",
+      "version": "1.2",
       "author": "MrSteelballs",
-      "description": "One UI look: pill tiles, wide Wi-Fi/Bluetooth, soft cards, grouped Settings rows, sine-curve motion, bootanimation, fonts and sounds.",
+      "description": "NEW UPDATE: OneUI launcher port, New statusbar icons. One UI look: pill tiles, wide Wi-Fi/Bluetooth, soft cards, grouped Settings rows, bootanimation, fonts and sounds.",
       "category": "theme",
       "updated": "2026-11-01",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/one-ui.zip",
-      "downloads": 42,
+      "downloads": 44,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/thumbnail.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/screenshots/Screenshot_20261028-170733_KamiOS Home.png",
-        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/screenshots/Screenshot_20261028-170741_System UI.png",
-        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/screenshots/Screenshot_20261028-170744_System UI.png",
-        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/screenshots/Screenshot_20261028-170749_System UI.png",
-        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/screenshots/Screenshot_20261028-170757_Settings.png"
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/screenshots/Screenshot_20261101-184502_One UI Home.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/screenshots/Screenshot_20261101-184507_System UI.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/screenshots/Screenshot_20261101-184509_System UI.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/screenshots/Screenshot_20261101-184514_Settings.png",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/screenshots/Screenshot_20261101-184521_One UI Home.png"
       ]
     },
     {
