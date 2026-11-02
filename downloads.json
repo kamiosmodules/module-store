@@ -37,7 +37,7 @@
   "ios-emoji": {
     "asset": 698489994,
     "base": 54,
-    "count": 1
+    "count": 2
   },
   "metro-launcher": {
     "asset": 698489982,
@@ -62,17 +62,17 @@
   "one-ui": {
     "asset": 698490002,
     "base": 44,
-    "count": 14
+    "count": 15
   },
   "oneplus-sans": {
     "asset": 698489990,
     "base": 32,
-    "count": 1
+    "count": 2
   },
   "pacman-pill": {
     "asset": 698489999,
     "base": 17,
-    "count": 1
+    "count": 2
   },
   "pixelcraft-kamios": {
     "asset": 698489985,
