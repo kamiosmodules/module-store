@@ -27,17 +27,17 @@
   "flyme-os": {
     "asset": 698490000,
     "base": 45,
-    "count": 2
+    "count": 3
   },
   "inter-font": {
     "asset": 698489984,
     "base": 10,
-    "count": 1
+    "count": 2
   },
   "ios-emoji": {
     "asset": 698489994,
     "base": 54,
-    "count": 4
+    "count": 5
   },
   "metro-launcher": {
     "asset": 698489982,
@@ -57,22 +57,22 @@
   "nyan-cat-pill": {
     "asset": 698489998,
     "base": 10,
-    "count": 0
+    "count": 1
   },
   "one-ui": {
     "asset": 698490002,
     "base": 44,
-    "count": 21
+    "count": 24
   },
   "oneplus-sans": {
     "asset": 698489990,
     "base": 32,
-    "count": 2
+    "count": 3
   },
   "pacman-pill": {
     "asset": 698489999,
     "base": 17,
-    "count": 3
+    "count": 4
   },
   "pixelcraft-kamios": {
     "asset": 698489985,
