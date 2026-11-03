@@ -2,7 +2,7 @@
   "coloros-fusion": {
     "asset": 698490007,
     "base": 62,
-    "count": 7
+    "count": 8
   },
   "doctor-doom": {
     "asset": 659935965,
@@ -37,12 +37,12 @@
   "ios-emoji": {
     "asset": 698489994,
     "base": 54,
-    "count": 5
+    "count": 6
   },
   "metro-launcher": {
     "asset": 698489982,
     "base": 78,
-    "count": 5
+    "count": 6
   },
   "minecraft": {
     "asset": 698489997,
@@ -62,12 +62,12 @@
   "one-ui": {
     "asset": 698490002,
     "base": 44,
-    "count": 24
+    "count": 26
   },
   "oneplus-sans": {
     "asset": 698489990,
     "base": 32,
-    "count": 3
+    "count": 4
   },
   "pacman-pill": {
     "asset": 698489999,
@@ -92,11 +92,11 @@
   "volte-rounded-bold": {
     "asset": 698489986,
     "base": 17,
-    "count": 0
+    "count": 1
   },
   "waifu-ui": {
     "asset": 698489979,
     "base": 44,
-    "count": 2
+    "count": 3
   }
 }
