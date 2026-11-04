@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01",
+  "updated": "2026-11-04",
   "modules": [
     {
       "id": "coloros-fusion",
@@ -10,7 +10,7 @@
       "category": "theme",
       "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/coloros-fusion.zip",
-      "downloads": 71,
+      "downloads": 74,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/coloros-fusion/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/coloros-fusion/screenshots/Screenshot 2026-10-13 205717.png"
@@ -25,7 +25,7 @@
       "category": "theme",
       "updated": "2026-10-21",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/doom-ui.zip",
-      "downloads": 18,
+      "downloads": 19,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/doom-ui/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/doom-ui/screenshots/6249170960804156052_121.jpg",
@@ -60,7 +60,7 @@
       "category": "theme",
       "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/flyme-os.zip",
-      "downloads": 48,
+      "downloads": 55,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-os/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-os/screenshots/Screenshot_20261012-213515_System UI.png",
@@ -68,6 +68,24 @@
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-os/screenshots/Screenshot_20261012-213522_KamiOS Home.png",
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-os/screenshots/Screenshot_20261012-213524_KamiOS Home.png",
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/flyme-os/screenshots/markup_738.png"
+      ]
+    },
+    {
+      "id": "hyperos4-glass-forest",
+      "name": "HyperOS Glass Enhanced (KamiOS)",
+      "version": "2.1",
+      "author": "Zaid.",
+      "description": "Launcher-free HyperOS-inspired glass customization for KamiOS. Uses the owner's supplied wallpaper for both home and lock wallpaper paths, with enhanced Quick Settings glass settings and retained supported reference targets. Actual effects depend on the installed KamiOS build and module engine.",
+      "category": "theme",
+      "updated": "2026-11-04",
+      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/hyperos4-glass-forest.zip",
+      "downloads": 0,
+      "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/hyperos4-glass-forest/thumbnail.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/hyperos4-glass-forest/screenshots/IMG_20261104_215605_489.jpg",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/hyperos4-glass-forest/screenshots/IMG_20261104_215605_541.jpg",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/hyperos4-glass-forest/screenshots/IMG_20261104_215606_075.jpg",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/hyperos4-glass-forest/screenshots/IMG_20261104_215606_141.jpg"
       ]
     },
     {
@@ -94,7 +112,7 @@
       "category": "fonts",
       "updated": "2026-10-18",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/ios-emoji.zip",
-      "downloads": 60,
+      "downloads": 61,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/ios-emoji/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/ios-emoji/screenshots/5938181870778519210_119.jpg"
@@ -180,7 +198,7 @@
       "category": "theme",
       "updated": "2026-11-01",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/one-ui.zip",
-      "downloads": 71,
+      "downloads": 82,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/screenshots/Screenshot_20261101-184502_One UI Home.png",
@@ -199,7 +217,7 @@
       "category": "fonts",
       "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/oneplus-sans.zip",
-      "downloads": 36,
+      "downloads": 37,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/oneplus-sans/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/oneplus-sans/screenshots/6221762412256367766_119.jpg"
@@ -264,7 +282,7 @@
       "category": "theme",
       "updated": "2026-10-29",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/stealth-avionics-theme-by-isifat.zip",
-      "downloads": 23,
+      "downloads": 25,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/stealth-avionics-theme-by-isifat/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/stealth-avionics-theme-by-isifat/screenshots/6275907922495739112_121.jpg",

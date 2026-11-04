@@ -2,7 +2,7 @@
   "coloros-fusion": {
     "asset": 698490007,
     "base": 62,
-    "count": 9
+    "count": 12
   },
   "doctor-doom": {
     "asset": 659935965,
@@ -12,7 +12,7 @@
   "doom-ui": {
     "asset": 698490003,
     "base": 16,
-    "count": 2
+    "count": 3
   },
   "economica-font": {
     "asset": 698489993,
@@ -27,7 +27,7 @@
   "flyme-os": {
     "asset": 698490000,
     "base": 45,
-    "count": 3
+    "count": 10
   },
   "inter-font": {
     "asset": 698489984,
@@ -37,7 +37,7 @@
   "ios-emoji": {
     "asset": 698489994,
     "base": 54,
-    "count": 6
+    "count": 7
   },
   "metro-launcher": {
     "asset": 698489982,
@@ -62,12 +62,12 @@
   "one-ui": {
     "asset": 698490002,
     "base": 44,
-    "count": 27
+    "count": 38
   },
   "oneplus-sans": {
     "asset": 698489990,
     "base": 32,
-    "count": 4
+    "count": 5
   },
   "pacman-pill": {
     "asset": 698489999,
@@ -87,7 +87,7 @@
   "stealth-avionics-theme-by-isifat": {
     "asset": 698489977,
     "base": 19,
-    "count": 4
+    "count": 6
   },
   "volte-rounded-bold": {
     "asset": 698489986,
