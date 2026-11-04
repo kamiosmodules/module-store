@@ -175,6 +175,25 @@
       ]
     },
     {
+      "id": "nothing-os-5-enhance",
+      "name": "Nothing OS 5 Enhanced for KamiOS",
+      "version": "1.1",
+      "author": "Zaid.",
+      "description": "Enhanced Nothing OS 5-inspired KamiOS styling. Preserves user wallpaper asset; apply wallpaper manually if desired.",
+      "category": "theme",
+      "updated": "2026-11-04",
+      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/nothing-os-5-enhance.zip",
+      "downloads": 0,
+      "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nothing-os-5-enhance/thumbnail.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nothing-os-5-enhance/screenshots/IMG_20261104_215454_566.jpg",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nothing-os-5-enhance/screenshots/IMG_20261104_215455_048.jpg",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nothing-os-5-enhance/screenshots/IMG_20261104_215455_319.jpg",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nothing-os-5-enhance/screenshots/IMG_20261104_215455_331.jpg",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nothing-os-5-enhance/screenshots/IMG_20261104_215455_424.jpg"
+      ]
+    },
+    {
       "id": "nothing-os-5-enhanced",
       "name": "Nothing OS 5 Enhanced for KamiOS",
       "version": "1.1",
@@ -183,7 +202,7 @@
       "category": "theme",
       "updated": "2026-11-04",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/nothing-os-5-enhanced.zip",
-      "downloads": 0,
+      "downloads": 1,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nothing-os-5-enhanced/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nothing-os-5-enhanced/screenshots/IMG_20261104_215454_566.jpg",
@@ -217,7 +236,7 @@
       "category": "theme",
       "updated": "2026-11-01",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/one-ui.zip",
-      "downloads": 82,
+      "downloads": 83,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/screenshots/Screenshot_20261101-184502_One UI Home.png",
