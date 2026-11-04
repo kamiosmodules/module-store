@@ -175,6 +175,25 @@
       ]
     },
     {
+      "id": "nothing-os-5-enhanced",
+      "name": "Nothing OS 5 Enhanced for KamiOS",
+      "version": "1.1",
+      "author": "Zaid.",
+      "description": "Enhanced Nothing OS 5-inspired KamiOS styling. Preserves user wallpaper asset; apply wallpaper manually if desired.",
+      "category": "theme",
+      "updated": "2026-11-04",
+      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/nothing-os-5-enhanced.zip",
+      "downloads": 0,
+      "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nothing-os-5-enhanced/thumbnail.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nothing-os-5-enhanced/screenshots/IMG_20261104_215454_566.jpg",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nothing-os-5-enhanced/screenshots/IMG_20261104_215455_048.jpg",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nothing-os-5-enhanced/screenshots/IMG_20261104_215455_319.jpg",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nothing-os-5-enhanced/screenshots/IMG_20261104_215455_331.jpg",
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nothing-os-5-enhanced/screenshots/IMG_20261104_215455_424.jpg"
+      ]
+    },
+    {
       "id": "nyan-cat-pill",
       "name": "Nyan Cat Pill",
       "version": "1.0",
