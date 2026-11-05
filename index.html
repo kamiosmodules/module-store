@@ -1,73 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#10131a">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%93%A6%3C/text%3E%3C/svg%3E">
-<title>Module Store</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
-<style>
-:root{--bg:#f3f5f9;--card:#fff;--ink:#14181f;--mute:#5d6675;--line:#e1e5ec;--acc:#3b5bdb;--acc-ink:#fff;--tile:#e4e9ff;--tile-ink:#2c46b8;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10131a;--card:#181c26;--ink:#eef1f7;--mute:#98a2b5;--line:#272d3b;--acc:#7c93ff;--acc-ink:#0d1230;--tile:#232a4a;--tile-ink:#b6c3ff}}
-:root[data-theme="dark"]{--bg:#10131a;--card:#181c26;--ink:#eef1f7;--mute:#98a2b5;--line:#272d3b;--acc:#7c93ff;--acc-ink:#0d1230;--tile:#232a4a;--tile-ink:#b6c3ff}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 "DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-main{max-width:640px;margin:0 auto;padding:24px max(14px,env(safe-area-inset-right,0px)) 48px max(14px,env(safe-area-inset-left,0px))}
-h1{font-size:32px;line-height:1.1;margin:0 0 6px;font-weight:700;letter-spacing:-.02em}
-.support{margin:0 0 10px;font-size:13px}
-.support a{color:var(--acc);text-decoration:none;font-weight:500}
-.support a:hover{text-decoration:underline}
-.support a:focus-visible{outline:3px solid var(--acc);outline-offset:2px;border-radius:4px}
-.sub{color:var(--mute);margin:0 0 20px}
-.search{width:100%;min-height:48px;font-size:16px;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;margin-bottom:14px}
-.search:focus-visible,.btn:focus-visible,summary:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
-.list{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden}
-.row{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:4px 14px;align-items:start;padding:16px;border-bottom:1px solid var(--line)}
-.row:last-child{border-bottom:0}
-.tile{width:44px;height:44px;overflow:hidden;border-radius:12px;background:var(--tile);color:var(--tile-ink);display:grid;place-items:center;font-weight:700;font-size:18px}
-.tile img{width:100%;height:100%;object-fit:cover;display:block}
-.info{min-width:0;overflow-wrap:anywhere}
-.shots{grid-column:1 / -1;grid-row:2;display:flex;gap:8px;overflow-x:auto;margin-top:8px;padding-bottom:4px;-webkit-overflow-scrolling:touch}
-.shots img{height:170px;width:auto;border-radius:12px;flex:none;border:1px solid var(--line);cursor:zoom-in}
-.shots img:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
-.lb{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.88);padding:max(16px,env(safe-area-inset-top,0px)) 16px max(16px,env(safe-area-inset-bottom,0px))}
-.lb.open{display:flex}
-.lb img{max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;cursor:zoom-out;background:#000}
-.lb button{position:absolute;border:0;background:rgba(255,255,255,.16);color:#fff;font:inherit;font-size:24px;width:48px;height:48px;border-radius:999px;cursor:pointer;display:grid;place-items:center}
-.lb button:focus-visible{outline:3px solid #fff}
-.lb .x{top:max(12px,env(safe-area-inset-top,0px));right:12px}
-.lb .p{left:10px;top:50%;margin-top:-24px}
-.lb .n{right:10px;top:50%;margin-top:-24px}
-.lb .c{position:absolute;bottom:max(14px,env(safe-area-inset-bottom,0px));left:0;right:0;text-align:center;color:#fff;font-size:14px;opacity:.85}
-.name{font-weight:700;margin:0}
-.meta{color:var(--mute);font-size:13px;margin:0 0 2px}
-.desc{margin:0;color:var(--ink);font-size:15px}
-.btn{grid-column:3;grid-row:1;align-self:center;display:inline-flex;align-items:center;justify-content:center;min-height:44px;background:var(--acc);color:var(--acc-ink);text-decoration:none;font-weight:700;font-size:15px;padding:0 20px;border-radius:999px;-webkit-tap-highlight-color:transparent}
-.btn:active{transform:scale(.97)}
-.empty{padding:28px 16px;color:var(--mute);text-align:center}
-.note{font-size:13px;color:var(--mute);margin:14px 4px}
-details{margin-top:18px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 16px}
-summary{cursor:pointer;font-weight:500}
-pre{overflow-x:auto;white-space:pre-wrap;word-break:break-word;font-size:12px;line-height:1.5;margin:10px 0 0;color:var(--mute)}
-@media (max-width:560px){h1{font-size:28px}.row{grid-template-columns:44px minmax(0,1fr);padding:14px}.btn{grid-column:1 / -1;grid-row:3;width:100%;margin-top:10px}summary{padding:4px 0}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10131a">
+  <title>KamiOS Module Store</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%93%A6%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f3f5f9;
+      --card: #fff;
+      --ink: #14181f;
+      --mute: #5d6675;
+      --line: #e1e5ec;
+      --acc: #3b5bdb;
+      --acc-ink: #fff;
+      --tile: #e4e9ff;
+      --tile-ink: #2c46b8;
+      --ok: #16834a;
+      --warn: #a45b00;
+      --bad: #bd3030;
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #10131a; --card: #181c26; --ink: #eef1f7; --mute: #98a2b5;
+        --line: #272d3b; --acc: #7c93ff; --acc-ink: #0d1230;
+        --tile: #232a4a; --tile-ink: #b6c3ff;
+        --ok: #62d392; --warn: #ffbf66; --bad: #ff7777;
+      }
+    }
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #10131a; --card: #181c26; --ink: #eef1f7; --mute: #98a2b5;
+      --line: #272d3b; --acc: #7c93ff; --acc-ink: #0d1230;
+      --tile: #232a4a; --tile-ink: #b6c3ff;
+      --ok: #62d392; --warn: #ffbf66; --bad: #ff7777;
+    }
+    :root[data-theme="light"] { color-scheme: light; }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font: 16px/1.5 "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    main { max-width: 920px; margin: 0 auto; padding: 30px 18px 60px; }
+    h1 { font-size: clamp(28px, 5vw, 38px); line-height: 1.1; margin: 0 0 7px; letter-spacing: -.025em; }
+    h2 { font-size: 19px; margin: 0; }
+    p { margin-top: 0; }
+    a { color: var(--acc); }
+    .support { margin: 0 0 10px; font-size: 13px; }
+    .support a { text-decoration: none; font-weight: 600; }
+    .support a:hover { text-decoration: underline; }
+    .sub { color: var(--mute); margin: 0 0 22px; }
+    .toolbar { display: grid; gap: 12px; margin-bottom: 18px; }
+    .search {
+      width: 100%; min-height: 48px; font-size: 16px; padding: 12px 16px;
+      border-radius: 14px; border: 1px solid var(--line); background: var(--card);
+      color: var(--ink); font: inherit;
+    }
+    .search:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible {
+      outline: 3px solid var(--acc); outline-offset: 2px;
+    }
+    .filters { display: flex; flex-wrap: wrap; gap: 7px; }
+    .filter {
+      border: 1px solid var(--line); background: var(--card); color: var(--mute);
+      border-radius: 999px; padding: 7px 12px; font: inherit; font-size: 13px;
+      cursor: pointer; white-space: nowrap;
+    }
+    .filter[aria-pressed="true"] { background: var(--tile); color: var(--tile-ink); border-color: var(--acc); font-weight: 700; }
+    .group { margin: 25px 0 0; scroll-margin-top: 18px; }
+    .group-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 0 2px 10px; }
+    .count { color: var(--mute); font-size: 12px; white-space: nowrap; }
+    .list { background: var(--card); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
+    .row {
+      display: grid; grid-template-columns: 48px minmax(0, 1fr) auto;
+      gap: 5px 14px; align-items: start; padding: 15px;
+      border-bottom: 1px solid var(--line);
+    }
+    .row:last-child { border-bottom: 0; }
+    .tile {
+      width: 48px; height: 48px; overflow: hidden; border-radius: 13px;
+      background: var(--tile); color: var(--tile-ink); display: grid;
+      place-items: center; font-weight: 700; font-size: 19px;
+    }
+    .tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .info { min-width: 0; overflow-wrap: anywhere; }
+    .name { font-weight: 700; margin: 0; }
+    .meta { color: var(--mute); font-size: 12px; margin: 1px 0 5px; }
+    .desc { margin: 0; color: var(--ink); font-size: 14px; }
+    .row-actions { grid-column: 3; grid-row: 1; align-self: center; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; min-height: 42px;
+      background: var(--acc); color: var(--acc-ink); text-decoration: none;
+      border: 0; font: inherit; font-weight: 700; font-size: 14px;
+      padding: 0 18px; border-radius: 999px; cursor: pointer;
+    }
+    .btn:disabled { opacity: .48; cursor: not-allowed; }
+    .btn.secondary { background: var(--tile); color: var(--tile-ink); }
+    .shots {
+      grid-column: 1 / -1; grid-row: 2; display: flex; gap: 8px;
+      overflow-x: auto; margin-top: 7px; padding: 2px 0 5px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .shots img { height: 150px; width: auto; border-radius: 11px; flex: none; border: 1px solid var(--line); cursor: zoom-in; }
+    .shots img:focus-visible { outline: 3px solid var(--acc); outline-offset: 2px; }
+    .empty { padding: 30px 16px; color: var(--mute); text-align: center; background: var(--card); border: 1px solid var(--line); border-radius: 18px; }
+    .note { font-size: 12px; color: var(--mute); margin: 13px 3px; }
+    details { margin-top: 20px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 13px 16px; }
+    summary { cursor: pointer; font-weight: 600; }
+    pre { overflow-x: auto; white-space: pre-wrap; word-break: break-word; font-size: 12px; line-height: 1.5; margin: 10px 0 0; color: var(--mute); }
+    .upload-intro { color: var(--mute); font-size: 13px; margin: 8px 0 14px; }
+    .upload-grid { display: grid; gap: 12px; }
+    .auth-row { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; }
+    .auth-user { color: var(--ok); font-size: 13px; }
+    .field-label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+    input[type="file"] { display: block; width: 100%; max-width: 100%; padding: 11px; border: 1px dashed var(--line); border-radius: 12px; background: var(--bg); color: var(--mute); font: inherit; font-size: 13px; }
+    .upload-status { min-height: 20px; margin: 0; font-size: 13px; color: var(--mute); overflow-wrap: anywhere; }
+    .upload-status.ok { color: var(--ok); }
+    .upload-status.warn { color: var(--warn); }
+    .upload-status.error { color: var(--bad); }
+    .preview { display: none; border: 1px solid var(--line); border-radius: 12px; padding: 12px; background: var(--bg); font-size: 13px; }
+    .preview.show { display: block; }
+    .preview strong { display: inline-block; min-width: 78px; }
+    .preview-files { max-height: 130px; overflow: auto; margin: 7px 0 0; padding-left: 20px; color: var(--mute); font-size: 12px; }
+    .device-code { display: none; padding: 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg); }
+    .device-code.show { display: block; }
+    .device-code code { font-size: 20px; letter-spacing: .12em; font-weight: 700; }
+    .device-code a { font-size: 13px; }
+    .lb {
+      position: fixed; inset: 0; z-index: 50; display: none; align-items: center;
+      justify-content: center; background: rgba(0,0,0,.88);
+      padding: max(16px,env(safe-area-inset-top,0px)) 16px max(16px,env(safe-area-inset-bottom,0px));
+    }
+    .lb.open { display: flex; }
+    .lb img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 8px; cursor: zoom-out; background: #000; }
+    .lb button { position: absolute; border: 0; background: rgba(255,255,255,.16); color: #fff; font: inherit; font-size: 24px; width: 48px; height: 48px; border-radius: 999px; cursor: pointer; display: grid; place-items: center; }
+    .lb button:focus-visible { outline: 3px solid #fff; }
+    .lb .x { top: max(12px,env(safe-area-inset-top,0px)); right: 12px; }
+    .lb .p { left: 10px; top: 50%; margin-top: -24px; }
+    .lb .n { right: 10px; top: 50%; margin-top: -24px; }
+    .lb .c { position: absolute; bottom: max(14px,env(safe-area-inset-bottom,0px)); left: 0; right: 0; text-align: center; color: #fff; font-size: 14px; opacity: .85; }
+    @media (max-width: 600px) {
+      main { padding: 24px 13px 46px; }
+      .row { grid-template-columns: 44px minmax(0,1fr); padding: 13px; }
+      .tile { width: 44px; height: 44px; }
+      .row-actions { grid-column: 1 / -1; grid-row: 3; }
+      .row-actions .btn { width: 100%; }
+      .shots { grid-row: 2; }
+      .filters { flex-wrap: nowrap; overflow-x: auto; padding: 2px 1px 7px; }
+      .filter { flex: 0 0 auto; }
+    }
+  </style>
 </head>
 <body>
 <main>
-  <h1>Module Store</h1>
-  <p class="support"><a href="https://t.me/kamiosofficial" target="_blank" rel="noopener">Official support group for KamiOS</a></p>
-  <p class="sub">Browse modules and download the zip in one tap.</p>
-  <input id="q" class="search" type="search" placeholder="Search modules" aria-label="Search modules">
-  <div id="list" class="list" aria-live="polite"></div>
+  <header>
+    <h1>KamiOS Module Store</h1>
+    <p class="support"><a href="https://t.me/kamiosofficial" target="_blank" rel="noopener">Official KamiOS support group</a></p>
+    <p class="sub">Browse, filter and download modules. You can also submit a module ZIP for review.</p>
+  </header>
+
+  <section class="toolbar" aria-label="Module filters">
+    <input id="q" class="search" type="search" placeholder="Search modules" aria-label="Search modules">
+    <div id="filters" class="filters" aria-label="Filter by category"></div>
+  </section>
+
+  <div id="list" aria-live="polite"></div>
   <p class="note" id="src"></p>
+
+  <details id="submit-module">
+    <summary>Submit a module ZIP</summary>
+    <p class="upload-intro">
+      Upload a ZIP following the repository README. The website extracts it, checks the metadata and submits a pull request from your GitHub fork. A maintainer must review and merge it before it appears in the store.
+    </p>
+    <div class="upload-grid">
+      <div class="auth-row">
+        <button class="btn" id="login-button" type="button">Sign in with GitHub</button>
+        <button class="btn secondary" id="logout-button" type="button" hidden>Sign out</button>
+        <span class="auth-user" id="auth-user" aria-live="polite"></span>
+      </div>
+      <div class="device-code" id="device-code">
+        <p>Open <a id="verify-link" href="https://github.com/login/device" target="_blank" rel="noopener">GitHub device authorization</a> and enter this code:</p>
+        <p><code id="user-code"></code></p>
+        <p class="note">Keep this page open while GitHub authorizes the request.</p>
+      </div>
+      <div>
+        <label class="field-label" for="zip-file">Module ZIP</label>
+        <input id="zip-file" type="file" accept=".zip,application/zip">
+      </div>
+      <div class="preview" id="zip-preview" aria-live="polite"></div>
+      <p class="upload-status" id="upload-status" role="status"></p>
+      <div>
+        <button class="btn" id="submit-button" type="button" disabled>Validate and open pull request</button>
+      </div>
+      <p class="note">
+        The uploader requests GitHub's <code>public_repo</code> permission so it can create a fork, commit the files and open a pull request. The access token is kept in page memory only; it is not written to local storage.
+      </p>
+    </div>
+  </details>
+
   <details>
-    <summary>See the modules.json behind this page</summary>
+    <summary>View the generated modules.json</summary>
     <pre id="json"></pre>
   </details>
 </main>
+
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Screenshot viewer">
   <button class="x" id="lbx" aria-label="Close">&#10005;</button>
   <button class="p" id="lbp" aria-label="Previous screenshot">&#8249;</button>
@@ -75,86 +220,653 @@ pre{overflow-x:auto;white-space:pre-wrap;word-break:break-word;font-size:12px;li
   <button class="n" id="lbn" aria-label="Next screenshot">&#8250;</button>
   <div class="c" id="lbc"></div>
 </div>
+
 <script>
-// Sample data. On GitHub Pages this is replaced by the real modules.json next to index.html.
-var SAMPLE = {
-  updated: "2026-10-12",
-  modules: [
-    {id:"better-battery",name:"Better Battery",version:"1.2",author:"shoaib",description:"Tunes kernel and doze settings to cut idle drain.",download:"https://github.com/USER/module-store/releases/download/latest/better-battery.zip"},
-    {id:"fast-charge-tweaks",name:"Fast Charge Tweaks",version:"0.9",author:"devname",description:"Raises the charge current limit on supported devices.",download:"https://github.com/USER/module-store/releases/download/latest/fast-charge-tweaks.zip"},
-    {id:"dark-everything",name:"Dark Everything",version:"2.0",author:"devname",description:"Forces dark mode on apps that do not support it.",download:"https://github.com/USER/module-store/releases/download/latest/dark-everything.zip"},
-    {id:"debloat-lite",name:"Debloat Lite",version:"1.0",author:"shoaib",description:"Disables a safe list of preinstalled apps without deleting them.",download:"https://github.com/USER/module-store/releases/download/latest/debloat-lite.zip"},
-    {id:"gaming-boost",name:"Gaming Boost",version:"1.5",author:"someone",description:"Locks the CPU and GPU governors to performance while a game is open.",download:"https://github.com/USER/module-store/releases/download/latest/gaming-boost.zip"}
-  ]
+"use strict";
+
+/*
+ * Deployment settings:
+ * 1. Deploy oauth-proxy/worker.js as a Cloudflare Worker.
+ * 2. Set OAUTH_PROXY_URL to that Worker URL (without a trailing slash).
+ * 3. Create a GitHub OAuth App with Device Flow enabled and put its client ID
+ *    in the Worker environment as GITHUB_CLIENT_ID.
+ */
+const STORE_OWNER = "kamiosmodules";
+const STORE_REPO = "module-store";
+const STORE_BRANCH = "main";
+const GITHUB_API = "https://api.github.com";
+const OAUTH_PROXY_URL = "https://YOUR-WORKER.workers.dev";
+const ZIP_LIBRARY_READY = () => typeof JSZip !== "undefined";
+const MAX_FILES = 100;
+const MAX_FILE_BYTES = 20 * 1024 * 1024;
+const MAX_TOTAL_BYTES = 50 * 1024 * 1024;
+const CATEGORIES = ["theme", "launcher", "tweak", "sounds", "bootanimation", "emoji", "fonts", "wallpaper", "icons", "apps", "quicksettings", "pill", "volume", "lockscreen"];
+const CATEGORY_LABELS = {
+  theme: "Themes", launcher: "Launchers", tweak: "Tweaks", sounds: "Sounds",
+  bootanimation: "Boot animations", emoji: "Emoji", fonts: "Fonts", wallpaper: "Wallpapers",
+  icons: "Icons", apps: "Apps", quicksettings: "Quick settings", pill: "Pills",
+  volume: "Volume panels", lockscreen: "Lock screens", other: "Other"
 };
-var shown = [], data = SAMPLE, listEl = document.getElementById('list'), q = document.getElementById('q');
-function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
-function render(){
-  var t = q.value.trim().toLowerCase();
-  var items = data.modules.filter(function(m){return (m.name+' '+m.description+' '+m.author).toLowerCase().indexOf(t)>-1});
-  if(!items.length){listEl.innerHTML='<div class="empty">No modules match "'+esc(q.value)+'". Try a different word.</div>';return}
-  shown = items;
-  listEl.innerHTML = items.map(function(m,mi){
-    var tile = m.thumbnail ? '<img src="'+esc(m.thumbnail)+'" alt="" loading="lazy">' : esc(m.name.charAt(0));
-    var shots = (m.screenshots&&m.screenshots.length) ? '<div class="shots">'+m.screenshots.map(function(u,si){return '<img src="'+esc(u)+'" alt="Screenshot of '+esc(m.name)+'" loading="lazy" tabindex="0" role="button" data-m="'+mi+'" data-i="'+si+'">'}).join('')+'</div>' : '';
-    return '<div class="row"><div class="tile">'+tile+'</div>'+
-      '<div class="info"><p class="name">'+esc(m.name)+'</p>'+
-      '<p class="meta">v'+esc(m.version)+' by '+esc(m.author)+'</p>'+
-      '<p class="desc">'+esc(m.description)+'</p></div>'+shots+
-      '<a class="btn" href="'+esc(m.download)+'" target="_blank" rel="noopener" download>Download</a></div>';
-  }).join('');
+const CATEGORY_ORDER = [...CATEGORIES, "other"];
+
+let data = { updated: null, modules: [] };
+let shown = [];
+let activeCategory = "all";
+let currentAccessToken = null;
+let currentUser = null;
+let selectedArchive = null;
+let parsedUpload = null;
+let loginPending = false;
+
+const listEl = document.getElementById("list");
+const searchEl = document.getElementById("q");
+const filtersEl = document.getElementById("filters");
+const statusEl = document.getElementById("upload-status");
+const submitButton = document.getElementById("submit-button");
+
+function esc(value) {
+  return String(value == null ? "" : value).replace(/[&<>"']/g, function (char) {
+    return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char];
+  });
 }
-function show(src){
-  document.getElementById('src').textContent = src;
-  document.getElementById('json').textContent = JSON.stringify(data,null,2);
+
+function safeUrl(value) {
+  if (!String(value || "").trim()) return "#";
+  try {
+    const parsed = new URL(String(value).trim(), window.location.href);
+    return (parsed.protocol === "https:" || parsed.protocol === "http:") ? parsed.href : "#";
+  } catch (_) { return "#"; }
+}
+
+function normalCategory(value) {
+  const category = String(value || "").trim().toLowerCase();
+  return CATEGORIES.includes(category) ? category : "other";
+}
+
+function getCategory(module) {
+  return normalCategory(module.category);
+}
+
+function categoryName(category) {
+  return CATEGORY_LABELS[category] || CATEGORY_LABELS.other;
+}
+
+function setStatus(message, type) {
+  statusEl.textContent = message || "";
+  statusEl.className = "upload-status" + (type ? " " + type : "");
+}
+
+function renderFilters() {
+  const counts = {};
+  data.modules.forEach(function (module) {
+    const category = getCategory(module);
+    counts[category] = (counts[category] || 0) + 1;
+  });
+  const available = CATEGORY_ORDER.filter(category => counts[category]);
+  const options = [{ id: "all", label: "All", count: data.modules.length }].concat(
+    available.map(id => ({ id, label: categoryName(id), count: counts[id] }))
+  );
+  filtersEl.innerHTML = options.map(option =>
+    '<button class="filter" type="button" data-category="' + esc(option.id) + '" aria-pressed="' + (activeCategory === option.id) + '">' +
+    esc(option.label) + ' <span>(' + option.count + ')</span></button>'
+  ).join("");
+}
+
+function render() {
+  const term = searchEl.value.trim().toLowerCase();
+  const items = data.modules.filter(function (module) {
+    const category = getCategory(module);
+    const searchable = [module.name, module.description, module.author, module.id, categoryName(category)].join(" ").toLowerCase();
+    return (activeCategory === "all" || category === activeCategory) && searchable.includes(term);
+  }).sort((a, b) => String(a.name || a.id).localeCompare(String(b.name || b.id)));
+
+  shown = items;
+  if (!items.length) {
+    listEl.innerHTML = '<div class="empty">No modules match your search or category filter.</div>';
+    return;
+  }
+
+  const groups = new Map();
+  items.forEach(module => {
+    const category = getCategory(module);
+    if (!groups.has(category)) groups.set(category, []);
+    groups.get(category).push(module);
+  });
+
+  listEl.innerHTML = CATEGORY_ORDER.filter(category => groups.has(category)).map(category => {
+    const modules = groups.get(category);
+    const rows = modules.map(module => {
+      const moduleIndex = items.indexOf(module);
+      const title = esc(module.name || module.id);
+      const author = esc(module.author || "Unknown author");
+      const version = esc(module.version || "1.0");
+      const description = esc(module.description || "No description provided.");
+      const thumbnail = safeUrl(module.thumbnail);
+      const tile = module.thumbnail && thumbnail !== "#"
+        ? '<img src="' + esc(thumbnail) + '" alt="" loading="lazy">'
+        : esc((module.name || module.id || "?").charAt(0).toUpperCase());
+      const screenshots = Array.isArray(module.screenshots) ? module.screenshots.filter(url => safeUrl(url) !== "#") : [];
+      const shots = screenshots.length
+        ? '<div class="shots">' + screenshots.map((url, index) =>
+          '<img src="' + esc(safeUrl(url)) + '" alt="Screenshot of ' + title + '" loading="lazy" tabindex="0" role="button" data-m="' + moduleIndex + '" data-i="' + index + '">'
+        ).join("") + '</div>' : "";
+      const download = safeUrl(module.download);
+      const downloadButton = download !== "#"
+        ? '<a class="btn" href="' + esc(download) + '" target="_blank" rel="noopener">Download</a>'
+        : '<span class="note">Download unavailable</span>';
+      const details = ["v" + version, "by " + author];
+      if (Number.isFinite(Number(module.downloads))) details.push(Number(module.downloads).toLocaleString() + " downloads");
+      if (module.updated) details.push("updated " + esc(module.updated));
+
+      return '<article class="row"><div class="tile">' + tile + '</div>' +
+        '<div class="info"><p class="name">' + title + '</p>' +
+        '<p class="meta">' + details.join(" · ") + '</p>' +
+        '<p class="desc">' + description + '</p></div>' +
+        '<div class="row-actions">' + downloadButton + '</div>' + shots + '</article>';
+    }).join("");
+
+    return '<section class="group" data-group="' + esc(category) + '"><div class="group-head"><h2>' +
+      esc(categoryName(category)) + '</h2><span class="count">' + modules.length + ' module' + (modules.length === 1 ? "" : "s") +
+      '</span></div><div class="list">' + rows + '</div></section>';
+  }).join("");
+}
+
+function showSource(message) {
+  document.getElementById("src").textContent = message;
+  document.getElementById("json").textContent = JSON.stringify(data, null, 2);
+  renderFilters();
   render();
 }
-q.addEventListener('input',render);
 
-// Screenshot viewer: tap a screenshot to open it full size.
-var lb=document.getElementById('lb'), lbi=document.getElementById('lbi'), lbc=document.getElementById('lbc');
-var cur={list:[],i:0,name:''}, lastFocus=null;
-function lbShow(){
-  lbi.src=cur.list[cur.i]; lbi.alt='Screenshot of '+cur.name;
-  lbc.textContent=cur.name+' ('+(cur.i+1)+' of '+cur.list.length+')';
-  var multi=cur.list.length>1;
-  document.getElementById('lbp').style.display=multi?'grid':'none';
-  document.getElementById('lbn').style.display=multi?'grid':'none';
-}
-function lbOpen(mi,si){
-  var m=shown[mi]; if(!m||!m.screenshots) return;
-  cur={list:m.screenshots,i:si,name:m.name}; lastFocus=document.activeElement;
-  lbShow(); lb.classList.add('open'); document.body.style.overflow='hidden';
-  document.getElementById('lbx').focus();
-}
-function lbClose(){lb.classList.remove('open'); lbi.removeAttribute('src'); document.body.style.overflow=''; if(lastFocus&&lastFocus.focus) lastFocus.focus()}
-function lbStep(d){cur.i=(cur.i+d+cur.list.length)%cur.list.length; lbShow()}
-function openFrom(t){var e=t.closest&&t.closest('.shots img'); if(e){lbOpen(+e.getAttribute('data-m'),+e.getAttribute('data-i')); return true}}
-listEl.addEventListener('click',function(e){openFrom(e.target)});
-listEl.addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' ')&&openFrom(e.target)) e.preventDefault()});
-document.getElementById('lbx').addEventListener('click',lbClose);
-document.getElementById('lbp').addEventListener('click',function(e){e.stopPropagation();lbStep(-1)});
-document.getElementById('lbn').addEventListener('click',function(e){e.stopPropagation();lbStep(1)});
-lbi.addEventListener('click',lbClose);
-lb.addEventListener('click',function(e){if(e.target===lb) lbClose()});
-document.addEventListener('keydown',function(e){
-  if(!lb.classList.contains('open')) return;
-  if(e.key==='Escape') lbClose();
-  else if(e.key==='ArrowLeft'&&cur.list.length>1) lbStep(-1);
-  else if(e.key==='ArrowRight'&&cur.list.length>1) lbStep(1);
+searchEl.addEventListener("input", render);
+filtersEl.addEventListener("click", function (event) {
+  const button = event.target.closest("button[data-category]");
+  if (!button) return;
+  activeCategory = button.getAttribute("data-category");
+  renderFilters();
+  render();
 });
-// Swipe left/right on the open image to move between screenshots.
-var tx=null;
-lb.addEventListener('touchstart',function(e){tx=e.touches.length===1?e.touches[0].clientX:null},{passive:true});
-lb.addEventListener('touchend',function(e){
-  if(tx===null||cur.list.length<2) return;
-  var dx=e.changedTouches[0].clientX-tx; tx=null;
-  if(Math.abs(dx)>60) lbStep(dx<0?1:-1);
-},{passive:true});
-// Try the real file first (works on GitHub Pages), otherwise keep the sample.
-fetch('modules.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){
-  if(j&&j.modules){data=j;show('Loaded modules.json from this site.')}else throw 0;
-}).catch(function(){show('Showing sample data. Download links point to a placeholder repo (USER/module-store).')});
+
+// Screenshot viewer.
+const lightbox = document.getElementById("lb");
+const lightboxImage = document.getElementById("lbi");
+const lightboxCaption = document.getElementById("lbc");
+let lightboxState = { list: [], index: 0, name: "" };
+let previousFocus = null;
+
+function showLightboxImage() {
+  lightboxImage.src = lightboxState.list[lightboxState.index];
+  lightboxImage.alt = "Screenshot of " + lightboxState.name;
+  lightboxCaption.textContent = lightboxState.name + " (" + (lightboxState.index + 1) + " of " + lightboxState.list.length + ")";
+  const multiple = lightboxState.list.length > 1;
+  document.getElementById("lbp").style.display = multiple ? "grid" : "none";
+  document.getElementById("lbn").style.display = multiple ? "grid" : "none";
+}
+
+function openLightbox(moduleIndex, imageIndex) {
+  const module = shown[moduleIndex];
+  if (!module || !Array.isArray(module.screenshots)) return;
+  const images = module.screenshots.filter(url => safeUrl(url) !== "#").map(safeUrl);
+  if (!images.length) return;
+  lightboxState = { list: images, index: imageIndex, name: module.name || module.id };
+  previousFocus = document.activeElement;
+  showLightboxImage();
+  lightbox.classList.add("open");
+  document.body.style.overflow = "hidden";
+  document.getElementById("lbx").focus();
+}
+
+function closeLightbox() {
+  lightbox.classList.remove("open");
+  lightboxImage.removeAttribute("src");
+  document.body.style.overflow = "";
+  if (previousFocus && previousFocus.focus) previousFocus.focus();
+}
+
+function stepLightbox(direction) {
+  lightboxState.index = (lightboxState.index + direction + lightboxState.list.length) % lightboxState.list.length;
+  showLightboxImage();
+}
+
+function openFromTarget(target) {
+  const image = target.closest && target.closest(".shots img");
+  if (!image) return false;
+  openLightbox(Number(image.dataset.m), Number(image.dataset.i));
+  return true;
+}
+
+listEl.addEventListener("click", event => openFromTarget(event.target));
+listEl.addEventListener("keydown", event => {
+  if ((event.key === "Enter" || event.key === " ") && openFromTarget(event.target)) event.preventDefault();
+});
+document.getElementById("lbx").addEventListener("click", closeLightbox);
+document.getElementById("lbp").addEventListener("click", event => { event.stopPropagation(); stepLightbox(-1); });
+document.getElementById("lbn").addEventListener("click", event => { event.stopPropagation(); stepLightbox(1); });
+lightboxImage.addEventListener("click", closeLightbox);
+lightbox.addEventListener("click", event => { if (event.target === lightbox) closeLightbox(); });
+document.addEventListener("keydown", event => {
+  if (!lightbox.classList.contains("open")) return;
+  if (event.key === "Escape") closeLightbox();
+  else if (event.key === "ArrowLeft" && lightboxState.list.length > 1) stepLightbox(-1);
+  else if (event.key === "ArrowRight" && lightboxState.list.length > 1) stepLightbox(1);
+});
+let touchStartX = null;
+lightbox.addEventListener("touchstart", event => { touchStartX = event.touches.length === 1 ? event.touches[0].clientX : null; }, { passive: true });
+lightbox.addEventListener("touchend", event => {
+  if (touchStartX === null || lightboxState.list.length < 2) return;
+  const delta = event.changedTouches[0].clientX - touchStartX;
+  touchStartX = null;
+  if (Math.abs(delta) > 60) stepLightbox(delta < 0 ? 1 : -1);
+}, { passive: true });
+
+// GitHub OAuth Device Flow. The small Worker proxy is required because GitHub's
+// login endpoints do not provide the browser CORS behaviour needed by Pages.
+async function oauthProxy(path, body) {
+  if (!OAUTH_PROXY_URL || OAUTH_PROXY_URL.includes("YOUR-WORKER")) {
+    throw new Error("The GitHub OAuth proxy has not been configured by the store maintainer yet.");
+  }
+  const response = await fetch(OAUTH_PROXY_URL.replace(/\/$/, "") + path, {
+    method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body || {})
+  });
+  const result = await response.json().catch(() => ({}));
+  if (!response.ok) throw new Error(result.error_description || result.error || "GitHub authentication proxy error.");
+  return result;
+}
+
+const delay = milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds));
+
+async function startGithubLogin() {
+  if (loginPending || currentAccessToken) return;
+  loginPending = true;
+  const loginButton = document.getElementById("login-button");
+  loginButton.disabled = true;
+  setStatus("Requesting a one-time GitHub authorization code…");
+  try {
+    const device = await oauthProxy("/device/code", {});
+    if (!device.device_code || !device.user_code) {
+      throw new Error(device.error_description || device.error || "GitHub did not return a device authorization code.");
+    }
+    document.getElementById("user-code").textContent = device.user_code;
+    document.getElementById("verify-link").href = device.verification_uri || "https://github.com/login/device";
+    document.getElementById("device-code").classList.add("show");
+    setStatus("Enter the code on GitHub. Waiting for authorization…");
+
+    const expiresAt = Date.now() + Number(device.expires_in || 900) * 1000;
+    let interval = Math.max(5, Number(device.interval || 5));
+    while (Date.now() < expiresAt) {
+      await delay(interval * 1000);
+      const tokenResult = await oauthProxy("/access_token", { device_code: device.device_code });
+      if (tokenResult.access_token) {
+        currentAccessToken = tokenResult.access_token;
+        currentUser = await githubApi("/user");
+        document.getElementById("auth-user").textContent = "Signed in as @" + currentUser.login;
+        document.getElementById("logout-button").hidden = false;
+        document.getElementById("login-button").hidden = true;
+        document.getElementById("device-code").classList.remove("show");
+        setStatus("GitHub authorization successful. Select a validated module ZIP.", "ok");
+        updateSubmitButton();
+        return;
+      }
+      if (tokenResult.error === "authorization_pending") continue;
+      if (tokenResult.error === "slow_down") { interval += 5; continue; }
+      if (tokenResult.error === "access_denied") throw new Error("GitHub authorization was denied.");
+      if (tokenResult.error === "expired_token") throw new Error("The GitHub device code expired. Start sign-in again.");
+      throw new Error(tokenResult.error_description || tokenResult.error || "GitHub authorization failed.");
+    }
+    throw new Error("The GitHub device code expired. Start sign-in again.");
+  } catch (error) {
+    setStatus(error.message || String(error), "error");
+    document.getElementById("device-code").classList.remove("show");
+  } finally {
+    loginPending = false;
+    loginButton.disabled = false;
+  }
+}
+
+async function githubApi(path, options) {
+  if (!currentAccessToken) throw new Error("Sign in with GitHub first.");
+  const config = options || {};
+  const headers = {
+    "Accept": "application/vnd.github+json",
+    "Authorization": "Bearer " + currentAccessToken,
+    "X-GitHub-Api-Version": "2022-11-28"
+  };
+  if (config.body !== undefined) headers["Content-Type"] = "application/json";
+  const response = await fetch(GITHUB_API + path, {
+    method: config.method || "GET", headers,
+    body: config.body === undefined ? undefined : JSON.stringify(config.body)
+  });
+  const result = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    const error = new Error(result.message || ("GitHub API error (" + response.status + ")"));
+    error.status = response.status;
+    throw error;
+  }
+  return result;
+}
+
+async function githubApiIfExists(path) {
+  try { return await githubApi(path); }
+  catch (error) { if (error.status === 404) return null; throw error; }
+}
+
+function signOut() {
+  currentAccessToken = null;
+  currentUser = null;
+  document.getElementById("auth-user").textContent = "";
+  document.getElementById("logout-button").hidden = true;
+  document.getElementById("login-button").hidden = false;
+  setStatus("Signed out. Your GitHub token has been cleared from this page.");
+  updateSubmitButton();
+}
+
+document.getElementById("login-button").addEventListener("click", startGithubLogin);
+document.getElementById("logout-button").addEventListener("click", signOut);
+window.addEventListener("pagehide", function () { currentAccessToken = null; });
+
+function base64ToText(base64) {
+  const binary = atob(base64);
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+  return new TextDecoder("utf-8", { fatal: true }).decode(bytes);
+}
+
+function parseModuleProp(text) {
+  const values = {};
+  text.split(/\r?\n/).forEach(line => {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#") || !trimmed.includes("=")) return;
+    const index = trimmed.indexOf("=");
+    values[trimmed.slice(0, index).trim()] = trimmed.slice(index + 1).trim();
+  });
+  return values;
+}
+
+function decodedBase64Size(base64) {
+  if (!base64) return 0;
+  let padding = 0;
+  if (base64.endsWith("==")) padding = 2;
+  else if (base64.endsWith("=")) padding = 1;
+  return Math.floor(base64.length * 3 / 4) - padding;
+}
+
+function normalizeArchivePath(rawPath) {
+  const path = String(rawPath || "").replace(/\\/g, "/");
+  if (!path || path.startsWith("/") || /^[A-Za-z]:/.test(path)) throw new Error("The ZIP contains an absolute file path.");
+  const parts = path.split("/");
+  if (parts.some(part => part === ".." || part === "." || part === ".git" || /[\u0000-\u001f]/.test(part))) {
+    throw new Error("The ZIP contains an unsafe path entry.");
+  }
+  return parts.filter(Boolean).join("/");
+}
+
+async function inspectArchive(file) {
+  if (!ZIP_LIBRARY_READY()) throw new Error("The ZIP reader did not load. Refresh the page and try again.");
+  if (!file || !file.name.toLowerCase().endsWith(".zip")) throw new Error("Choose a .zip file.");
+  const zip = await JSZip.loadAsync(file, { checkCRC32: true });
+  let records = [];
+
+  for (const entryName of Object.keys(zip.files)) {
+    const entry = zip.files[entryName];
+    if (entry.dir) continue;
+    const originalName = entry.unsafeOriginalName || entry.name || entryName;
+    const normalized = normalizeArchivePath(originalName);
+    if (!normalized || normalized.startsWith("__MACOSX/") || normalized === ".DS_Store" || normalized.endsWith("/.DS_Store") || normalized.endsWith("Thumbs.db")) continue;
+    const estimated = Number(entry._data && entry._data.uncompressedSize || 0);
+    if (estimated > MAX_FILE_BYTES) throw new Error("A file exceeds the " + (MAX_FILE_BYTES / 1024 / 1024) + " MB per-file upload limit: " + normalized);
+    records.push({ path: normalized, entry, estimated });
+  }
+
+  if (!records.length) throw new Error("The ZIP does not contain any files.");
+  if (records.length > MAX_FILES) throw new Error("The ZIP contains " + records.length + " files; the browser uploader limit is " + MAX_FILES + ".");
+  if (records.some(record => /(^|\/)module\.(json|prop)$/i.test(record.path) && !/(^|\/)module\.(json|prop)$/.test(record.path))) {
+    throw new Error("The metadata filename must be exactly module.json or module.prop (lowercase).");
+  }
+
+  let wrappedFolderName = null;
+  const rootMetadata = records.some(record => record.path === "module.json" || record.path === "module.prop");
+  if (!rootMetadata) {
+    const metadataRecords = records.filter(record => /(^|\/)(module\.json|module\.prop)$/i.test(record.path));
+    if (!metadataRecords.length) throw new Error("No module.json or module.prop was found in the ZIP.");
+    const prefixes = [...new Set(metadataRecords.map(record => record.path.slice(0, record.path.lastIndexOf("/") + 1)))];
+    if (prefixes.length !== 1 || !prefixes[0] || prefixes[0].slice(0, -1).includes("/") || !records.every(record => record.path.startsWith(prefixes[0]))) {
+      throw new Error("The ZIP must contain exactly one module folder, with module.json or module.prop at that folder's root.");
+    }
+    wrappedFolderName = prefixes[0].slice(0, -1);
+    records = records.map(record => ({ ...record, path: record.path.slice(prefixes[0].length) }));
+  }
+
+  const seen = new Set();
+  records.forEach(record => {
+    if (!record.path || record.path.startsWith("/") || record.path.split("/").some(part => part === "..")) throw new Error("The ZIP contains an unsafe path.");
+    if (seen.has(record.path)) throw new Error("The ZIP contains duplicate file paths: " + record.path);
+    seen.add(record.path);
+  });
+  if (!seen.has("module.json") && !seen.has("module.prop")) throw new Error("module.json or module.prop must be at the module root.");
+
+  let totalBytes = 0;
+  const files = [];
+  for (const record of records) {
+    setStatus("Extracting " + (files.length + 1) + " of " + records.length + " files…");
+    const base64 = await record.entry.async("base64");
+    const size = decodedBase64Size(base64);
+    if (size > MAX_FILE_BYTES) throw new Error(record.path + " exceeds the per-file upload limit.");
+    totalBytes += size;
+    if (totalBytes > MAX_TOTAL_BYTES) throw new Error("The extracted module exceeds the " + (MAX_TOTAL_BYTES / 1024 / 1024) + " MB total upload limit.");
+    files.push({ path: record.path, base64, size });
+  }
+
+  const byPath = new Map(files.map(item => [item.path, item]));
+  let manifest = {};
+  let prop = {};
+  if (byPath.has("module.json")) {
+    try { manifest = JSON.parse(base64ToText(byPath.get("module.json").base64)); }
+    catch (error) { throw new Error("module.json is not valid UTF-8 JSON: " + error.message); }
+    if (!manifest || typeof manifest !== "object" || Array.isArray(manifest)) throw new Error("module.json must contain a JSON object.");
+    if (byPath.has("module.prop")) prop = parseModuleProp(base64ToText(byPath.get("module.prop").base64));
+  } else {
+    prop = parseModuleProp(base64ToText(byPath.get("module.prop").base64));
+  }
+
+  // Match build.py: module.json takes precedence whenever it exists.
+  const metadata = byPath.has("module.json") ? manifest : prop;
+  const id = String(metadata.id || "").trim();
+  const name = String(metadata.name || "").trim();
+  const author = String(metadata.author || "").trim();
+  const description = String(metadata.description || "").trim();
+  if (!/^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$/.test(id)) throw new Error("The module ID is missing or invalid.");
+  if (wrappedFolderName && wrappedFolderName !== id) {
+    throw new Error("The ZIP folder name '" + wrappedFolderName + "' must exactly match the module ID '" + id + "'.");
+  }
+  if (!name || !author || !description) throw new Error("module.json/module.prop must contain name, author and description.");
+
+  let category = manifest.category;
+  if ((category === undefined || category === null || !String(category).trim()) && prop.category) category = prop.category;
+  const normalizedCategory = String(category || "").trim().toLowerCase();
+  let categoryMessage = "Category will be inferred automatically from the module contents.";
+  if (normalizedCategory) {
+    categoryMessage = CATEGORIES.includes(normalizedCategory)
+      ? "Declared category: " + categoryName(normalizedCategory) + "."
+      : "Unsupported category '" + normalizedCategory + "' will be ignored; the module will appear under Other.";
+  }
+
+  return {
+    id, name, author, description,
+    version: String(byPath.has("module.json") ? (manifest.module_version || "1.0") : (prop.version || "1.0")),
+    category: normalizedCategory,
+    categoryMessage,
+    totalBytes,
+    files
+  };
+}
+
+function updateSubmitButton() {
+  submitButton.disabled = !(currentAccessToken && parsedUpload) || submitButton.dataset.busy === "true";
+}
+
+function showPreview(result) {
+  const preview = document.getElementById("zip-preview");
+  preview.classList.add("show");
+  preview.innerHTML = '<div><strong>Name</strong> ' + esc(result.name) + '</div>' +
+    '<div><strong>ID</strong> ' + esc(result.id) + '</div>' +
+    '<div><strong>Author</strong> ' + esc(result.author) + '</div>' +
+    '<div><strong>Version</strong> ' + esc(result.version) + '</div>' +
+    '<div><strong>Category</strong> ' + esc(result.categoryMessage) + '</div>' +
+    '<div><strong>Size</strong> ' + (result.totalBytes / 1024 / 1024).toFixed(2) + ' MB · ' + result.files.length + ' files</div>' +
+    '<ul class="preview-files">' + result.files.map(item => '<li>' + esc(item.path) + '</li>').join("") + '</ul>';
+}
+
+document.getElementById("zip-file").addEventListener("change", async function (event) {
+  selectedArchive = event.target.files && event.target.files[0] || null;
+  parsedUpload = null;
+  document.getElementById("zip-preview").classList.remove("show");
+  updateSubmitButton();
+  if (!selectedArchive) return;
+  try {
+    setStatus("Checking ZIP structure and metadata…");
+    parsedUpload = await inspectArchive(selectedArchive);
+    showPreview(parsedUpload);
+    setStatus("ZIP passed the browser-side checks. Sign in and submit it for review.", "ok");
+  } catch (error) {
+    setStatus(error.message || String(error), "error");
+    parsedUpload = null;
+  }
+  updateSubmitButton();
+});
+
+async function getOrCreateFork(login) {
+  const forkPath = "/repos/" + encodeURIComponent(login) + "/" + STORE_REPO;
+  let fork = await githubApiIfExists(forkPath);
+  if (fork) {
+    if (!fork.fork || !fork.parent || fork.parent.full_name.toLowerCase() !== (STORE_OWNER + "/" + STORE_REPO).toLowerCase()) {
+      throw new Error("A repository named " + STORE_REPO + " already exists in your account but is not a fork of the official store.");
+    }
+    return fork;
+  }
+
+  setStatus("Creating your GitHub fork…");
+  await githubApi("/repos/" + STORE_OWNER + "/" + STORE_REPO + "/forks", {
+    method: "POST", body: { default_branch_only: true }
+  });
+  for (let attempt = 0; attempt < 30; attempt++) {
+    await delay(1500);
+    fork = await githubApiIfExists(forkPath);
+    if (fork) return fork;
+  }
+  throw new Error("GitHub is still creating your fork. Wait a minute and submit again.");
+}
+
+async function createPullRequest() {
+  if (!parsedUpload || !currentAccessToken || !currentUser) throw new Error("Select a valid ZIP and sign in with GitHub first.");
+  const module = parsedUpload;
+  const login = currentUser.login;
+  const upstream = await githubApi("/repos/" + STORE_OWNER + "/" + STORE_REPO);
+  const baseBranch = upstream.default_branch || STORE_BRANCH;
+
+  const upstreamPath = "/repos/" + STORE_OWNER + "/" + STORE_REPO + "/contents/modules/" + encodeURIComponent(module.id) + "?ref=" + encodeURIComponent(baseBranch);
+  if (await githubApiIfExists(upstreamPath)) {
+    throw new Error("A module with ID '" + module.id + "' already exists in the official store. Ask a maintainer to review an update instead of creating a duplicate submission.");
+  }
+
+  const fork = await getOrCreateFork(login);
+  const forkBranch = fork.default_branch || baseBranch;
+  const forkPath = "/repos/" + encodeURIComponent(login) + "/" + STORE_REPO;
+  const existingForkModule = await githubApiIfExists(forkPath + "/contents/modules/" + encodeURIComponent(module.id) + "?ref=" + encodeURIComponent(forkBranch));
+  if (existingForkModule) throw new Error("Your fork already contains modules/" + module.id + ". Remove or rename that folder before submitting this ID.");
+
+  setStatus("Reading your fork's latest commit…");
+  const ref = await githubApi(forkPath + "/git/ref/heads/" + encodeURIComponent(forkBranch));
+  const parentCommit = await githubApi(forkPath + "/git/commits/" + ref.object.sha);
+
+  setStatus("Uploading " + module.files.length + " module files to your fork…");
+  const blobs = [];
+  for (let offset = 0; offset < module.files.length; offset += 3) {
+    const batch = module.files.slice(offset, offset + 3);
+    const created = await Promise.all(batch.map(async file => {
+      const blob = await githubApi(forkPath + "/git/blobs", {
+        method: "POST", body: { content: file.base64, encoding: "base64" }
+      });
+      return { path: "modules/" + module.id + "/" + file.path, mode: "100644", type: "blob", sha: blob.sha };
+    }));
+    blobs.push(...created);
+    setStatus("Uploaded " + blobs.length + " of " + module.files.length + " files…");
+  }
+
+  setStatus("Creating one commit for the extracted module…");
+  const tree = await githubApi(forkPath + "/git/trees", {
+    method: "POST", body: { base_tree: parentCommit.tree.sha, tree: blobs }
+  });
+  const commit = await githubApi(forkPath + "/git/commits", {
+    method: "POST", body: {
+      message: "Add module: " + module.name,
+      tree: tree.sha,
+      parents: [ref.object.sha]
+    }
+  });
+
+  const safeBranchId = module.id.toLowerCase().replace(/[^a-z0-9-]+/g, "-").replace(/^-+|-+$/g, "");
+  const branchName = "submit-" + safeBranchId + "-" + Date.now();
+  await githubApi(forkPath + "/git/refs", {
+    method: "POST", body: { ref: "refs/heads/" + branchName, sha: commit.sha }
+  });
+
+  setStatus("Opening a pull request against the official store…");
+  const pullRequest = await githubApi("/repos/" + STORE_OWNER + "/" + STORE_REPO + "/pulls", {
+    method: "POST",
+    body: {
+      title: "Add " + module.name,
+      head: login + ":" + branchName,
+      base: baseBranch,
+      body: "## Module submission\n\n" +
+        "- **Module:** " + module.name + " (`" + module.id + "`)\n" +
+        "- **Version:** " + module.version + "\n" +
+        "- **Author:** " + module.author + "\n" +
+        "- **Files:** " + module.files.length + "\n\n" +
+        "Submitted through the KamiOS Module Store website. Please review and test before merging."
+    }
+  });
+  return pullRequest;
+}
+
+submitButton.addEventListener("click", async function () {
+  if (!parsedUpload || !currentAccessToken || submitButton.dataset.busy === "true") return;
+  submitButton.dataset.busy = "true";
+  submitButton.disabled = true;
+  try {
+    const pullRequest = await createPullRequest();
+    setStatus("Pull request created: " + pullRequest.html_url, "ok");
+    const link = document.createElement("a");
+    link.href = pullRequest.html_url;
+    link.target = "_blank";
+    link.rel = "noopener";
+    link.textContent = "Open your pull request";
+    statusEl.appendChild(document.createTextNode(" "));
+    statusEl.appendChild(link);
+    document.getElementById("zip-file").value = "";
+    document.getElementById("zip-preview").classList.remove("show");
+    parsedUpload = null;
+    selectedArchive = null;
+  } catch (error) {
+    setStatus(error.message || String(error), "error");
+  } finally {
+    submitButton.dataset.busy = "false";
+    updateSubmitButton();
+  }
+});
+
+// Load the generated index. Category grouping is driven by modules.json, with
+// unrecognised/missing values displayed under Other for older or new ROM data.
+fetch("modules.json", { cache: "no-store" })
+  .then(response => { if (!response.ok) throw new Error("HTTP " + response.status); return response.json(); })
+  .then(json => {
+    if (!json || !Array.isArray(json.modules)) throw new Error("modules.json has no modules array");
+    data = json;
+    showSource("Loaded " + data.modules.length + " modules · index updated " + (data.updated || "unknown") + ".");
+  })
+  .catch(error => {
+    data = { updated: null, modules: [] };
+    showSource("Could not load modules.json (" + error.message + "). Try refreshing the page.");
+  });
 </script>
 </body>
 </html>

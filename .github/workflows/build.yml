@@ -4,49 +4,76 @@ on:
   push:
     branches: [main]
     paths: ["modules/**", "scripts/**"]
+  pull_request:
+    branches: [main]
+    paths: ["modules/**", "scripts/**"]
   schedule:
-    - cron: "17 */6 * * *"   # only refreshes the download numbers
+    - cron: "17 */6 * * *" # refresh download counts only
   workflow_dispatch:
 
+# Start read-only. Only the publishing job gets write access.
 permissions:
-  contents: write
+  contents: read
 
-# one run at a time: a refresh must not overlap a build that replaces the zips
 concurrency:
   group: module-store
   cancel-in-progress: false
 
 jobs:
-  build:
+  validate-pr:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Validate submitted modules
+        run: python3 scripts/validate.py
+
+  build-and-publish:
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # the builder dates each module from its git history
+          fetch-depth: 0
 
-      - name: Zip modules and build modules.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Validate modules
         if: github.event_name != 'schedule'
+        run: python3 scripts/validate.py
+
+      - name: Build module ZIPs and modules.json
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         run: python3 scripts/build.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Refresh the download numbers
+      - name: Refresh download counts
         if: github.event_name == 'schedule'
         run: python3 scripts/build.py --refresh-counts
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Publish zips to the "latest" release
-        if: github.event_name != 'schedule'
+      - name: Publish ZIPs to the latest release
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
           name: Latest modules
           files: out/*.zip
 
-      - name: Commit updated index
+      - name: Commit updated index and download state
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add modules.json downloads.json
-          git diff --cached --quiet || (git commit -m "Update modules.json" && git push)
+          git diff --cached --quiet || (git commit -m "Update module store index" && git push)

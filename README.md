@@ -1,155 +1,204 @@
 # KamiOS Module Store
 
-A public store of modules for KamiOS. Browse them on the website, or in the
-ROM's settings. Every module has a description, optional screenshots, and a
-one-tap download straight from GitHub.
+A public module store for KamiOS. Modules are kept in `modules/`, indexed in
+`modules.json`, and published as installable ZIP files in the GitHub Release
+named `latest`.
 
-- Website: https://kamiosmodules.github.io/module-store/
-- Index for apps: https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules.json
+- Website: <https://kamiosmodules.github.io/module-store/>
+- Repository: <https://github.com/kamiosmodules/module-store>
+- ROM/app index: <https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules.json>
 
-## How it works
+## How the store is built
 
-1. Each module is a folder inside `modules/`.
-2. When something is added to `main`, a GitHub Action zips every module,
-   publishes the zips to the **latest** release, and rewrites `modules.json`.
-3. The website and the ROM read `modules.json`, so a new module appears by
-   itself. Nobody has to update the app.
+1. Each module lives in `modules/<module-id>/`.
+2. A module contains a root-level `module.json` or `module.prop`.
+3. GitHub Actions validates the module folders, creates one installable ZIP per
+   module and regenerates `modules.json`.
+4. The ZIPs are published to the `latest` release. The website and the ROM read
+   `modules.json` and use the release URLs for downloads.
 
+The release ZIP includes the module's installation files, but excludes the
+root-level `thumbnail.png` (and the other supported `thumbnail.*` image types)
+and the root `screenshots/` directory. Those images remain in the repository
+and are used by the website.
 
-## Contributors
+## Module layout
 
-We would love seeing what you build and want to make it as easy as possible to share your creations, making the experience available to everyone in the community.
-
-Maintainers: Can push directly to the main branch.
-Contributors: Fork the repository and open a Pull Request.
-
-
-What to Expect Next
-
-• Review: A maintainer will look over your Pull Request as soon as possible to help review and merge your changes.
-• Deployment: Once merged, your module will automatically go live within just 1–2 minutes.
-
-## What a module looks like
-
-```
+```text
 modules/
-└── my-module/              <- folder name = the module's id
-    ├── module.json         <- required (exported from the ROM)
-    ├── assets/ ...         <- the module's own files
-    ├── thumbnail.png       <- optional, square icon for the store
-    └── screenshots/        <- optional
+└── my-module/                 # folder name must equal module.json id
+    ├── module.json           # required, or use module.prop instead
+    ├── module.prop           # optional; supports store-only category metadata
+    ├── assets/               # module's own install files
+    ├── thumbnail.png         # optional store artwork
+    └── screenshots/          # optional store screenshots
         ├── 1.png
         └── 2.png
 ```
 
-**Required**
-- `module.json` at the top level of the folder (not inside another folder).
-- The folder name must be **exactly** the `id` written inside `module.json`.
-  For example `"id": "nyan-cat-pill"` means the folder is `modules/nyan-cat-pill`.
-- `name`, `author` and `description` filled in. Write a real one-line
-  description, not a placeholder like "What it does".
+Required metadata:
 
-**Optional**
-- `"category"` in `module.json`: where the store lists the module. One of `theme`, `launcher`,
-  `tweak`, `sounds`, `bootanimation`, `emoji`, `fonts`, `wallpaper`, `icons`, `apps`, `quicksettings`,
-  `pill`, `volume`, `lockscreen`. A missing or unknown one lands under "Other".
-  The newest ids (`quicksettings`, `pill`, `volume`, `lockscreen`) are rejected by phones on an older
-  ROM when they sit in `module.json`. For those, put `category=pill` (for example) in a `module.prop`
-  next to it instead; the store reads it and the phone ignores that file.
-- `"module_version"` in `module.json` (like `1.2`): the module's own version. The store compares it to
-  the installed one for the "Updates" list. Raise it with every change you want phones to pick up.
-- `thumbnail.png` (or `.jpg`, `.webp`, `.gif`): a small square icon shown next to the name.
-- `screenshots/`: images (PNG, JPG, WebP or GIF) directly inside this folder.
-  Sub-folders are not read. Files show in number order (1, 2, 10).
+- `id`: must exactly match the folder name.
+- `name`, `author` and `description`: must be filled in with real values.
+- `module.json` must be at the module folder root. Older modules may use a
+  root-level `module.prop` with `id`, `name`, `author`, `description`, and
+  optionally `version`.
 
-Thumbnail and screenshots are for the store only. They are left out of the
-module's download zip.
+For `module.json`, the module's own version is `module_version`. The JSON
+`version` field is the manifest format version. If `module_version` is absent,
+the store displays `1.0`.
 
-Older modules can use a `module.prop` file instead of `module.json`
-(`id`, `name`, `author`, `description`, and optionally `version`).
+## Categories
 
-**Download numbers:** `modules.json` has a `downloads` number per module, shown in the store and used by
-"Popular". GitHub restarts a file's counter whenever the workflow uploads the zips again, so
-`downloads.json` keeps the running total (do not edit it by hand). A scheduled run refreshes the numbers
-every six hours without touching the zips.
+`category` is optional. Supported values are:
 
-**Version note:** the `"version"` number inside `module.json` is the file-format version, not the
-module's own version. The store shows `module_version` and falls back to `1.0` when it is not set.
-
-## How to contribute
-
-### 1. Fork the repo
-Open https://github.com/kamiosmodules/module-store and click **Fork**.
-This gives you your own copy.
-
-### 2. Add your module to your fork
-Pick whichever method suits you.
-
-**A. In the browser (easiest, nothing to install)**
-1. Open your fork on GitHub and go into the `modules` folder.
-2. Click **Add file → Upload files**.
-3. Drag in your whole module folder (named after the module id).
-4. Click **Commit changes**.
-
-Browser uploads allow roughly 100 files at a time and 25 MB per file. For a
-bigger module, upload in two batches or use method B or C.
-
-**B. GitHub Desktop (buttons, no commands)**
-1. Install GitHub Desktop and sign in.
-2. **File → Clone repository**, and pick your fork.
-3. Copy your module folder into the `modules` folder.
-4. Type a message, click **Commit to main**, then **Push origin**.
-
-**C. Git commands**
-```
-git clone https://github.com/YOURNAME/module-store.git
-cd module-store
-git checkout -b add-my-module
-# copy your module folder into modules/
-git add .
-git commit -m "Add My Module"
-git push -u origin add-my-module
+```text
+theme, launcher, tweak, sounds, bootanimation, emoji, fonts, wallpaper,
+icons, apps, quicksettings, pill, volume, lockscreen
 ```
 
-**D. github.dev (browser editor)**
-Open your fork and press the **.** key. Drag your folder into the file list,
-then use the Source Control tab to commit.
+You may put the category in `module.json` as `"category": "pill"`, or in
+`module.prop` as `category=pill`. For the newer values `quicksettings`, `pill`,
+`volume`, and `lockscreen`, use `module.prop` when compatibility with older
+KamiOS builds matters; older phones may reject those values when they appear
+inside `module.json`.
 
-### 3. Open a pull request
-On your fork's page, click **Contribute → Open pull request** (or
-**Compare & pull request**). Check that it targets `kamiosmodules/module-store`
-on `main`, then click **Create pull request**. Put the module's name and a
-short line about what it does in the title or description.
+A missing category is inferred during the build:
 
-### 4. Wait for review
-An owner will look at your module. They may ask for changes, for example a
-better description or a missing field. Make the change in your fork and push
-again, and the pull request updates itself. Once it is merged, your module
-appears in the store after about a minute or two.
+- A module that only changes sounds, boot animation, emoji, fonts, wallpaper,
+  or icons gets that category.
+- A home app without fonts or wallpaper is a launcher. A home app combined
+  with fonts or wallpaper is a theme.
+- A module that combines a style component (font, wallpaper, accent, icons,
+  sounds, boot animation or emoji) with other module behaviour is a theme.
+- A module that targets three or more Android app packages is a theme.
+- App-only installers do not become Apps automatically: use an explicit
+  `"category": "apps"` when that is the best fit. Anything else that does not
+  match the rules above defaults to Tweaks.
 
-### Updating your module later
-Change the files in your module's folder, open a pull request again, and the
-store rebuilds the zip when it is merged.
+An explicitly supplied category always takes precedence. An unrecognised value
+(for example, a typo or a category from a newer ROM) is **not a build error**:
+the value is ignored, the module appears under **Other**, and
+`scripts/validate.py` prints a warning. The website groups modules by category
+and provides category filters; absent or unknown values are shown under Other.
 
-## Rules
+## Submit a module from the website
 
-- Only add or change **your own** module folder. Don't edit other people's modules.
-- **Don't edit `modules.json`.** It is generated automatically.
-- Everything must be safe to install. No hidden or harmful code, and don't
-  upload anything you don't have the right to share.
-- Use clear names and a real description so people know what the module does.
-- Keep the module small. Large unnecessary files slow down downloads for everyone.
+The website has a **Submit a module ZIP** section. A contributor selects a ZIP
+with the same layout described above. The browser extracts it, checks the
+metadata and file paths, and submits the extracted files to a new branch in the
+contributor's fork. It then opens a pull request against this repository.
 
-## Testing before you submit 
+A maintainer must review and merge that pull request. The existing GitHub
+Actions workflow then builds the installable ZIP and updates the website index.
+The browser uploader does not write directly to the official `main` branch.
 
-You must test your module in your own phone before pushing it
+### One-time maintainer setup for the website uploader
 
-______________________________________________________________________________________________________________________________________________________________________________________________________________
+The store is hosted on GitHub Pages, which is static and cannot safely hold a
+GitHub OAuth client secret or repository write token. The uploader therefore
+uses GitHub's Device Flow and a small Cloudflare Worker proxy. The proxy only
+forwards device-code/token requests; the user's token is held in browser memory
+and is not stored by the Worker.
+
+1. Create a GitHub OAuth App under **GitHub Settings → Developer settings →
+   OAuth Apps**. Set its homepage to
+   `https://kamiosmodules.github.io/module-store/`, enable **Device Flow**, and
+   note its Client ID. The callback URL can be the same website URL.
+2. Deploy `oauth-proxy/worker.js` as a Cloudflare Worker. From the repository
+   root, run:
+
+   ```sh
+   cd oauth-proxy
+   npx wrangler secret put GITHUB_CLIENT_ID
+   npx wrangler deploy
+   ```
+
+   Paste the OAuth App Client ID when prompted. The included
+   `oauth-proxy/wrangler.toml` sets `ALLOWED_ORIGINS` to the production GitHub
+   Pages origin. Add a local development origin only while testing.
+3. Copy the deployed Worker URL into `OAUTH_PROXY_URL` near the top of the
+   script section in `index.html`.
+4. Commit and push `index.html` and the Worker configuration. Test with a
+   non-maintainer GitHub account: it should create a fork, branch and pull
+   request without asking for a maintainer token.
+
+The uploader asks GitHub for the `public_repo` OAuth scope. This is a GitHub
+permission that lets the signed-in contributor work with their public
+repositories; it is broader than permission to this one fork. Contributors can
+revoke the OAuth app at **GitHub Settings → Applications → Authorized OAuth
+Apps**. Do not add a personal access token or OAuth client secret to `index.html`.
+
+The browser uploader currently limits ZIPs to 100 files, 20 MB per file and
+50 MB total extracted size. Larger modules can still be submitted using the
+manual fork/PR process below.
+
+## Manual contribution
+
+The website uploader is the easiest method, but contributors can still use any
+of the repository's normal GitHub contribution methods.
+
+1. Fork this repository from <https://github.com/kamiosmodules/module-store>.
+2. Add the complete module folder under `modules/<module-id>/` in your fork.
+   The folder name must exactly match the `id` in its metadata.
+3. Open a pull request targeting `kamiosmodules/module-store` on `main`.
+4. A maintainer reviews and merges it. The store is rebuilt automatically.
+
+Other ways to add the folder to your fork:
+
+- **GitHub in the browser:** open the `modules/` folder in your fork, choose
+  **Add file → Upload files**, and upload the complete module folder.
+- **GitHub Desktop:** clone your fork, copy the module folder into `modules/`,
+  commit the change and push your branch.
+- **Git commands:**
+
+  ```sh
+  git clone https://github.com/YOURNAME/module-store.git
+  cd module-store
+  git checkout -b add-my-module
+  # copy your module folder into modules/
+  git add modules/my-module
+  git commit -m "Add My Module"
+  git push -u origin add-my-module
+  ```
+
+- **github.dev:** open your fork, press `.`, add the module folder in the file
+  list, then commit and push from the Source Control tab.
+
+To update a module later, change its existing folder in your fork and open a
+pull request again. A maintainer must review and merge the change before the
+new release ZIP is published.
+
+## Contribution rules
+
+- Only add or change module folders you are authorised to contribute. Do not
+  modify another author's module.
+- Do not edit `modules.json` or `downloads.json` manually; both are generated.
+- Modules must be safe to install. Do not upload hidden or harmful code, or
+  content you do not have permission to distribute.
+- Use a clear name and a real description so users understand what the module
+  changes. Keep unnecessary large files out of the module.
+- Test the module on a device before submitting it.
+
+## Local checks
+
+```bash
+python3 scripts/validate.py
+python3 scripts/build.py
+```
+
+`validate.py` fails on missing/invalid required metadata and warns about
+unsupported category values. It prints the inferred category for modules that
+do not declare one. `build.py` creates installable ZIPs under `out/` and writes
+`modules.json`.
+
+## Download numbers
+
+`modules.json` includes a `downloads` count used by the website. GitHub resets
+an asset's download counter when a release asset is replaced, so
+`downloads.json` carries the previous totals forward. A scheduled GitHub Action
+refreshes the counts every six hours. Do not edit this file by hand.
 
 Made with care by the KamiOS Team.
 
-Join the community on Telegram: https://t.me/kamiosmodules | https://t.me/kamiosofficial
-
-KamiOS. Released under open-source terms.
-
-
+Join the community: <https://t.me/kamiosmodules> · <https://t.me/kamiosofficial>

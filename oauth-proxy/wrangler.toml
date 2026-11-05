@@ -1,0 +1,7 @@
+name = "kamios-module-store-oauth"
+main = "worker.js"
+compatibility_date = "2026-11-05"
+
+[vars]
+# Use the exact GitHub Pages origin. Add localhost only when testing locally.
+ALLOWED_ORIGINS = "https://kamiosmodules.github.io"
