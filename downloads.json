@@ -32,7 +32,7 @@
   "hyperos4-glass-forest": {
     "asset": 710424557,
     "base": 0,
-    "count": 11
+    "count": 13
   },
   "inter-font": {
     "asset": 710424550,
@@ -42,7 +42,7 @@
   "ios-emoji": {
     "asset": 710424574,
     "base": 61,
-    "count": 5
+    "count": 6
   },
   "metro-launcher": {
     "asset": 710424549,
@@ -62,7 +62,7 @@
   "nothing-os-5-enhance": {
     "asset": 710424551,
     "base": 0,
-    "count": 7
+    "count": 8
   },
   "nothing-os-5-enhanced": {
     "asset": 710408685,
@@ -77,7 +77,7 @@
   "one-ui": {
     "asset": 710424560,
     "base": 83,
-    "count": 2
+    "count": 3
   },
   "oneplus-sans": {
     "asset": 710424568,
@@ -102,7 +102,7 @@
   "stealth-avionics-theme-by-isifat": {
     "asset": 710424567,
     "base": 25,
-    "count": 1
+    "count": 2
   },
   "volte-rounded-bold": {
     "asset": 710424561,
