@@ -1,0 +1,71 @@
+{
+  "format": "kamios-module",
+  "version": 1,
+  "id": "axionqs-by-isifat",
+  "name": "AxionQS by iSiFAT",
+  "author": "iSiFAT",
+  "description": "AxionOS-inspired Quick Settings with dynamic Material You colors and custom refinements.",
+  "category": "quicksettings",
+  "qs_style": {
+    "base": "stock",
+    "panel": {
+      "background": "none",
+      "blur": 0,
+      "alpha": 0,
+      "radius": 0,
+      "padding": 16,
+      "gap": 14
+    },
+    "header": {
+      "style": "stock",
+      "clock": true,
+      "date": true,
+      "edit": true,
+      "settings": true,
+      "power": true
+    },
+    "qqs": {
+      "columns": 4,
+      "rows": 1,
+      "media": false,
+      "brightness": false
+    },
+    "tiles": {
+      "columns": 4,
+      "shape": "circle",
+      "size": "icon",
+      "radius": 50,
+      "height": 76,
+      "gap": 14,
+      "labels": false,
+      "sublabels": false
+    },
+    "blocks": [
+      {
+        "type": "grid",
+        "columns": 4,
+        "gap": 14,
+        "cell": 76,
+        "items": [
+          { "type": "tile", "spec": "wifi", "w": 1, "h": 1 },
+          { "type": "tile", "spec": "cell", "w": 1, "h": 1 },
+          { "type": "slider", "kind": "brightness", "orientation": "v", "w": 1, "h": 2, "radius": 50, "fill": "accent" },
+          { "type": "slider", "kind": "volume", "orientation": "v", "w": 1, "h": 2, "radius": 50, "fill": "accent" },
+          { "type": "tile", "spec": "bt", "w": 1, "h": 1 },
+          { "type": "tile", "spec": "flashlight", "w": 1, "h": 1 },
+          { "type": "ringer", "w": 2, "h": 1, "height": 76, "radius": 50 },
+          { "type": "tile", "spec": "rotation" },
+          { "type": "tile", "spec": "dnd" },
+          { "type": "tile", "spec": "location" },
+          { "type": "tile", "spec": "airplane" },
+          { "type": "tile", "spec": "screenrecord" },
+          { "type": "tile", "spec": "battery" },
+          { "type": "tile", "spec": "nfc" },
+          { "type": "tile", "spec": "dark" },
+          { "type": "tile", "spec": "hotspot" },
+          { "type": "tile", "spec": "saver" }
+        ]
+      }
+    ]
+  }
+}
