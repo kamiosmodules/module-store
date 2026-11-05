@@ -1,101 +1,237 @@
+
 /**
- * Minimal Cloudflare Worker proxy for GitHub OAuth Device Flow.
- * It forwards only the two device-flow endpoints, stores no tokens, and
- * accepts requests only from origins listed in ALLOWED_ORIGINS.
+ * Cloudflare Worker proxy for GitHub OAuth Device Flow.
  *
- * Worker variables:
- *   GITHUB_CLIENT_ID  - GitHub OAuth App client ID
- *   ALLOWED_ORIGINS   - comma-separated exact origins, for example:
- *                       https://kamiosmodules.github.io,http://localhost:8000
+ * Routes:
+ *   POST /device/code
+ *   POST /access_token
+ *
+ * Required Worker configuration:
+ *   GITHUB_CLIENT_ID - OAuth App client ID (Worker secret)
+ *   ALLOWED_ORIGINS  - comma-separated exact browser origins
  */
 
 const JSON_HEADERS = {
-  "content-type": "application/json; charset=utf-8",
-  "cache-control": "no-store",
+  "Content-Type": "application/json; charset=utf-8",
+  "Cache-Control": "no-store, max-age=0",
+  "Pragma": "no-cache",
+  "X-Content-Type-Options": "nosniff",
 };
 
-function jsonResponse(body, status, origin) {
-  return new Response(JSON.stringify(body), {
+const MAX_REQUEST_BYTES = 8 * 1024;
+const MAX_DEVICE_CODE_LENGTH = 2048;
+
+function getAllowedOrigins(env) {
+  return String(env.ALLOWED_ORIGINS || "")
+    .split(",")
+    .map(value => value.trim())
+    .filter(Boolean);
+}
+
+function corsHeaders(origin) {
+  const headers = new Headers(JSON_HEADERS);
+  headers.set("Vary", "Origin");
+  headers.set("Access-Control-Allow-Origin", origin);
+  headers.set("Access-Control-Allow-Methods", "POST, OPTIONS");
+  headers.set("Access-Control-Allow-Headers", "Content-Type");
+  headers.set("Access-Control-Max-Age", "86400");
+  return headers;
+}
+
+function jsonResponse(data, status, origin) {
+  const headers = origin
+    ? corsHeaders(origin)
+    : new Headers(JSON_HEADERS);
+
+  return new Response(JSON.stringify(data), {
     status: status || 200,
-    headers: {
-      ...JSON_HEADERS,
-      "access-control-allow-origin": origin,
-      "access-control-allow-methods": "POST, OPTIONS",
-      "access-control-allow-headers": "Content-Type",
-      "access-control-max-age": "86400",
-      "vary": "Origin",
-    },
+    headers,
   });
+}
+
+function errorResponse(error, status, origin, description) {
+  const body = { error };
+  if (description) body.error_description = description;
+  return jsonResponse(body, status, origin);
+}
+
+async function readJson(request) {
+  const contentType = request.headers.get("Content-Type") || "";
+
+  if (!contentType.toLowerCase().includes("application/json")) {
+    throw new Error("content_type_must_be_application_json");
+  }
+
+  const declaredLength = Number(
+    request.headers.get("Content-Length") || 0
+  );
+
+  if (declaredLength > MAX_REQUEST_BYTES) {
+    throw new Error("request_too_large");
+  }
+
+  const raw = await request.text();
+
+  if (new TextEncoder().encode(raw).byteLength > MAX_REQUEST_BYTES) {
+    throw new Error("request_too_large");
+  }
+
+  let value;
+
+  try {
+    value = raw ? JSON.parse(raw) : {};
+  } catch {
+    throw new Error("invalid_json");
+  }
+
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    throw new Error("json_body_must_be_an_object");
+  }
+
+  return value;
+}
+
+async function forwardToGitHub(endpoint, parameters) {
+  const upstream = await fetch(endpoint, {
+    method: "POST",
+    redirect: "error",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams(parameters).toString(),
+  });
+
+  const raw = await upstream.text();
+  let data;
+
+  try {
+    data = JSON.parse(raw);
+  } catch {
+    return {
+      status: 502,
+      data: {
+        error: "invalid_upstream_response",
+        error_description: "GitHub returned an unreadable OAuth response.",
+      },
+    };
+  }
+
+  return {
+    status: upstream.status,
+    data,
+  };
 }
 
 export default {
   async fetch(request, env) {
     const origin = request.headers.get("Origin") || "";
-    const allowedOrigins = String(env.ALLOWED_ORIGINS || "")
-      .split(",")
-      .map(value => value.trim())
-      .filter(Boolean);
+    const allowedOrigins = getAllowedOrigins(env);
 
+    // Exact origin matching. Never use wildcard CORS.
     if (!origin || !allowedOrigins.includes(origin)) {
-      return new Response("Origin not allowed", { status: 403 });
+      return errorResponse("origin_not_allowed", 403, null);
     }
 
     if (request.method === "OPTIONS") {
       return new Response(null, {
         status: 204,
         headers: {
-          "access-control-allow-origin": origin,
-          "access-control-allow-methods": "POST, OPTIONS",
-          "access-control-allow-headers": "Content-Type",
-          "access-control-max-age": "86400",
-          "vary": "Origin",
+          "Access-Control-Allow-Origin": origin,
+          "Access-Control-Allow-Methods": "POST, OPTIONS",
+          "Access-Control-Allow-Headers": "Content-Type",
+          "Access-Control-Max-Age": "86400",
+          "Vary": "Origin",
         },
       });
     }
 
-    if (request.method !== "POST") return jsonResponse({ error: "method_not_allowed" }, 405, origin);
-    if (!env.GITHUB_CLIENT_ID) return jsonResponse({ error: "missing_github_client_id" }, 500, origin);
+    if (request.method !== "POST") {
+      return errorResponse("method_not_allowed", 405, origin);
+    }
 
     const url = new URL(request.url);
+
+    if (url.search || url.hash) {
+      return errorResponse(
+        "query_parameters_not_supported",
+        400,
+        origin
+      );
+    }
+
+    if (!env.GITHUB_CLIENT_ID ||
+        typeof env.GITHUB_CLIENT_ID !== "string") {
+      return errorResponse("missing_github_client_id", 500, origin);
+    }
+
     let input;
+
     try {
-      input = await request.json();
-    } catch {
-      return jsonResponse({ error: "invalid_json" }, 400, origin);
+      input = await readJson(request);
+    } catch (error) {
+      return errorResponse(
+        error.message || "invalid_request",
+        400,
+        origin
+      );
+    }
+
+    const clientId = env.GITHUB_CLIENT_ID.trim();
+
+    if (!clientId) {
+      return errorResponse("missing_github_client_id", 500, origin);
     }
 
     let endpoint;
-    const params = new URLSearchParams({ client_id: env.GITHUB_CLIENT_ID });
+    const parameters = {
+      client_id: clientId,
+    };
 
     if (url.pathname === "/device/code") {
-      // The requested scope is intentionally fixed; callers cannot widen it.
-      params.set("scope", "public_repo");
+      // Scope is fixed. Callers cannot request wider permissions.
+      parameters.scope = "public_repo";
+
       endpoint = "https://github.com/login/device/code";
+
     } else if (url.pathname === "/access_token") {
-      const deviceCode = String(input.device_code || "");
-      if (!deviceCode || deviceCode.length > 256) {
-        return jsonResponse({ error: "invalid_device_code" }, 400, origin);
+      const deviceCode = input.device_code;
+
+      if (
+        typeof deviceCode !== "string" ||
+        deviceCode.trim().length === 0 ||
+        deviceCode.length > MAX_DEVICE_CODE_LENGTH
+      ) {
+        return errorResponse("invalid_device_code", 400, origin);
       }
-      params.set("device_code", deviceCode);
-      params.set("grant_type", "urn:ietf:params:oauth:grant-type:device_code");
+
+      parameters.device_code = deviceCode;
+
+      parameters.grant_type =
+        "urn:ietf:params:oauth:grant-type:device_code";
+
       endpoint = "https://github.com/login/oauth/access_token";
+
     } else {
-      return jsonResponse({ error: "not_found" }, 404, origin);
+      return errorResponse("not_found", 404, origin);
     }
 
     try {
-      const upstream = await fetch(endpoint, {
-        method: "POST",
-        headers: {
-          "accept": "application/json",
-          "content-type": "application/x-www-form-urlencoded",
-        },
-        body: params.toString(),
-      });
-      const body = await upstream.json();
-      return jsonResponse(body, upstream.status, origin);
+      const result = await forwardToGitHub(endpoint, parameters);
+
+      return jsonResponse(
+        result.data,
+        result.status,
+        origin
+      );
+
     } catch {
-      return jsonResponse({ error: "github_unreachable", error_description: "GitHub OAuth could not be reached." }, 502, origin);
+      return errorResponse(
+        "github_unreachable",
+        502,
+        origin,
+        "GitHub OAuth could not be reached. Please try again."
+      );
     }
   },
 };
