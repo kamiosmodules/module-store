@@ -1,7 +1,9 @@
 name = "kamios-module-store-oauth"
 main = "worker.js"
 compatibility_date = "2026-11-05"
+workers_dev = true
 
 [vars]
-# Use the exact GitHub Pages origin. Add localhost only when testing locally.
+# Comma-separated exact origins allowed to call the OAuth proxy.
+# For local testing, temporarily append your local origin, then redeploy.
 ALLOWED_ORIGINS = "https://kamiosmodules.github.io"
