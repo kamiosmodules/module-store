@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "modules": [
     {
       "id": "axionqs-by-isifat",
@@ -271,6 +271,21 @@
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pacman-pill/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pacman-pill/screenshots/Screenshot_20261012-165932_KamiOS Home.png"
+      ]
+    },
+    {
+      "id": "pixel-launcher",
+      "name": "Pixel Launcher",
+      "version": "1.1",
+      "author": "KamiKaonashi",
+      "description": "Google Pixel Launcher without need for Gapps + Double Tap to sleep function.",
+      "category": "launcher",
+      "updated": "2026-11-06",
+      "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/pixel-launcher.zip",
+      "downloads": 0,
+      "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pixel-launcher/thumbnail.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pixel-launcher/screenshots/Screenshot_20261106-211125_Pixel Launcher.png"
       ]
     },
     {
