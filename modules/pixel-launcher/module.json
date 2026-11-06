@@ -1,0 +1,21 @@
+{
+  "format": "kamios-module",
+  "version": 1,
+  "id": "pixel-launcher",
+  "name": "Pixel Launcher",
+  "author": "KamiKaonashi",
+  "module_version": "1.1",
+  "description": "Google Pixel Launcher without need for Gapps + Double Tap to sleep function.",
+  "category": "launcher",
+  "home_app": "com.google.android.apps.nexuslauncher",
+  "apps": [
+    {
+      "package": "com.google.android.apps.nexuslauncher",
+      "apk": "apk/app.apk",
+      "cert": "9c2084f740af819dfb9a109c6030f171b32afeed93dc4d68ceb00097387f78bc",
+      "trust": "full",
+      "recents": true,
+      "keep_data": true
+    }
+  ]
+}
