@@ -2,7 +2,7 @@
   "axionqs-by-isifat": {
     "asset": 713103166,
     "base": 0,
-    "count": 3
+    "count": 5
   },
   "coloros-fusion": {
     "asset": 713103211,
@@ -37,7 +37,7 @@
   "hyperos4-glass-forest": {
     "asset": 713103221,
     "base": 15,
-    "count": 4
+    "count": 7
   },
   "inter-font": {
     "asset": 713103201,
@@ -52,7 +52,7 @@
   "metro-launcher": {
     "asset": 713103204,
     "base": 86,
-    "count": 1
+    "count": 2
   },
   "minecraft": {
     "asset": 713103217,
@@ -67,7 +67,7 @@
   "nothing-os-5-enhance": {
     "asset": 713103219,
     "base": 9,
-    "count": 5
+    "count": 7
   },
   "nothing-os-5-enhanced": {
     "asset": 710408685,
@@ -82,7 +82,7 @@
   "one-ui": {
     "asset": 713103208,
     "base": 87,
-    "count": 3
+    "count": 4
   },
   "oneplus-sans": {
     "asset": 713103202,
@@ -102,7 +102,7 @@
   "spiderverse": {
     "asset": 713103212,
     "base": 50,
-    "count": 2
+    "count": 3
   },
   "stealth-avionics-theme-by-isifat": {
     "asset": 713103209,
@@ -117,6 +117,6 @@
   "waifu-ui": {
     "asset": 713103187,
     "base": 50,
-    "count": 0
+    "count": 1
   }
 }
