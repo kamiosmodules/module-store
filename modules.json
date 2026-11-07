@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "modules": [
     {
       "id": "axionqs-by-isifat",
@@ -26,7 +26,7 @@
       "category": "theme",
       "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/coloros-fusion.zip",
-      "downloads": 83,
+      "downloads": 84,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/coloros-fusion/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/coloros-fusion/screenshots/Screenshot 2026-10-13 205717.png"
@@ -41,7 +41,7 @@
       "category": "theme",
       "updated": "2026-10-21",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/doom-ui.zip",
-      "downloads": 20,
+      "downloads": 21,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/doom-ui/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/doom-ui/screenshots/6249170960804156052_121.jpg",
@@ -95,7 +95,7 @@
       "category": "theme",
       "updated": "2026-11-04",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/hyperos4-glass-forest.zip",
-      "downloads": 36,
+      "downloads": 49,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/hyperos4-glass-forest/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/hyperos4-glass-forest/screenshots/IMG_20261104_215605_489.jpg",
@@ -128,7 +128,7 @@
       "category": "fonts",
       "updated": "2026-10-18",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/ios-emoji.zip",
-      "downloads": 70,
+      "downloads": 71,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/ios-emoji/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/ios-emoji/screenshots/5938181870778519210_119.jpg"
@@ -143,7 +143,7 @@
       "category": "launcher",
       "updated": "2026-10-15",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/metro-launcher.zip",
-      "downloads": 90,
+      "downloads": 91,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/metro-launcher/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/metro-launcher/screenshots/1.png",
@@ -167,7 +167,7 @@
       "category": "theme",
       "updated": "2026-10-18",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/minecraft.zip",
-      "downloads": 20,
+      "downloads": 21,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/minecraft/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/minecraft/screenshots/Screenshot_20261017-170047_System UI.png",
@@ -199,7 +199,7 @@
       "category": "theme",
       "updated": "2026-11-04",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/nothing-os-5-enhance.zip",
-      "downloads": 21,
+      "downloads": 25,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nothing-os-5-enhance/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nothing-os-5-enhance/screenshots/IMG_20261104_215454_566.jpg",
@@ -218,7 +218,7 @@
       "category": "pill",
       "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/nyan-cat-pill.zip",
-      "downloads": 11,
+      "downloads": 12,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nyan-cat-pill/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/nyan-cat-pill/screenshots/Screenshot 2026-10-12 151243.png"
@@ -233,7 +233,7 @@
       "category": "theme",
       "updated": "2026-11-01",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/one-ui.zip",
-      "downloads": 98,
+      "downloads": 99,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/one-ui/screenshots/Screenshot_20261101-184502_One UI Home.png",
@@ -267,7 +267,7 @@
       "category": "pill",
       "updated": "2026-10-14",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/pacman-pill.zip",
-      "downloads": 24,
+      "downloads": 25,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pacman-pill/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pacman-pill/screenshots/Screenshot_20261012-165932_KamiOS Home.png"
@@ -280,9 +280,9 @@
       "author": "KamiKaonashi",
       "description": "Google Pixel Launcher without need for Gapps + Double Tap to sleep function.",
       "category": "launcher",
-      "updated": "2026-11-06",
+      "updated": "2026-11-08",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/pixel-launcher.zip",
-      "downloads": 4,
+      "downloads": 6,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pixel-launcher/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/pixel-launcher/screenshots/Screenshot_20261106-211125_Pixel Launcher.png"
@@ -313,7 +313,7 @@
       "category": "theme",
       "updated": "2026-10-16",
       "download": "https://github.com/kamiosmodules/module-store/releases/download/latest/spiderverse.zip",
-      "downloads": 55,
+      "downloads": 57,
       "thumbnail": "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/spiderverse/thumbnail.png",
       "screenshots": [
         "https://raw.githubusercontent.com/kamiosmodules/module-store/main/modules/spiderverse/screenshots/Screenshot_20261012-164538_System UI.png",
