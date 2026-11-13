@@ -2,7 +2,7 @@
   "axionqs-by-isifat": {
     "asset": 721911875,
     "base": 12,
-    "count": 7
+    "count": 8
   },
   "coloros-fusion": {
     "asset": 721911858,
@@ -47,7 +47,7 @@
   "ios-emoji": {
     "asset": 721911859,
     "base": 71,
-    "count": 8
+    "count": 9
   },
   "metro-launcher": {
     "asset": 721911854,
@@ -82,12 +82,12 @@
   "one-ui": {
     "asset": 721911872,
     "base": 99,
-    "count": 22
+    "count": 24
   },
   "oneplus-sans": {
     "asset": 721911874,
     "base": 42,
-    "count": 3
+    "count": 4
   },
   "pacman-pill": {
     "asset": 721911855,
@@ -97,7 +97,7 @@
   "pixel-launcher": {
     "asset": 721911863,
     "base": 6,
-    "count": 17
+    "count": 18
   },
   "pixelcraft-kamios": {
     "asset": 721911866,
@@ -107,7 +107,7 @@
   "spiderverse": {
     "asset": 721911864,
     "base": 57,
-    "count": 4
+    "count": 5
   },
   "stealth-avionics-theme-by-isifat": {
     "asset": 721911873,
@@ -122,6 +122,6 @@
   "waifu-ui": {
     "asset": 721911849,
     "base": 52,
-    "count": 4
+    "count": 5
   }
 }
