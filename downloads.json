@@ -2,7 +2,7 @@
   "axionqs-by-isifat": {
     "asset": 721911875,
     "base": 12,
-    "count": 13
+    "count": 14
   },
   "coloros-fusion": {
     "asset": 721911858,
@@ -47,7 +47,7 @@
   "ios-emoji": {
     "asset": 721911859,
     "base": 71,
-    "count": 15
+    "count": 16
   },
   "metro-launcher": {
     "asset": 721911854,
@@ -62,12 +62,12 @@
   "minecraft-xp": {
     "asset": 721911857,
     "base": 7,
-    "count": 0
+    "count": 1
   },
   "nothing-os-5-enhance": {
     "asset": 721911870,
     "base": 25,
-    "count": 16
+    "count": 17
   },
   "nothing-os-5-enhanced": {
     "asset": 710408685,
@@ -77,7 +77,7 @@
   "nyan-cat-pill": {
     "asset": 721911860,
     "base": 12,
-    "count": 0
+    "count": 1
   },
   "one-ui": {
     "asset": 721911872,
@@ -87,12 +87,12 @@
   "oneplus-sans": {
     "asset": 721911874,
     "base": 42,
-    "count": 5
+    "count": 7
   },
   "pacman-pill": {
     "asset": 721911855,
     "base": 25,
-    "count": 1
+    "count": 2
   },
   "pixel-launcher": {
     "asset": 721911863,
